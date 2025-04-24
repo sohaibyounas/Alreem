@@ -8,20 +8,20 @@ import {
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import Shoe from "../assets/images/shoes.png";
-import PowerBank from '../assets/images/Power Bank.png';
-import WirlessHeadphone from '../assets/images/Wirless headphone.jfif';
-import Laptop from '../assets/images/laptop.png';
-import SmartWatch from '../assets/images/Smart watch.jfif';
-import BluetoohSpeaker from '../assets/images/speaker.jfif';
-import Tablet from '../assets/images/tablet.png';
-import SmartTv from '../assets/images/smart tv.png';
-import GamingConsole from '../assets/images/gaming console.png';
-import WirelessEarbuds from '../assets/images/Wireless buds.png';
-import SmartHomeDevice from '../assets/images/smart home device.png';
-import FitnessTracker from '../assets/images/Fitness tracker.jpg';
-import VRHeadset from '../assets/images/vr headset.png';
-import DigitalCamera from '../assets/images/digital camera.jfif';
-import SmartPhone from '../assets/images/phone.png';
+import PowerBank from "../assets/images/Power Bank.png";
+import WirlessHeadphone from "../assets/images/Wirless headphone.jfif";
+import Laptop from "../assets/images/laptop.png";
+import SmartWatch from "../assets/images/Smart watch.jfif";
+import BluetoohSpeaker from "../assets/images/speaker.jfif";
+import Tablet from "../assets/images/tablet.png";
+import SmartTv from "../assets/images/smart tv.png";
+import GamingConsole from "../assets/images/gaming console.png";
+import WirelessEarbuds from "../assets/images/Wireless buds.png";
+import SmartHomeDevice from "../assets/images/smart home device.png";
+import FitnessTracker from "../assets/images/Fitness tracker.jpg";
+import VRHeadset from "../assets/images/vr headset.png";
+import DigitalCamera from "../assets/images/digital camera.jfif";
+import SmartPhone from "../assets/images/phone.png";
 
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
@@ -32,15 +32,17 @@ const ManageOrder = () => {
   const [tab, setTab] = useState(0);
 
   useEffect(() => {
-    // console.log(tab); 
-    setData(tab === 0 ? Pending : tab === 1 ? Completed : tab === 2 ? Cancelled : []);
+    // console.log(tab);
+    setData(
+      tab === 0 ? Pending : tab === 1 ? Completed : tab === 2 ? Cancelled : []
+    );
   }, [tab]);
 
   const navigate = useNavigate();
 
-  const handleClick = ()=> {
-    navigate('/detail');
-  }
+  const handleClick = () => {
+    navigate("/detail");
+  };
 
   return (
     <>
@@ -64,8 +66,8 @@ const ManageOrder = () => {
         >
           <ListItem
             sx={{
-              color: "#000",
-              background: "#fff",
+              color: tab === 0 && "#000",
+              background: tab === 0 && "#fff",
               borderRadius: "10px",
               padding: "10px",
               cursor: "pointer",
@@ -77,7 +79,8 @@ const ManageOrder = () => {
           </ListItem>
           <ListItem
             sx={{
-              color: "#fff",
+              color: tab === 1 && "#000",
+              background: tab === 1 && "#fff",
               borderRadius: "10px",
               padding: "10px",
               cursor: "pointer",
@@ -89,7 +92,8 @@ const ManageOrder = () => {
           </ListItem>
           <ListItem
             sx={{
-              color: "#fff",
+              color: tab === 2 && "#000",
+              background: tab === 2 && "#fff",
               borderRadius: "10px",
               padding: "10px",
               cursor: "pointer",
@@ -102,7 +106,7 @@ const ManageOrder = () => {
         </Grid>
 
         {/* order list gird */}
-        
+
         {data.map((item, index) => (
           <Grid
             key={index}
@@ -181,7 +185,7 @@ const ManageOrder = () => {
                   fontSize: "16px",
                   fontWeight: "bold",
                 }}
-                onClick= {handleClick}
+                onClick={handleClick}
               >
                 Details
               </Button>
@@ -231,9 +235,8 @@ const ManageOrder = () => {
                 fontSize: "16px",
                 outline: "1px solid #3D4348",
               }}
-              
             >
-              <KeyboardBackspaceIcon /> 
+              <KeyboardBackspaceIcon />
               Previous
             </IconButton>
 
@@ -249,7 +252,7 @@ const ManageOrder = () => {
                 outline: "1px solid #3D4348",
               }}
             >
-                Next 
+              Next
               <ArrowRightAltIcon />
             </IconButton>
           </Grid>
@@ -305,7 +308,7 @@ const Completed = [
     name: "Smartphone",
     orderId: "AUS-123456789",
     date: "11:15 AM Tuesday 20, December 2023",
-    image : SmartPhone,
+    image: SmartPhone,
   },
   {
     id: 2,

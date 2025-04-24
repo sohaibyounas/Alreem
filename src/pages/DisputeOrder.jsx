@@ -6,13 +6,18 @@ import {
   Pagination,
   Typography,
 } from "@mui/material";
-import React, { useState } from "react";
-import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
-import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import React, { useEffect, useState } from "react";
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 const DisputeOrder = () => {
-  const [state, setState] = useState();
-  
+  const [state, setState] = useState([]);
+  const [tab, setTab] = useState(0);
+
+  useEffect(() => {
+    setState(tab === 0 ? "Active" : tab === 1 ? "Closed" : []);
+  }, [tab]);
+
   return (
     <Box sx={{ margin: "0 auto", padding: 2 }}>
       {/* Tabs Section */}
@@ -25,10 +30,12 @@ const DisputeOrder = () => {
           padding: 2,
         }}
       >
-        <Box
+        <Typography
           sx={{
-            background: "#fff",
-            color: "#000",
+            // color: tab === 0 && "#000",
+            // background: tab === 0 && "#fff",
+            color: tab === 0 ? "#000" : "#fff",
+            background: tab === 0 ? "#fff" : "transparent",
             width: "50%",
             textAlign: "center",
             fontSize: "20px",
@@ -37,13 +44,14 @@ const DisputeOrder = () => {
             padding: 1,
             cursor: "pointer",
           }}
+          onClick={() => setTab(0)}
         >
           Active
-        </Box>
+        </Typography>
         <Box
           sx={{
-            background: "#fff",
-            color: "#000",
+            color: tab === 0 ? "#fff" : "#000",
+            background: tab === 0 ? "#29292A": "#fff",
             width: "50%",
             textAlign: "center",
             fontSize: "20px",
@@ -52,6 +60,7 @@ const DisputeOrder = () => {
             padding: 1,
             cursor: "pointer",
           }}
+          onClick={() => setTab(1)}
         >
           Closed
         </Box>
@@ -87,7 +96,11 @@ const DisputeOrder = () => {
           {/* Left Column: Labels */}
           <Box>
             <Typography
-              sx={{ color: "#fff", fontSize: "16px", paddingTop: 0.5 }}
+              sx={{
+                color: "#EEE692",
+                fontSize: "16px",
+                paddingTop: 0.5,
+              }}
             >
               Dispute Status:
             </Typography>
@@ -107,13 +120,13 @@ const DisputeOrder = () => {
           <Box>
             <Typography
               sx={{
-                color: "#EEE692",
+                color: tab === 0 ? "#EEE692" : "red",
                 fontSize: "16px",
                 paddingTop: 0.5,
                 textAlign: "end",
               }}
             >
-              Active
+              {tab === 0 ? "Active" : "Closed"}
             </Typography>
             <Typography
               sx={{
@@ -171,7 +184,6 @@ const DisputeOrder = () => {
           <Typography
             sx={{ color: "#EEE692", fontSize: "20px", fontWeight: "bold" }}
           >
-            
             Order Disputes
           </Typography>
         </Box>
@@ -208,12 +220,13 @@ const DisputeOrder = () => {
           <Box>
             <Typography
               sx={{
-                color: "#EEE692",
+                color: tab === 0 ? "#EEE692" : "red",
                 fontSize: "16px",
                 paddingTop: 0.5,
                 textAlign: "end",
               }}
             >
+              {tab === 0 ? "Active" : "Closed"}
               Active
             </Typography>
             <Typography
