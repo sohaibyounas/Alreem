@@ -1,0 +1,90 @@
+import { Avatar, Box, List, ListItemText, Typography } from "@mui/material";
+import React from "react";
+import User from "../../assets/images/user.png";
+
+const Navbar = () => {
+  return (
+    <>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          backgroundColor: "#212121",
+          color: "#fff",
+          height: "70px",
+          padding: "0 20px",
+        }}
+      >
+        <Typography
+          sx={{
+            color: "#DED184",
+            fontFamily: "Poppins",
+            fontSize: "28px",
+            fontWeight: "600",
+            paddingTop: "10px",
+            marginLeft: "0px",
+            lineHeight: "34px",
+            textTransform: "uppercase",
+          }}
+        >
+          Aleem Seller Dashboard
+        </Typography>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: "10px",
+          }}
+        >
+          <Avatar 
+          sx={{
+            width: "39px",
+            height: "39px",
+            border: "1px solid #eee692",
+            }}>
+            <img
+              src={User}
+              alt="user"
+              style={{
+                width: "100%",
+                height: "100%",
+                borderRadius: "50%",
+              }}
+            />
+          </Avatar>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start",
+            padding: "0px",
+          }}>
+          <Typography
+            sx={{
+              fontSize: "16px",
+              fontWeight: "500",
+              color: "#fff",
+              lineHeight: 1.2,
+            }}
+          >
+            Michael Jorden
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: "16px",
+              color: "#bbb",
+              lineHeight: 1.2,
+            }}
+          >
+            Seller
+          </Typography>
+    </Box>
+          
+        </Box>
+      </Box>
+    </>
+  );
+};
+
+export default Navbar;
