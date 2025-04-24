@@ -12,7 +12,7 @@ import PowerBank from "../assets/images/Power Bank.png";
 import WirlessHeadphone from "../assets/images/Wirless headphone.jfif";
 import Laptop from "../assets/images/laptop.png";
 import SmartWatch from "../assets/images/Smart watch.jfif";
-import BluetoohSpeaker from "../assets/images/speaker.jfif";
+import BluetoohSpeaker from "../assets/images/Speaker.png";
 import Tablet from "../assets/images/tablet.png";
 import SmartTv from "../assets/images/smart tv.png";
 import GamingConsole from "../assets/images/gaming console.png";
