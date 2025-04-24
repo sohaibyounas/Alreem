@@ -6,6 +6,7 @@ import {
   CardMedia,
   Grid,
   Icon,
+  IconButton,
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";

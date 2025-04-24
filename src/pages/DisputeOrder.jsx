@@ -9,6 +9,7 @@ import {
 import React, { useEffect, useState } from "react";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import { useNavigate } from "react-router-dom";
 
 const DisputeOrder = () => {
   const [state, setState] = useState([]);
@@ -17,6 +18,9 @@ const DisputeOrder = () => {
   useEffect(() => {
     setState(tab === 0 ? "Active" : tab === 1 ? "Closed" : []);
   }, [tab]);
+
+  const navigate = useNavigate();
+  // navigate('');
 
   return (
     <Box sx={{ margin: "0 auto", padding: 2 }}>
@@ -227,7 +231,6 @@ const DisputeOrder = () => {
               }}
             >
               {tab === 0 ? "Active" : "Closed"}
-              Active
             </Typography>
             <Typography
               sx={{

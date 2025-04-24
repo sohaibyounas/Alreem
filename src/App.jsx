@@ -84,7 +84,7 @@ function App() {
         <Route
           path="/detail"
           element={
-            <Layout>
+            <Layout showLink={true}>
               <Detail />
             </Layout>
           }

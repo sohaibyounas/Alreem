@@ -1,9 +1,11 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Grid, Icon, Typography } from "@mui/material";
 import React from "react";
 import Sidebar from "../pages/Sidebar";
 import Navbar from "./Header/Navbar";
+import { Navigate, useNavigate } from "react-router-dom";
 
-const Layout = ({ children }) => {
+
+const Layout = ({ children, showLink = false }) => {
   return (
     <>
       <Box>
@@ -12,7 +14,7 @@ const Layout = ({ children }) => {
             <Sidebar />
           </Grid>
           <Grid size={10}>
-            <Navbar />
+            <Navbar showLink={showLink} />
             <Box
               sx={{
                 background: "#29292A",

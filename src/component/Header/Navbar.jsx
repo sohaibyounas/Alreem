@@ -1,8 +1,22 @@
-import { Avatar, Box, List, ListItemText, Typography } from "@mui/material";
+import {
+  Avatar,
+  Box,
+  Icon,
+  List,
+  ListItemText,
+  Typography,
+} from "@mui/material";
 import React from "react";
 import User from "../../assets/images/user.png";
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+import { useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ showLink }) => {
+  const navigate = useNavigate();
+  
+    const handleChatClick = () => {
+      navigate("/manageorder");
+    }
   return (
     <>
       <Box
@@ -37,12 +51,13 @@ const Navbar = () => {
             gap: "10px",
           }}
         >
-          <Avatar 
-          sx={{
-            width: "39px",
-            height: "39px",
-            border: "1px solid #eee692",
-            }}>
+          <Avatar
+            sx={{
+              width: "39px",
+              height: "39px",
+              border: "1px solid #eee692",
+            }}
+          >
             <img
               src={User}
               alt="user"
@@ -53,36 +68,65 @@ const Navbar = () => {
               }}
             />
           </Avatar>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+              padding: "0px",
+            }}
+          >
+            <Typography
+              sx={{
+                fontSize: "16px",
+                fontWeight: "500",
+                color: "#fff",
+                lineHeight: 1.2,
+              }}
+            >
+              Michael Jorden
+            </Typography>
+            <Typography
+              sx={{
+                fontSize: "16px",
+                color: "#bbb",
+                lineHeight: 1.2,
+              }}
+            >
+              Seller
+            </Typography>
+          </Box>
+        </Box>
+      </Box>
+      {showLink && (
         <Box
           sx={{
             display: "flex",
-            flexDirection: "column",
-            alignItems: "flex-start",
-            padding: "0px",
-          }}>
-          <Typography
+            gap: "5px",
+            alignItems: "center",
+            backgroundColor: "#212121",
+            cursor: "pointer",
+            padding: "10px",
+            "&:hover .back-icon": {
+              color: "#EEE692",
+              transform: "translateX(-5px)",
+              transition: "color 0.3s, transform 0.3s",
+            },
+          }}
+          onClick={()=> handleChatClick()}
+        >
+          <Icon
+            className="back-icon"
             sx={{
-              fontSize: "16px",
-              fontWeight: "500",
               color: "#fff",
-              lineHeight: 1.2,
+              transition: "color 0.3s, transform 0.3s",
             }}
           >
-            Michael Jorden
-          </Typography>
-          <Typography
-            sx={{
-              fontSize: "16px",
-              color: "#bbb",
-              lineHeight: 1.2,
-            }}
-          >
-            Seller
-          </Typography>
-    </Box>
-          
+            <KeyboardBackspaceIcon />
+          </Icon>
+          <Typography sx={{ color: "#fff" }}>Chat Support</Typography>
         </Box>
-      </Box>
+      )}
     </>
   );
 };
