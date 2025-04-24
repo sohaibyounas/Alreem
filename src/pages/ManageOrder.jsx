@@ -137,7 +137,6 @@ const ManageOrder = () => {
                   sx={{
                     color: "#fff",
                     lineHeight: "21px",
-                    fontSize: "14px",
                     fontSize: "20px",
                   }}
                 >

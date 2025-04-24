@@ -6,11 +6,13 @@ import {
   Pagination,
   Typography,
 } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 const DisputeOrder = () => {
+  const [state, setState] = useState();
+  
   return (
     <Box sx={{ margin: "0 auto", padding: 2 }}>
       {/* Tabs Section */}
@@ -169,6 +171,7 @@ const DisputeOrder = () => {
           <Typography
             sx={{ color: "#EEE692", fontSize: "20px", fontWeight: "bold" }}
           >
+            
             Order Disputes
           </Typography>
         </Box>
