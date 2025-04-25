@@ -21,8 +21,6 @@ import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 const Detail = () => {
-  // const [order, setOrder] = useState("");
-
   return (
     <>
       <Box sx={{ display: "flex", gap: "25px", width: "100%" }}>
@@ -470,9 +468,7 @@ const Detail = () => {
                     padding: "10px 36px",
                     borderRadius: "10px",
                   }}
-                >
-                  
-                  {onclick = () => orderClick () }
+                >                  
                   Accept Order
                 </Button>
               </Grid>

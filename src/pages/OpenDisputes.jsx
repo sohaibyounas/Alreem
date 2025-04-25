@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Avatar, Box, Button, Card, CardMedia, Dialog, Divider, Icon, TextField, Typography } from '@mui/material';
+import { Avatar, Box, Button, Card, CardMedia, Dialog, Divider, Icon, TextField, Typography, IconButton } from '@mui/material';
 import Logo from '../assets/images/logo.png';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import InfoOutlineRoundedIcon from '@mui/icons-material/InfoOutlineRounded';
@@ -27,10 +27,17 @@ const OpenDisputes = () => {
         setOpenDialog(false);
     };
 
+    const handleSendMessage = () => {
+        if (inputValue.trim()) {
+            // Handle sending message logic here
+            setInputValue('');
+        }
+    };
+
     return (
         <Box sx={{ border: "1px solid #3D4348", borderRadius: "10px" }}>
             <Box>
-                <Box sx={{ display: "flex", justifyContent: "space-between", py: 2, }}>
+                <Box sx={{ display: "flex", justifyContent: "space-between", py: 2, px: 2 }}>
                     <Card sx={{ background: "none", boxShadow: "none", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center" }}>
                         <CardMedia sx={{ background: "#111111", width: "200px", height: "200px", borderRadius: "50%", }}>
                             <img src={Logo} alt="LOGO" style={{ width: "180px", height: "auto", padding: "40px 25px 20px 11px" }} />
@@ -47,7 +54,9 @@ const OpenDisputes = () => {
                             Welcome to Alreem Chat Support. Seller and buyer are requested to resolve their dispute via chat support. In case of no solution contact admin in the chat.
                         </Typography>
                     </Card>
-                    <MoreVertIcon sx={{ color: "#fff", fontSize: "20px" }} />
+                    <IconButton onClick={handleOpenDialog}>
+                        <MoreVertIcon sx={{ color: "#fff", fontSize: "20px" }} />
+                    </IconButton>
                 </Box>
                 {/* Dispute Button */}
                 <Box sx={{
@@ -129,6 +138,11 @@ const OpenDisputes = () => {
                     placeholder="Type message..."
                     value={inputValue}
                     onChange={handleInputChange}
+                    onKeyPress={(e) => {
+                        if (e.key === 'Enter') {
+                            handleSendMessage();
+                        }
+                    }}
                     sx={{
                         background: "#000", color: "#fff", width: "100%", height: "40px", m: 1.5, borderRadius: "10px",
                         '& .MuiInputBase-input': {
@@ -144,27 +158,27 @@ const OpenDisputes = () => {
 
                 {/* icon */}
                 <Box sx={{ display: "flex", gap: "5px" }}>
-                    <Icon sx={{ border: "1px solid grey", borderRadius: "10px", p: 1 }}>
+                    <IconButton sx={{ border: "1px solid grey", borderRadius: "10px", p: 1 }}>
                         <AttachFileIcon sx={{ color: "#EEE692", fontSize: "20px" }} />
-                    </Icon>
-                    <Icon sx={{ border: "1px solid grey", borderRadius: "10px", p: 1 }}>
+                    </IconButton>
+                    <IconButton onClick={handleSendMessage} sx={{ border: "1px solid grey", borderRadius: "10px", p: 1 }}>
                         <SendIcon sx={{ color: "#EEE692" }} />
-                    </Icon>
+                    </IconButton>
                 </Box>
             </Box>
             {/* Dialog box */}
             <Dialog
                 open={openDialog}
                 onClose={handleCloseDialog}
-
-                sx={{
-                    bgcolor: '#29292A',
-                    color: '#fff',
-                    borderRadius: "2px",
-                    minWidth: 320,
-                    maxWidth: 380
+                PaperProps={{
+                    sx: {
+                        bgcolor: '#29292A',
+                        color: '#fff',
+                        borderRadius: "2px",
+                        minWidth: 320,
+                        maxWidth: 380
+                    }
                 }}
-
             >
                 <Box sx={{ textAlign: 'center', py: 2 }}>
                     <Typography sx={{ color: '#EEE677', fontWeight: 500 }}>
@@ -175,7 +189,6 @@ const OpenDisputes = () => {
                     borderTop: '1px solid #3d4348',
                     borderBottom: '1px solid #3d4348',
                     p: 2,
-
                 }}>
                     <Typography align="center" sx={{ fontSize: "14px" }}>
                         Are you sure you want the admin to invite in this chat?
@@ -187,7 +200,6 @@ const OpenDisputes = () => {
                 }}>
                     <Button
                         fullWidth
-
                         sx={{
                             color: '#fff',
                             fontSize: "14px",
