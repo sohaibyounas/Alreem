@@ -1,13 +1,12 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
+import OpenDisputes from './OpenDisputes';
 
 const DraftInventory = () => {
   return (
     <>
     <Box>
-        <Typography>
-            Draft Inventory Page
-        </Typography>
+        <OpenDisputes />
     </Box>
     </>
   )

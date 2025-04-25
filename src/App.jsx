@@ -12,6 +12,8 @@ import Inbox from "./pages/Inbox";
 import EditShop from "./pages/EditShop";
 import Layout from "./component/Layout";
 import Detail from "./pages/Detail";
+import Userdetail from "./pages/Userdetail";
+import OpenDisputes from "./pages/OpenDisputes";
 
 function App() {
   return (
@@ -88,6 +90,22 @@ function App() {
               <Detail />
             </Layout>
           }
+        />
+        <Route 
+          path="/userdetail"
+          element= {
+            <Layout showLink={true} contactSupport={true} >
+              <Userdetail />
+            </Layout>
+          }
+        />
+        <Route 
+        path="/OpenDisputes"
+        element={
+          <Layout >
+            <OpenDisputes />
+          </Layout>
+        }
         />
       </Routes>
     </Router>

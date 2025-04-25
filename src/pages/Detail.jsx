@@ -18,8 +18,11 @@ import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import PaymentRoundedIcon from "@mui/icons-material/PaymentRounded";
 import LocalShippingRoundedIcon from "@mui/icons-material/LocalShippingRounded";
 import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 const Detail = () => {
+  // const [order, setOrder] = useState("");
+
   return (
     <>
       <Box sx={{ display: "flex", gap: "25px", width: "100%" }}>
@@ -29,7 +32,7 @@ const Detail = () => {
           sx={{ border: "1px solid #3D4348", borderRadius: "10px" }}
         >
           {/* card */}
-          <Card sx={{ background: "none", padding: "10px", boxShadow: "none" }}>
+          <Card sx={{ background: "none", boxShadow: "none" }}>
             <CardContent>
               <Typography
                 sx={{ color: "#EEE692", fontSize: "20px", fontWeight: "bold" }}
@@ -41,7 +44,7 @@ const Detail = () => {
               <img
                 src={Shoe}
                 alt="shoe"
-                style={{ width: "65px", paddingLeft: "10px" }}
+                style={{ width: "65px", paddingLeft: "15px" }}
               />
             </CardMedia>
             <Box sx={{ display: "flex", justifyContent: "space-between" }}>
@@ -70,19 +73,19 @@ const Detail = () => {
             </Box>
           </Card>
           <Divider
-            sx={{ background: "#3D4348", margin: "0px", height: "3px" }}
+            sx={{ background: "#3D4348", margin: "0px", height: "3px", mx: 2 }}
           />
           <Card sx={{ background: "none", p: 2, boxShadow: "none" }}>
             <CardMedia>
               <img
                 src={PowerBank}
                 alt="PowerBank"
-                style={{ width: "65px", paddingLeft: "10px" }}
+                style={{ width: "65px" }}
               />
             </CardMedia>
             <Box sx={{ display: "flex", justifyContent: "space-between" }}>
               <CardContent
-                sx={{ textAlign: "start", color: "#909090", fontSize: "14px" }}
+                sx={{ textAlign: "start", color: "#909090", fontSize: "14px", p: "0 !important" }}
               >
                 <Typography sx={{ lineHeight: "30px" }}>
                   Product Name
@@ -92,7 +95,7 @@ const Detail = () => {
                 <Typography sx={{ lineHeight: "30px" }}>Size</Typography>
               </CardContent>
               <CardContent
-                sx={{ textAlign: "end", color: "#fff", fontSize: "14px" }}
+                sx={{ textAlign: "end", color: "#fff", fontSize: "14px", pr: "0 !important" }}
               >
                 <Typography sx={{ lineHeight: "30px" }}>Power Bank</Typography>
                 <Typography sx={{ lineHeight: "30px" }}>AED350</Typography>
@@ -102,19 +105,19 @@ const Detail = () => {
             </Box>
           </Card>
           <Divider
-            sx={{ background: "#3D4348", margin: "0px", height: "3px" }}
+            sx={{ background: "#3D4348", margin: "0px", height: "3px", mx: 2 }}
           />
           <Card sx={{ background: "none", p: 2, boxShadow: "none" }}>
             <CardMedia>
               <img
                 src={GoldenRing}
                 alt="GoldenRing"
-                style={{ width: "65px", paddingLeft: "10px" }}
+                style={{ width: "65px" }}
               />
             </CardMedia>
             <Box sx={{ display: "flex", justifyContent: "space-between" }}>
               <CardContent
-                sx={{ textAlign: "start", color: "#909090", fontSize: "14px" }}
+                sx={{ textAlign: "start", color: "#909090", fontSize: "14px", p: "0 !important" }}
               >
                 <Typography sx={{ lineHeight: "30px" }}>
                   Product Name
@@ -124,7 +127,7 @@ const Detail = () => {
                 <Typography sx={{ lineHeight: "30px" }}>Size</Typography>
               </CardContent>
               <CardContent
-                sx={{ textAlign: "end", color: "#fff", fontSize: "14px" }}
+                sx={{ textAlign: "end", color: "#fff", fontSize: "14px", pr: "0 !important" }}
               >
                 <Typography sx={{ lineHeight: "30px" }}>Power Bank</Typography>
                 <Typography sx={{ lineHeight: "30px" }}>AED350</Typography>
@@ -133,12 +136,15 @@ const Detail = () => {
               </CardContent>
             </Box>
           </Card>
+          <Divider
+            sx={{ background: "#3D4348", margin: "0px", height: "3px", mx: 2, mb: 4 }}
+          />
         </Grid>
 
         {/* Order Info */}
         <Grid
           size={5}
-          sx={{ border: "1px solid #3D4348", borderRadius: "10px" }}
+          sx={{ border: "1px solid #3D4348", borderRadius: "10px", pr: 2, ps: 1 }}
         >
           {/* Buyer info */}
           <Box>
@@ -345,7 +351,7 @@ const Detail = () => {
                   <Typography sx={{ lineHeight: "35px" }}>Countary</Typography>
                   <Typography sx={{ lineHeight: "35px" }}>City</Typography>
                   <Typography sx={{ lineHeight: "35px" }}>
-                    Postal Code
+                    Postal Code{" "}
                   </Typography>
                 </CardContent>
                 <CardContent
@@ -415,7 +421,6 @@ const Detail = () => {
                       />
                     </Box>
                   </CardMedia>
-
                   <Box sx={{ color: "#fff" }}>
                     <Typography>Order Place by Buyer</Typography>
                     <Typography>14 November</Typography>
@@ -425,7 +430,17 @@ const Detail = () => {
                   <Typography sx={{ color: "#fff" }}>2:00 PM</Typography>
                 </Box>
               </Card>
+
+              {/* Accept Order Section */}
+              <Box sx={{}}>
+                <Box>
+                  <Icon sx={{color: "#EEE692"}}>
+                    <MoreVertIcon />
+                  </Icon>
+                </Box>
+              </Box>
             </Box>
+          
             {/* cancel/accept order button */}
             <Box sx={{ p: 2, display: "flex", gap: "10px" }}>
               <Grid>
@@ -435,7 +450,8 @@ const Detail = () => {
                     border: "1px solid #3D4348",
                     color: "#fff",
                     fontWeight: "bold",
-                    padding: "5px 38px",
+                    padding: "10px 36px",
+                    borderRadius: "10px",
                   }}
                 >
                   Cancel Order
@@ -451,9 +467,12 @@ const Detail = () => {
                     fontWeight: "bold",
                     fontSize: "14px",
                     lineHeight: "25px",
-                    padding: "5px 38px",
+                    padding: "10px 36px",
+                    borderRadius: "10px",
                   }}
                 >
+                  
+                  {onclick = () => orderClick () }
                   Accept Order
                 </Button>
               </Grid>

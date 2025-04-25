@@ -9,7 +9,8 @@ import {
 import React, { useEffect, useState } from "react";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const DisputeOrder = () => {
   const [state, setState] = useState([]);
@@ -18,9 +19,6 @@ const DisputeOrder = () => {
   useEffect(() => {
     setState(tab === 0 ? "Active" : tab === 1 ? "Closed" : []);
   }, [tab]);
-
-  const navigate = useNavigate();
-  // navigate('');
 
   return (
     <Box sx={{ margin: "0 auto", padding: 2 }}>
@@ -36,8 +34,6 @@ const DisputeOrder = () => {
       >
         <Typography
           sx={{
-            // color: tab === 0 && "#000",
-            // background: tab === 0 && "#fff",
             color: tab === 0 ? "#000" : "#fff",
             background: tab === 0 ? "#fff" : "transparent",
             width: "50%",
@@ -71,208 +67,212 @@ const DisputeOrder = () => {
       </Box>
 
       {/* Dispute Section */}
-      <Box
-        sx={{
-          border: "1px solid #3D4348",
-          borderRadius: "10px",
-          padding: 2,
-          marginTop: 3,
-        }}
-      >
-        {/* Dispute Header */}
-        <Box sx={{ paddingBottom: 1 }}>
-          <Typography
-            sx={{ color: "#EEE692", fontSize: "20px", fontWeight: "bold" }}
-          >
-            Order Disputes
-          </Typography>
-        </Box>
-
-        {/* Dispute Details */}
+      <Link to="/Userdetail" style={{textDecoration: "none"}}>
         <Box
           sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            width: "100%",
-            paddingTop: 1,
+            border: "1px solid #3D4348",
+            borderRadius: "10px",
+            padding: 2,
+            marginTop: 3,
           }}
         >
-          {/* Left Column: Labels */}
-          <Box>
+          {/* Dispute Header */}
+          <Box sx={{ paddingBottom: 1 }}>
             <Typography
-              sx={{
-                color: "#EEE692",
-                fontSize: "16px",
-                paddingTop: 0.5,
-              }}
+              sx={{ color: "#EEE692", fontSize: "20px", fontWeight: "bold" }}
             >
-              Dispute Status:
-            </Typography>
-            <Typography
-              sx={{ color: "#fff", fontSize: "16px", paddingTop: 0.5 }}
-            >
-              Order ID:
-            </Typography>
-            <Typography
-              sx={{ color: "#fff", fontSize: "16px", paddingTop: 0.5 }}
-            >
-              Reason of Dispute:
+              Order Disputes
             </Typography>
           </Box>
 
-          {/* Right Column: Values */}
+          {/* Dispute Details */}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              width: "100%",
+              paddingTop: 1,
+            }}
+          >
+            {/* Left Column: Labels */}
+            <Box>
+              <Typography
+                sx={{
+                  color: "#EEE692",
+                  fontSize: "16px",
+                  paddingTop: 0.5,
+                }}
+              >
+                Dispute Status:
+              </Typography>
+              <Typography
+                sx={{ color: "#fff", fontSize: "16px", paddingTop: 0.5 }}
+              >
+                Order ID:
+              </Typography>
+              <Typography
+                sx={{ color: "#fff", fontSize: "16px", paddingTop: 0.5 }}
+              >
+                Reason of Dispute:
+              </Typography>
+            </Box>
+
+            {/* Right Column: Values */}
+            <Box>
+              <Typography
+                sx={{
+                  color: tab === 0 ? "#EEE692" : "red",
+                  fontSize: "16px",
+                  paddingTop: 0.5,
+                  textAlign: "end",
+                }}
+              >
+                {tab === 0 ? "Active" : "Closed"}
+              </Typography>
+              <Typography
+                sx={{
+                  color: "#EEE692",
+                  fontSize: "16px",
+                  paddingTop: 0.5,
+                  textAlign: "end",
+                }}
+              >
+                Alreem-1
+              </Typography>
+              <Typography
+                sx={{
+                  color: "#EEE692",
+                  fontSize: "16px",
+                  paddingTop: 0.5,
+                  textAlign: "end",
+                }}
+              >
+                Not Recognized
+              </Typography>
+            </Box>
+          </Box>
+          <Divider
+            sx={{ background: "#3D4348", margin: "0px", height: "2px", mt: 3 }}
+          />
           <Box>
             <Typography
               sx={{
-                color: tab === 0 ? "#EEE692" : "red",
-                fontSize: "16px",
-                paddingTop: 0.5,
-                textAlign: "end",
-              }}
-            >
-              {tab === 0 ? "Active" : "Closed"}
-            </Typography>
-            <Typography
-              sx={{
                 color: "#EEE692",
-                fontSize: "16px",
-                paddingTop: 0.5,
-                textAlign: "end",
+                fontSize: "20px",
+                fontWeight: "bold",
+                pt: 2.5,
               }}
             >
-              Alreem-1
+              Describe the Reasons
             </Typography>
-            <Typography
-              sx={{
-                color: "#EEE692",
-                fontSize: "16px",
-                paddingTop: 0.5,
-                textAlign: "end",
-              }}
-            >
-              Not Recognized
+            <Typography sx={{ color: "#fff", pt: 1, fontSize: "16px" }}>
+              This Product Usually I am Not Use I Need to Order the New Product.
             </Typography>
           </Box>
         </Box>
-        <Divider
-          sx={{ background: "#3D4348", margin: "0px", height: "2px", mt: 3 }}
-        />
-        <Box>
-          <Typography
-            sx={{
-              color: "#EEE692",
-              fontSize: "20px",
-              fontWeight: "bold",
-              pt: 2.5,
-            }}
-          >
-            Describe the Reasons
-          </Typography>
-          <Typography sx={{ color: "#fff", pt: 1, fontSize: "16px" }}>
-            This Product Usually I am Not Use I Need to Order the New Product.
-          </Typography>
-        </Box>
-      </Box>
+      </Link>
 
       {/* Dispute Section */}
-      <Box
-        sx={{
-          border: "1px solid #3D4348",
-          borderRadius: "10px",
-          padding: 2,
-          marginTop: 3,
-        }}
-      >
-        {/* Dispute Header */}
-        <Box sx={{ paddingBottom: 1 }}>
-          <Typography
-            sx={{ color: "#EEE692", fontSize: "20px", fontWeight: "bold" }}
-          >
-            Order Disputes
-          </Typography>
-        </Box>
-
-        {/* Dispute Details */}
+      <Link to="/Userdetail" style={{textDecoration: "none"}}>
         <Box
           sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            width: "100%",
-            paddingTop: 1,
+            border: "1px solid #3D4348",
+            borderRadius: "10px",
+            padding: 2,
+            marginTop: 3,
           }}
         >
-          {/* Left Column: Labels */}
-          <Box>
+          {/* Dispute Header */}
+          <Box sx={{ paddingBottom: 1 }}>
             <Typography
-              sx={{ color: "#fff", fontSize: "16px", paddingTop: 0.5 }}
+              sx={{ color: "#EEE692", fontSize: "20px", fontWeight: "bold" }}
             >
-              Dispute Status:
-            </Typography>
-            <Typography
-              sx={{ color: "#fff", fontSize: "16px", paddingTop: 0.5 }}
-            >
-              Order ID:
-            </Typography>
-            <Typography
-              sx={{ color: "#fff", fontSize: "16px", paddingTop: 0.5 }}
-            >
-              Reason of Dispute:
+              Order Disputes
             </Typography>
           </Box>
 
-          {/* Right Column: Values */}
+          {/* Dispute Details */}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+              width: "100%",
+              paddingTop: 1,
+            }}
+          >
+            {/* Left Column: Labels */}
+            <Box>
+              <Typography
+                sx={{ color: "#fff", fontSize: "16px", paddingTop: 0.5 }}
+              >
+                Dispute Status:
+              </Typography>
+              <Typography
+                sx={{ color: "#fff", fontSize: "16px", paddingTop: 0.5 }}
+              >
+                Order ID:
+              </Typography>
+              <Typography
+                sx={{ color: "#fff", fontSize: "16px", paddingTop: 0.5 }}
+              >
+                Reason of Dispute:
+              </Typography>
+            </Box>
+
+            {/* Right Column: Values */}
+            <Box>
+              <Typography
+                sx={{
+                  color: tab === 0 ? "#EEE692" : "red",
+                  fontSize: "16px",
+                  paddingTop: 0.5,
+                  textAlign: "end",
+                }}
+              >
+                {tab === 0 ? "Active" : "Closed"}
+              </Typography>
+              <Typography
+                sx={{
+                  color: "#EEE692",
+                  fontSize: "16px",
+                  paddingTop: 0.5,
+                  textAlign: "end",
+                }}
+              >
+                Alreem-1
+              </Typography>
+              <Typography
+                sx={{
+                  color: "#EEE692",
+                  fontSize: "16px",
+                  paddingTop: 0.5,
+                  textAlign: "end",
+                }}
+              >
+                Not Recognized
+              </Typography>
+            </Box>
+          </Box>
+          <Divider
+            sx={{ background: "#3D4348", margin: "0px", height: "2px", mt: 3 }}
+          />
           <Box>
             <Typography
               sx={{
-                color: tab === 0 ? "#EEE692" : "red",
-                fontSize: "16px",
-                paddingTop: 0.5,
-                textAlign: "end",
-              }}
-            >
-              {tab === 0 ? "Active" : "Closed"}
-            </Typography>
-            <Typography
-              sx={{
                 color: "#EEE692",
-                fontSize: "16px",
-                paddingTop: 0.5,
-                textAlign: "end",
+                fontSize: "20px",
+                fontWeight: "bold",
+                pt: 2.5,
               }}
             >
-              Alreem-1
+              Describe the Reasons
             </Typography>
-            <Typography
-              sx={{
-                color: "#EEE692",
-                fontSize: "16px",
-                paddingTop: 0.5,
-                textAlign: "end",
-              }}
-            >
-              Not Recognized
+            <Typography sx={{ color: "#fff", pt: 1, fontSize: "16px" }}>
+              This Product Usually I am Not Use I Need to Order the New Product.
             </Typography>
           </Box>
         </Box>
-        <Divider
-          sx={{ background: "#3D4348", margin: "0px", height: "2px", mt: 3 }}
-        />
-        <Box>
-          <Typography
-            sx={{
-              color: "#EEE692",
-              fontSize: "20px",
-              fontWeight: "bold",
-              pt: 2.5,
-            }}
-          >
-            Describe the Reasons
-          </Typography>
-          <Typography sx={{ color: "#fff", pt: 1, fontSize: "16px" }}>
-            This Product Usually I am Not Use I Need to Order the New Product.
-          </Typography>
-        </Box>
-      </Box>
+      </Link>
 
       {/* Pagination Grid */}
       <Grid sx={{ display: "flex", marginTop: "40px", gap: "10px" }}>

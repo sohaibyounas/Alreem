@@ -1,6 +1,7 @@
 import {
   Avatar,
   Box,
+  Divider,
   Icon,
   List,
   ListItemText,
@@ -13,10 +14,10 @@ import { useNavigate } from "react-router-dom";
 
 const Navbar = ({ showLink }) => {
   const navigate = useNavigate();
-  
-    const handleChatClick = () => {
-      navigate("/manageorder");
-    }
+
+  const handleChatClick = () => {
+    navigate("/manageorder");
+  }
   return (
     <>
       <Box
@@ -113,7 +114,7 @@ const Navbar = ({ showLink }) => {
               transition: "color 0.3s, transform 0.3s",
             },
           }}
-          onClick={()=> handleChatClick()}
+          onClick={() => handleChatClick()}
         >
           <Icon
             className="back-icon"
@@ -127,6 +128,10 @@ const Navbar = ({ showLink }) => {
           <Typography sx={{ color: "#fff" }}>Chat Support</Typography>
         </Box>
       )}
+      {/* contact support */}
+      <Divider
+        sx={{ background: "#3D4348", height: "2.5px" }}
+      />
     </>
   );
 };
