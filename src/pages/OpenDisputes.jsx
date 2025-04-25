@@ -160,7 +160,7 @@ const OpenDisputes = () => {
                 sx={{
                     bgcolor: '#29292A',
                     color: '#fff',
-                    borderRadius: 2,
+                    borderRadius: "2px",
                     minWidth: 320,
                     maxWidth: 380
                 }}
