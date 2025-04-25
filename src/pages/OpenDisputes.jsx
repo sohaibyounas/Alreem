@@ -130,7 +130,7 @@ const OpenDisputes = () => {
                     value={inputValue}
                     onChange={handleInputChange}
                     sx={{
-                        background: "#000", color: "#fff", width: "100%", height: "40px", m: 1.5, borderRadius: "10px", borderRadius: "10px",
+                        background: "#000", color: "#fff", width: "100%", height: "40px", m: 1.5, borderRadius: "10px",
                         '& .MuiInputBase-input': {
                             color: "#fff",
                             padding: "10px",
