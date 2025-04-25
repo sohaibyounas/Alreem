@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 // Import images
 import logo from "../assets/images/logo.png";
-import homeIcon from "../assets/images/Home.png";
+import homeIcon from "../assets/images/home.png";
 import dashboardIcon from "../assets/images/Dashboard.png";
 import manageOrderIcon from "../assets/images/Manageorder.png";
 import disputeOrderIcon from "../assets/images/DisputeOrder.png";
