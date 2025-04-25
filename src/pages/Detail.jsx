@@ -11,8 +11,8 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import Shoe from "../assets/images/shoes.png";
-import PowerBank from "../assets/images/Power Bank.png";
-import GoldenRing from "../assets/images/Golden Ring.png";
+import PowerBank from "../assets/images/Power-Bank.png";
+import GoldenRing from "../assets/images/Golden-Ring.png";
 import Divider from "@mui/material/Divider";
 import PersonRoundedIcon from "@mui/icons-material/PersonRounded";
 import PaymentRoundedIcon from "@mui/icons-material/PaymentRounded";

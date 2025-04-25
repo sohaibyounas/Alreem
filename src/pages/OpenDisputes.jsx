@@ -4,7 +4,7 @@ import Logo from '../assets/images/logo.png';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import InfoOutlineRoundedIcon from '@mui/icons-material/InfoOutlineRounded';
 import Buyer from '../assets/images/user.jpg';
-import GoldenRing from '../assets/images/Golden Ring.png';
+import GoldenRing from '../assets/images/Golden-Ring.png';
 import Shopping from '../assets/images/shoping.jfif';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 import SendIcon from '@mui/icons-material/Send';
