@@ -76,7 +76,7 @@ function App() {
           }
         />
         <Route
-          path="/"
+          path="/editshop"
           element={
             <Layout>
               <EditShop />

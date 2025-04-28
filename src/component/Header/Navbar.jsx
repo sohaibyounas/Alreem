@@ -18,10 +18,6 @@ const Navbar = ({ showLink, contactSupport: showContactSupport }) => {
     navigate("/manageorder");
   };
 
-  const handleContactSupport  = () => {
-    navigate("/userdetail");
-  };
-
   return (
     <>
       <Box
@@ -133,24 +129,26 @@ const Navbar = ({ showLink, contactSupport: showContactSupport }) => {
         </Box>
       )}
       {/* contact support */}
-      <Divider
-        sx={{ background: "#3D4348", height: "2.5px" }}
-      />
+      {/* Divider only on user detail page */}
+      {showContactSupport && (
+        <Divider
+          sx={{ background: "#3D4348", height: "2.5px" }}
+        />
+      )}
 
       {/* contact support */}
-      {showContactSupport && 
-      (
-        <Box sx={{ width: "100%", background: "#212121", display: "flex", justifyContent: "space-between", alignItems: "center" }}
-          onClick={handleContactSupport()}
-        >
-          <Typography sx={{ background: "#212121", color: "#EEE692", fontSize: "16px", py: 2 }}>
-            Contact Chat Support
-          </Typography>
-          <ChevronRightIcon sx={{ background: "#212121", color: "#fff" }}
-
-          />
-        </Box>
-      )}
+      {showContactSupport &&
+        (
+          <Box sx={{ width: "100%", background: "#212121", display: "flex", justifyContent: "space-between", alignItems: "center", cursor:"pointer" }}
+            onClick={() => navigate("/OpenDisputes")}
+          >
+            <Typography sx={{ background: "#212121", color: "#EEE692", fontSize: "16px", py: 2 }}>
+              Contact Chat Support
+            </Typography>
+            <ChevronRightIcon sx={{ background: "#212121", color: "#fff" }}
+            />
+          </Box>
+        )}
 
     </>
   );

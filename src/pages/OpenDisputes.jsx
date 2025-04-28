@@ -55,7 +55,13 @@ const OpenDisputes = () => {
                         </Typography>
                     </Card>
                     <IconButton onClick={handleOpenDialog}>
-                        <MoreVertIcon sx={{ color: "#fff", fontSize: "20px" }} />
+                        <MoreVertIcon sx={{ 
+                            position: "absolute",
+                            top: 8,
+                            right: 8,
+                            color: "#fff", fontSize: "20px",
+                            '&:hover': { backgroundColor: 'transparent' }
+                            }} />
                     </IconButton>
                 </Box>
                 {/* Dispute Button */}
@@ -75,7 +81,8 @@ const OpenDisputes = () => {
                         display: "flex",
                         alignItems: "center",
                         justifyItems: "center",
-                        paddingLeft: "30px"
+                        paddingLeft: "30px",
+                        gap:"10px"
                     }}>
                         <Icon>
                             <InfoOutlineRoundedIcon sx={{ color: "#fff", fontSize: "20px" }} />
@@ -191,7 +198,7 @@ const OpenDisputes = () => {
                     p: 2,
                 }}>
                     <Typography align="center" sx={{ fontSize: "14px" }}>
-                        Are you sure you want the admin to invite in this chat?
+                        Are you sure you want to invite the admin to this chat?
                     </Typography>
                 </Box>
                 <Box sx={{
