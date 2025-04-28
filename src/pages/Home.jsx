@@ -1,130 +1,76 @@
 import { Box, Typography } from "@mui/material";
 import Shoping from "../assets/images/shoping.jfif";
+import style from '../assets/CSS/style.module.css';
 
 const Home = () => {
   return (
     <>
       {/* main box */}
       <Box
-        sx={{
-          border: "1px solid #3D4348",
-          borderRadius: "20px",
-          display: "flex",
-          padding: "20px",
-          gap: "10px",
-        }}
-      >
+        className={style.mainbox}>
         <img
           src={Shoping}
           alt="Shoping"
-          style={{ width: "100px", borderRadius: "10px" }}
+          className={style.shopingimg}
         />
         <Box>
-          <Typography sx={{ color: "#EEE692", lineHeight: "30px" }}>
+          <Typography className={style.imgdetails}>
             Grado Labs
           </Typography>
-          <Typography sx={{ color: "#fff", lineHeight: "50px" }}>
+          <Typography className={style.headtext}>
             headphones or audio equipments, possibly offering unique feature
           </Typography>
         </Box>
       </Box>
-      {/*  */}
-      <Box sx={{ display: "flex", marginTop: "20px", gap: "10px" }}>
-        <Box
-          sx={{
-            border: "1px solid #3D4348",
-            borderRadius: "10px",
-            display: "flex",
-            flexDirection: "column",
-            padding: "20px",
-            gap: "10px",
-            width: "50%",
-          }}
-        >
-          <Typography sx={{ color: "#EEE692", lineHeight: "20px" }}>
+
+      {/* Inner Text */}
+      <Box className={style.innerbox}>
+        <Box className={style.innerbox1}>
+          <Typography className={style.innertext}>
             Address
           </Typography>
-          <Typography sx={{ color: "#fff", lineHeight: "20px" }}>
+          <Typography className={style.innerpara}>
             Ajman United AArab Emirates
           </Typography>
         </Box>
 
-        <Box
-          sx={{
-            border: "1px solid #3D4348",
-            borderRadius: "10px",
-            display: "flex",
-            flexDirection: "column",
-            padding: "20px",
-            gap: "10px",
-            width: "50%",
-          }}
-        >
-          <Typography sx={{ color: "#EEE692", lineHeight: "20px" }}>
+        <Box className={style.innerbox1}>
+          <Typography className={style.innertext}>
             Category
           </Typography>
-          <Typography sx={{ color: "#fff", lineHeight: "20px" }}>
+          <Typography className={style.innerpara}>
             Indoor Outdoor
           </Typography>
         </Box>
       </Box>
 
-      <Box sx={{ display: "flex", marginTop: "20px", gap: "10px" }}>
-        <Box
-          sx={{
-            border: "1px solid #3D4348",
-            borderRadius: "10px",
-            display: "flex",
-            flexDirection: "column",
-            padding: "20px",
-            gap: "10px",
-            width: "50%",
-          }}
-        >
-          <Typography sx={{ color: "#EEE692", lineHeight: "20px" }}>
+      <Box className={style.mainbox1}>
+        <Box className={style.innerbox1}>
+          <Typography className={style.innertext}>
             Website
           </Typography>
-          <Typography sx={{ color: "#fff", lineHeight: "20px" }}>
+          <Typography className={style.innerpara}>
             www.gradolabmail.com
           </Typography>
         </Box>
 
-        <Box
-          sx={{
-            border: "1px solid #3D4348",
-            borderRadius: "10px",
-            display: "flex",
-            flexDirection: "column",
-            padding: "20px",
-            gap: "10px",
-            width: "50%",
-          }}
-        >
-          <Typography sx={{ color: "#EEE692", lineHeight: "20px" }}>
+        <Box className={style.innerbox1}>
+          <Typography className={style.innertext}>
             Contact Number
           </Typography>
-          <Typography sx={{ color: "#fff", lineHeight: "20px" }}>
+          <Typography className={style.innerpara}>
             +97 3123 8797123
           </Typography>
         </Box>
       </Box>
 
-      <Box
-        sx={{
-          border: "1px solid #3D4348",
-          borderRadius: "20px",
-          display: "flex",
-          flexDirection: "column",
-          marginTop: "20px",
-          padding: "10px",
-        }}
-      >
-        <Typography sx={{ color: "#EEE692", lineHeight: "35px" }}>
+      <Box className={style.innerbox2}>
+        <Typography className={style.innertext}>
           Shop Description
         </Typography>
-        <Typography sx={{ color: "#fff", lineHeight: "35px" }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
-          voluptatibus. Quisquam, voluptatibus.
+        <Typography className={style.innerpara1}>
+          Grado Labs we believe fashion is a journey meant to be shared. Join our vibrant community of fashion aficionados,
+          where inspiration knows no bounds.
         </Typography>
       </Box>
     </>
