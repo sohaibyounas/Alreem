@@ -3,21 +3,25 @@ import {
   Box,
   Divider,
   Icon,
-  List,
-  ListItemText,
   Typography,
 } from "@mui/material";
 import React from "react";
 import User from "../../assets/images/user.png";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { useNavigate } from "react-router-dom";
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
-const Navbar = ({ showLink }) => {
+const Navbar = ({ showLink, contactSupport: showContactSupport }) => {
   const navigate = useNavigate();
 
   const handleChatClick = () => {
     navigate("/manageorder");
-  }
+  };
+
+  const handleContactSupport  = () => {
+    navigate("/userdetail");
+  };
+
   return (
     <>
       <Box
@@ -132,6 +136,22 @@ const Navbar = ({ showLink }) => {
       <Divider
         sx={{ background: "#3D4348", height: "2.5px" }}
       />
+
+      {/* contact support */}
+      {showContactSupport && 
+      (
+        <Box sx={{ width: "100%", background: "#212121", display: "flex", justifyContent: "space-between", alignItems: "center" }}
+          onClick={handleContactSupport()}
+        >
+          <Typography sx={{ background: "#212121", color: "#EEE692", fontSize: "16px", py: 2 }}>
+            Contact Chat Support
+          </Typography>
+          <ChevronRightIcon sx={{ background: "#212121", color: "#fff" }}
+
+          />
+        </Box>
+      )}
+
     </>
   );
 };
