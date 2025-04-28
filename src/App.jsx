@@ -54,7 +54,7 @@ function App() {
         <Route
           path="/inventory"
           element={
-            <Layout>
+            <Layout padding="20px 30px 20px 0px">
               <Inventory />
             </Layout>
           }
@@ -62,7 +62,7 @@ function App() {
         <Route
           path="/draftinventory"
           element={
-            <Layout>
+            <Layout padding="20px 30px 20px 0px">
               <DraftInventory />
             </Layout>
           }

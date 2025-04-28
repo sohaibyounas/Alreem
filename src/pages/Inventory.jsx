@@ -70,7 +70,7 @@ const Inventory = () => {
       {/* Cards */}
       <Grid container spacing={2}>
         {data.map((item) => (
-          <Grid item size={{xs:12, sm:6, md:3, lg:3}} key={item.id}>
+          <Grid item size={{ xs: 12, sm: 6, md: 3, lg: 3 }} key={item.id}>
             <Card
               sx={{
                 background: 'none',
@@ -93,12 +93,12 @@ const Inventory = () => {
                     position: 'absolute',
                     left: 0,
                     bottom: 0,
-                    width: '55%',
+                    width: '50%',
                     background: '#000',
                     color: '#fff',
                     px: 2,
                     py: 1,
-                    fontSize: '24px',
+                    fontSize: '20px',
                     fontWeight: 500,
                     borderTopRightRadius: '40px',
                   }}
@@ -124,71 +124,69 @@ const Inventory = () => {
       </Grid>
 
       {/* Pagination Grid */}
-      <Box sx={{ display: "none" }}>
-        <Grid sx={{ display: "flex", marginTop: "40px", gap: "10px" }}>
-          <Grid size={4}></Grid>
-          <Grid size={4}>
-            <Pagination
-              count={13}
-              variant="outlined"
-              shape="rounded"
-              hidePrevButton
-              hideNextButton
-              sx={{
-                "& .MuiPaginationItem-root": {
-                  backgroundColor: "#212121",
-                  color: "#fff",
-                },
-                "& .MuiPaginationItem-root.Mui-selected": {
-                  backgroundColor: "#fff",
-                  color: "#000",
-                },
-                "&. hover": {
-                  backgroundColor: "#fff",
-                  color: "#000",
-                },
-              }}
-            />
-          </Grid>
-          <Grid
-            size={4}
-            sx={{ justifyContent: "end", display: "flex", gap: "10px" }}
-          >
-            <IconButton
-              aria-label="backspacearrow"
-              disabled
-              sx={{
-                background: "#212121",
+      <Grid sx={{ display: "flex", marginTop: "40px", gap: "10px" }}>
+        <Grid size={4}></Grid>
+        <Grid size={4}>
+          <Pagination
+            count={13}
+            variant="outlined"
+            shape="rounded"
+            hidePrevButton
+            hideNextButton
+            sx={{
+              "& .MuiPaginationItem-root": {
+                backgroundColor: "#212121",
                 color: "#fff",
-                border: "none",
-                borderRadius: "5px",
-                padding: "0px 15px",
-                fontSize: "16px",
-                outline: "1px solid #3D4348",
-              }}
-            >
-              <KeyboardBackspaceIcon />
-              Previous
-            </IconButton>
-
-            <IconButton
-              aria-label="arrowright"
-              sx={{
-                background: "#212121",
-                color: "#fff",
-                border: "none",
-                borderRadius: "5px",
-                padding: "0px 15px",
-                fontSize: "16px",
-                outline: "1px solid #3D4348",
-              }}
-            >
-              Next
-              <ArrowRightAltIcon />
-            </IconButton>
-          </Grid>
+              },
+              "& .MuiPaginationItem-root.Mui-selected": {
+                backgroundColor: "#fff",
+                color: "#000",
+              },
+              "&. hover": {
+                backgroundColor: "#fff",
+                color: "#000",
+              },
+            }}
+          />
         </Grid>
-      </Box>
+        <Grid
+          size={4}
+          sx={{ justifyContent: "end", display: "flex", gap: "10px" }}
+        >
+          <IconButton
+            aria-label="backspacearrow"
+            disabled
+            sx={{
+              background: "#212121",
+              color: "#fff",
+              border: "none",
+              borderRadius: "5px",
+              padding: "0px 15px",
+              fontSize: "16px",
+              outline: "1px solid #3D4348",
+            }}
+          >
+            <KeyboardBackspaceIcon />
+            Previous
+          </IconButton>
+
+          <IconButton
+            aria-label="arrowright"
+            sx={{
+              background: "#212121",
+              color: "#fff",
+              border: "none",
+              borderRadius: "5px",
+              padding: "0px 15px",
+              fontSize: "16px",
+              outline: "1px solid #3D4348",
+            }}
+          >
+            Next
+            <ArrowRightAltIcon />
+          </IconButton>
+        </Grid>
+      </Grid>
     </>
   );
 };

@@ -3,7 +3,7 @@ import React from "react";
 import Sidebar from "../pages/Sidebar";
 import Navbar from "./Header/Navbar";
 
-const Layout = ({ children, showLink = false, contactSupport = false }) => {
+const Layout = ({ children, showLink = false, contactSupport = false, padding = "20px" }) => {
   return (
     <>
       <Box>
@@ -16,13 +16,13 @@ const Layout = ({ children, showLink = false, contactSupport = false }) => {
             <Box
               sx={{
                 background: "#29292A",
-                padding: "20px",
+                padding: padding,
                 height: showLink
                   ? "calc(100vh - 150px)"
                   : contactSupport
-                  ? "calc(100vh - 100px)"
-                  : "calc(100vh - 110px)"
-                  ,
+                    ? "calc(100vh - 100px)"
+                    : "calc(100vh - 110px)"
+                ,
                 overflowY: "auto",
                 scrollbarWidth: "none",
               }}

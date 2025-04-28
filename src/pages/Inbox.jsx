@@ -1,14 +1,13 @@
-import { Box, Typography } from '@mui/material'
+import { Box, Grid } from '@mui/material'
 import React from 'react'
 
 const Inbox = () => {
   return (
     <>
-    <Box>
-        <Typography>
-            Inbox Page
-        </Typography>
-    </Box>
+      <Box sx={{display:"flex", gap:"10px"}}>
+          <Grid size={8}>Images</Grid>
+          <Grid size={4}>RGB Colors</Grid>
+      </Box>
     </>
   )
 }
