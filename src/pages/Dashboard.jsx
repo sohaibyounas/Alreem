@@ -4,196 +4,136 @@ import TotalOrder from "../assets/images/totalorder.png";
 import TotalSales from "../assets/images/totalsales.png";
 import Orderinque from '../assets/images/orderinque.png';
 import Inventorybox from '../assets/images/inventorybox.png';
+import style from '../assets/style';
 
 const Dashboard = () => {
   return (
     <>
       {/* main box */}
-      <Box sx={{ display: "flex", gap: "20px" }}>
+      <Box sx={style.dashMain}>
         <Box
-          sx={{
-            border: "1px solid #3D4348",
-            borderRadius: "20px",
-            width: "50%",
-          }}
+          sx={style.dashBox}
         >
-          <Box sx={{ display: "flex", gap: "10px", padding: "20px" }}>
+          <Box sx={style.dashInnerBox1}>
             <Box>
-              <img src={TotalOrder} alt="Total Order" style={{ width: "80px" }} />
+              <img src={TotalOrder} alt="Total Order"
+                style={style.dashInnerBox1Img} />
             </Box>
             <Box>
               <Typography
-                sx={{
-                  color: "#fff",
-                  lineHeight: "34px",
-                  paddingTop: "20px",
-                  fontSize: "28px",
-                  fontWeight: "bold",
-                }}
+                sx={style.dashInnerBox1Text}
               >
                 Total Order
               </Typography>
             </Box>
           </Box>
           <Box
-            sx={{
-              display: "flex",
-              gap: "10px",
-              padding: "20px",
-              flexDirection: "column",
-              paddingLeft: "20px"
-            }}
+            sx={style.dashTextBox}
           >
             <Box>
-              <Typography sx={{ color: "#fff", lineHeight: "0px" }}>
+              <Typography sx={style.dashTextBoxDetails}>
                 This month amount of total sold Product
               </Typography>
             </Box>
             <Box>
-              <Typography sx={{ color: "#fff", lineHeight: "40px" }}>
+              <Typography sx={style.dashTextBoxDetails}>
                 0.00 AED
               </Typography>
             </Box>
           </Box>
-        </Box>       
-        <Box
-        sx={{
-          border: "1px solid #3D4348",
-          borderRadius: "20px",
-          width: "50%",
-        }}
-      >
-        <Box sx={{ display: "flex", gap: "10px", padding: "20px" }}>
-          <Box>
-            <img src={TotalSales} alt="Total Order" style={{ width: "80px" }} />
-          </Box>
-          <Box>
-            <Typography
-              sx={{
-                color: "#fff",
-                lineHeight: "34px",
-                paddingTop: "20px",
-                fontSize: "28px",
-                fontWeight: "bold",
-              }}
-            >
-              Total Sales
-            </Typography>
-          </Box>
         </Box>
         <Box
-          sx={{
-            display: "flex",
-            gap: "10px",
-            padding: "20px",
-            flexDirection: "column",
-          }}
+          sx={style.dashSubBox}
         >
-          <Box>
-            <Typography sx={{ color: "#fff", lineHeight: "0px" }}>
-              This month amount of total completed orders.
-            </Typography>
-          </Box>
-          <Box>
-            <Typography sx={{ color: "#fff", lineHeight: "40px" }}>
-              0
-            </Typography>
-          </Box>
-        </Box>
-        </Box>
-      </Box>
-
-      <Box sx={{ display: "flex", gap: "20px", marginTop: "15px" }}>
-        <Box
-          sx={{
-            border: "1px solid #3D4348",
-            borderRadius: "20px",
-            width: "50%",
-          }}
-        >
-          <Box sx={{ display: "flex", gap: "10px", padding: "20px" }}>
+          <Box sx={style.dashInnerBox1}>
             <Box>
-              <img src={Orderinque} alt="Total Order" style={{ width: "80px" }} />
+              <img src={TotalSales} alt="Total Order" style={style.dashInnerBox1Img} />
             </Box>
             <Box>
               <Typography
-                sx={{
-                  color: "#fff",
-                  lineHeight: "34px",
-                  paddingTop: "20px",
-                  fontSize: "28px",
-                  fontWeight: "bold",
-                }}
+                sx={style.dashInnerBox1Text}
+              >
+                Total Sales
+              </Typography>
+            </Box>
+          </Box>
+          <Box
+            sx={style.dashTextBox}
+          >
+            <Box>
+              <Typography sx={style.dashTextBoxDetails}>
+                This month amount of total completed orders.
+              </Typography>
+            </Box>
+            <Box>
+              <Typography sx={style.dashTextBoxDetails}>
+                0
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+
+      <Box sx={style.dashSubBox1Main}>
+        <Box
+          sx={style.dashSubBox}
+        >
+          <Box sx={style.dashInnerBox1}>
+            <Box>
+              <img src={Orderinque} alt="Total Order" style={style.dashInnerBox1Img} />
+            </Box>
+            <Box>
+              <Typography
+                sx={style.dashInnerBox1Text}
               >
                 Order in Que
               </Typography>
             </Box>
           </Box>
           <Box
-            sx={{
-              display: "flex",
-              gap: "10px",
-              padding: "20px",
-              flexDirection: "column",
-              paddingLeft: "20px"
-            }}
+            sx={style.dashTextBox}
           >
             <Box>
-              <Typography sx={{ color: "#fff", lineHeight: "0px" }}>
+              <Typography sx={style.dashTextBoxDetails}>
                 This month amount of total sold Product
               </Typography>
             </Box>
             <Box>
-              <Typography sx={{ color: "#fff", lineHeight: "40px" }}>
+              <Typography sx={style.dashTextBoxDetails}>
                 0
               </Typography>
             </Box>
           </Box>
-        </Box>       
-        <Box
-        sx={{
-          border: "1px solid #3D4348",
-          borderRadius: "20px",
-          width: "50%",
-        }}
-      >
-        <Box sx={{ display: "flex", gap: "10px", padding: "20px" }}>
-          <Box>
-            <img src={Inventorybox} alt="Total Order" style={{ width: "80px" }} />
-          </Box>
-          <Box>
-            <Typography
-              sx={{
-                color: "#fff",
-                lineHeight: "34px",
-                paddingTop: "20px",
-                fontSize: "28px",
-                fontWeight: "bold",
-              }}
-            >
-              Inventory
-            </Typography>
-          </Box>
         </Box>
         <Box
-          sx={{
-            display: "flex",
-            gap: "10px",
-            padding: "20px",
-            flexDirection: "column",
-          }}
+          sx={style.dashSubBox}
         >
-          <Box>
-            <Typography sx={{ color: "#fff", lineHeight: "0px" }}>
-              Number of Products remaining in the inventory section
-            </Typography>
+          <Box sx={style.dashInnerBox1}>
+            <Box>
+              <img src={Inventorybox} alt="Total Order" style={style.dashInnerBox1Img} />
+            </Box>
+            <Box>
+              <Typography
+                sx={style.dashInnerBox1Text}
+              >
+                Inventory
+              </Typography>
+            </Box>
           </Box>
-          <Box>
-            <Typography sx={{ color: "#fff", lineHeight: "40px" }}>
-              0
-            </Typography>
+          <Box
+            sx={style.dashTextBox}
+          >
+            <Box>
+              <Typography sx={style.dashTextBoxDetails}>
+                Number of Products remaining in the inventory section
+              </Typography>
+            </Box>
+            <Box>
+              <Typography sx={style.dashTextBoxDetails}>
+                0
+              </Typography>
+            </Box>
           </Box>
-        </Box>
         </Box>
       </Box>
     </>

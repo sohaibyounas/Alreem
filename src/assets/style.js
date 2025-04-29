@@ -1,5 +1,3 @@
-import { Height } from "@mui/icons-material";
-
 const style = {
     // Home Page
     mainBox: {
@@ -101,7 +99,63 @@ const style = {
     },
 
     // Dashboard Page
+    dashMain: {
+        display: 'flex',
+        gap: '20px',
+    },
 
+    dashBox: {
+        width: '50%',
+        border: '1px solid #3D4348',
+        borderRadius: '20px',
+    },
+
+    dashInnerBox1: {
+        display: 'flex',
+        gap: '10px',
+        padding: '20px',
+    },
+
+    dashInnerBox1Img: {
+        width: '80px',
+        display: 'block',
+    },
+
+    dashInnerBox1Text: {
+        color: '#fff',
+        lineHeight: '34px',
+        paddingTop: '20px',
+        fontSize: '28px',
+        fontWeight: 700,
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    dashTextBox: {
+        display: 'flex',
+        gap: '10px',
+        padding: '20px',
+        flexDirection: 'column',
+    },
+
+    dashTextBoxDetails: {
+        color: '#fff',
+        lineHeight: '24px',
+        fontSize: '16px',
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    dashSubBox: {
+        width: '50%',
+        border: '1px solid #3D4348',
+        borderRadius: '20px',
+    },
+
+    dashSubBox1Main: {
+        display: 'flex',
+        gap: '20px',
+        marginTop: '15px',
+    }
 
 
 }
