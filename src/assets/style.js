@@ -594,6 +594,123 @@ const style = {
         backgroundColor: "#E1D481",
     },
 
+    // Dispute Order Page
+    pageBox: {
+        padding: 2,
+        margin: "0 auto",
+    },
+
+    disputeTabs: {
+        display: "flex",
+        gap: "10px",
+        padding: '6px',
+        border: "1px solid #3D4348",
+        borderRadius: "10px",
+    },
+
+    disputeText: {
+        width: "50%",
+        textAlign: "center",
+        fontSize: "20px",
+        fontWeight: "bold",
+        borderRadius: "10px",
+        padding: "4px",
+        cursor: "pointer",
+        color: "#fff",
+    },
+
+    disputeActiveTab: {
+        color: "#000",
+        background: "#fff",
+    },
+
+    link: {
+        textDecoration: "none",
+    },
+
+    linkText: {
+        padding: 2,
+        marginTop: 3,
+        borderRadius: "10px",
+        border: "1px solid #3D4348",
+    },
+
+    disputeHeader: {
+        paddingBottom: 1,
+    },
+
+    disputeHeaderText: {
+        color: "#EEE692",
+        fontSize: "20px",
+        lineHeight: "29px",
+        fontWeight: 500,
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    disputeDetails: {
+        pt: 1,
+        width: "100%",
+        display: "flex",
+        justifyContent: "space-between",
+    },
+
+    disputeLeftText: {
+        color: "#fff",
+        paddingTop: 0.5,
+        fontSize: "14px",
+        fontWeight: 400,
+        lineHeight: "21px",
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    disputeRightText: {
+        fontSize: "16px",
+        paddingTop: 0.5,
+        textAlign: "end",
+        color: "#F8080F",
+    },
+
+    disputeRightTextActive: {
+        color: "#EEE692",
+    },
+
+    disputeRight: {
+        color: "#EEE692",
+        fontSize: "14px",
+        paddingTop: 0.5,
+        textAlign: "end",
+        fontWeight: 400,
+        lineHeight: "21px",
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    disputeDivider: {
+        mt: 3,
+        margin: "0px",
+        height: "2px",
+        background: "#3D4348",
+    },
+
+    disputeInnerBox: {
+        pt: 2.5,
+        color: "#EEE692",
+        fontSize: "20px",
+        fontWeight: 500,
+        lineHeight: "21px",
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    disputeInnerText: {
+        pt: 1,
+        color: "#fff",
+        fontSize: "16px",
+        fontWeight: 400,
+        lineHeight: "21px",
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+
+
 
 
 }

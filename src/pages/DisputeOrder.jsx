@@ -10,7 +10,7 @@ import React, { useEffect, useState } from "react";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { Link } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
+import style from '../assets/style';
 
 const DisputeOrder = () => {
   const [state, setState] = useState([]);
@@ -21,45 +21,25 @@ const DisputeOrder = () => {
   }, [tab]);
 
   return (
-    <Box sx={{ margin: "0 auto", padding: 2 }}>
+    <Box sx={style.pageBox}>
       {/* Tabs Section */}
       <Box
-        sx={{
-          border: "1px solid #3D4348",
-          borderRadius: "10px",
-          display: "flex",
-          gap: "10px",
-          padding: 2,
-        }}
+        sx={style.disputeTabs}
       >
         <Typography
-          sx={{
-            color: tab === 0 ? "#000" : "#fff",
-            background: tab === 0 ? "#fff" : "transparent",
-            width: "50%",
-            textAlign: "center",
-            fontSize: "20px",
-            fontWeight: "bold",
-            borderRadius: "10px",
-            padding: 1,
-            cursor: "pointer",
-          }}
+          sx={[
+            style.disputeText,
+            tab === 0 && style.disputeActiveTab
+          ]}
           onClick={() => setTab(0)}
         >
           Active
         </Typography>
         <Box
-          sx={{
-            color: tab === 0 ? "#fff" : "#000",
-            background: tab === 0 ? "#29292A": "#fff",
-            width: "50%",
-            textAlign: "center",
-            fontSize: "20px",
-            fontWeight: "bold",
-            borderRadius: "10px",
-            padding: 1,
-            cursor: "pointer",
-          }}
+          sx={[
+            style.disputeText,
+            tab === 1 && style.disputeActiveTab
+          ]}
           onClick={() => setTab(1)}
         >
           Closed
@@ -67,19 +47,14 @@ const DisputeOrder = () => {
       </Box>
 
       {/* Dispute Section */}
-      <Link to="/Userdetail" style={{textDecoration: "none"}}>
+      <Link to="/Userdetail" style={style.link}>
         <Box
-          sx={{
-            border: "1px solid #3D4348",
-            borderRadius: "10px",
-            padding: 2,
-            marginTop: 3,
-          }}
+          sx={style.linkText}
         >
           {/* Dispute Header */}
-          <Box sx={{ paddingBottom: 1 }}>
+          <Box sx={style.disputeHeader}>
             <Typography
-              sx={{ color: "#EEE692", fontSize: "20px", fontWeight: "bold" }}
+              sx={style.disputeHeaderText}
             >
               Order Disputes
             </Typography>
@@ -87,31 +62,22 @@ const DisputeOrder = () => {
 
           {/* Dispute Details */}
           <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              width: "100%",
-              paddingTop: 1,
-            }}
+            sx={style.disputeDetails}
           >
             {/* Left Column: Labels */}
             <Box>
               <Typography
-                sx={{
-                  color: "#EEE692",
-                  fontSize: "16px",
-                  paddingTop: 0.5,
-                }}
+                sx={style.disputeLeftText}
               >
                 Dispute Status:
               </Typography>
               <Typography
-                sx={{ color: "#fff", fontSize: "16px", paddingTop: 0.5 }}
+                sx={style.disputeLeftText}
               >
                 Order ID:
               </Typography>
               <Typography
-                sx={{ color: "#fff", fontSize: "16px", paddingTop: 0.5 }}
+                sx={style.disputeLeftText}
               >
                 Reason of Dispute:
               </Typography>
@@ -120,52 +86,35 @@ const DisputeOrder = () => {
             {/* Right Column: Values */}
             <Box>
               <Typography
-                sx={{
-                  color: tab === 0 ? "#EEE692" : "red",
-                  fontSize: "16px",
-                  paddingTop: 0.5,
-                  textAlign: "end",
-                }}
+                sx={[
+                  style.disputeRightText,
+                  tab === 0 && style.disputeRightTextActive
+                ]}
               >
                 {tab === 0 ? "Active" : "Closed"}
               </Typography>
               <Typography
-                sx={{
-                  color: "#EEE692",
-                  fontSize: "16px",
-                  paddingTop: 0.5,
-                  textAlign: "end",
-                }}
+                sx={style.disputeRight}
               >
                 Alreem-1
               </Typography>
               <Typography
-                sx={{
-                  color: "#EEE692",
-                  fontSize: "16px",
-                  paddingTop: 0.5,
-                  textAlign: "end",
-                }}
+                sx={style.disputeRight}
               >
                 Not Recognized
               </Typography>
             </Box>
           </Box>
           <Divider
-            sx={{ background: "#3D4348", margin: "0px", height: "2px", mt: 3 }}
+            sx={style.disputeDivider}
           />
           <Box>
             <Typography
-              sx={{
-                color: "#EEE692",
-                fontSize: "20px",
-                fontWeight: "bold",
-                pt: 2.5,
-              }}
+              sx={style.disputeInnerBox}
             >
               Describe the Reasons
             </Typography>
-            <Typography sx={{ color: "#fff", pt: 1, fontSize: "16px" }}>
+            <Typography sx={style.disputeInnerText}>
               This Product Usually I am Not Use I Need to Order the New Product.
             </Typography>
           </Box>
@@ -173,19 +122,14 @@ const DisputeOrder = () => {
       </Link>
 
       {/* Dispute Section */}
-      <Link to="/Userdetail" style={{textDecoration: "none"}}>
+      <Link to="/Userdetail" style={style.link}>
         <Box
-          sx={{
-            border: "1px solid #3D4348",
-            borderRadius: "10px",
-            padding: 2,
-            marginTop: 3,
-          }}
+          sx={style.linkText}
         >
           {/* Dispute Header */}
-          <Box sx={{ paddingBottom: 1 }}>
+          <Box sx={style.disputeHeader}>
             <Typography
-              sx={{ color: "#EEE692", fontSize: "20px", fontWeight: "bold" }}
+              sx={style.disputeHeaderText}
             >
               Order Disputes
             </Typography>
@@ -193,27 +137,22 @@ const DisputeOrder = () => {
 
           {/* Dispute Details */}
           <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              width: "100%",
-              paddingTop: 1,
-            }}
+            sx={style.disputeDetails}
           >
             {/* Left Column: Labels */}
             <Box>
               <Typography
-                sx={{ color: "#fff", fontSize: "16px", paddingTop: 0.5 }}
+                sx={style.disputeLeftText}
               >
                 Dispute Status:
               </Typography>
               <Typography
-                sx={{ color: "#fff", fontSize: "16px", paddingTop: 0.5 }}
+                sx={style.disputeLeftText}
               >
                 Order ID:
               </Typography>
               <Typography
-                sx={{ color: "#fff", fontSize: "16px", paddingTop: 0.5 }}
+                sx={style.disputeLeftText}
               >
                 Reason of Dispute:
               </Typography>
@@ -222,52 +161,35 @@ const DisputeOrder = () => {
             {/* Right Column: Values */}
             <Box>
               <Typography
-                sx={{
-                  color: tab === 0 ? "#EEE692" : "red",
-                  fontSize: "16px",
-                  paddingTop: 0.5,
-                  textAlign: "end",
-                }}
+                sx={[
+                  style.disputeRightText,
+                  tab === 0 && style.disputeRightTextActive
+                ]}
               >
                 {tab === 0 ? "Active" : "Closed"}
               </Typography>
               <Typography
-                sx={{
-                  color: "#EEE692",
-                  fontSize: "16px",
-                  paddingTop: 0.5,
-                  textAlign: "end",
-                }}
+                sx={style.disputeRight}
               >
                 Alreem-1
               </Typography>
               <Typography
-                sx={{
-                  color: "#EEE692",
-                  fontSize: "16px",
-                  paddingTop: 0.5,
-                  textAlign: "end",
-                }}
+                sx={style.disputeRight}
               >
                 Not Recognized
               </Typography>
             </Box>
           </Box>
           <Divider
-            sx={{ background: "#3D4348", margin: "0px", height: "2px", mt: 3 }}
+            sx={style.disputeDivider}
           />
           <Box>
             <Typography
-              sx={{
-                color: "#EEE692",
-                fontSize: "20px",
-                fontWeight: "bold",
-                pt: 2.5,
-              }}
+              sx={style.disputeInnerBox}
             >
               Describe the Reasons
             </Typography>
-            <Typography sx={{ color: "#fff", pt: 1, fontSize: "16px" }}>
+            <Typography sx={style.disputeInnerText}>
               This Product Usually I am Not Use I Need to Order the New Product.
             </Typography>
           </Box>
@@ -275,69 +197,40 @@ const DisputeOrder = () => {
       </Link>
 
       {/* Pagination Grid */}
-      <Grid sx={{ display: "flex", marginTop: "40px", gap: "10px" }}>
-        <Grid size={4}></Grid>
-        <Grid size={4}>
-          <Pagination
-            count={13}
-            variant="outlined"
-            shape="rounded"
-            hidePrevButton
-            hideNextButton
-            sx={{
-              "& .MuiPaginationItem-root": {
-                backgroundColor: "#212121",
-                color: "#fff",
-              },
-              "& .MuiPaginationItem-root.Mui-selected": {
-                backgroundColor: "#fff",
-                color: "#000",
-              },
-              "&. hover": {
-                backgroundColor: "#fff",
-                color: "#000",
-              },
-            }}
-          />
-        </Grid>
-        <Grid
-          size={4}
-          sx={{ justifyContent: "end", display: "flex", gap: "10px" }}
-        >
-          <IconButton
-            aria-label="backspacearrow"
-            disabled
-            sx={{
-              background: "#212121",
-              color: "#fff",
-              border: "none",
-              borderRadius: "5px",
-              padding: "0px 15px",
-              fontSize: "16px",
-              outline: "1px solid #3D4348",
-            }}
+      <Grid sx={style.paginationGrid}>
+          <Grid size={4}></Grid>
+          <Grid size={4}>
+            <Pagination
+              count={13}
+              variant="outlined"
+              shape="rounded"
+              hidePrevButton
+              hideNextButton
+              sx={style.pagination}
+            />
+          </Grid>
+          <Grid
+            size={4}
+            sx={style.paginationDetail}
           >
-            <KeyboardBackspaceIcon />
-            Previous
-          </IconButton>
+            <IconButton
+              aria-label="backspacearrow"
+              disabled
+              sx={style.paginationButton}
+            >
+              <KeyboardBackspaceIcon />
+              Previous
+            </IconButton>
 
-          <IconButton
-            aria-label="arrowright"
-            sx={{
-              background: "#212121",
-              color: "#fff",
-              border: "none",
-              borderRadius: "5px",
-              padding: "0px 15px",
-              fontSize: "16px",
-              outline: "1px solid #3D4348",
-            }}
-          >
-            Next
-            <ArrowRightAltIcon />
-          </IconButton>
+            <IconButton
+              aria-label="arrowright"
+              sx={style.paginationButton}
+            >
+              Next
+              <ArrowRightAltIcon />
+            </IconButton>
+          </Grid>
         </Grid>
-      </Grid>
     </Box>
   );
 };

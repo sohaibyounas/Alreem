@@ -53,25 +53,28 @@ const ManageOrder = () => {
           sx={style.grid}
         >
           <ListItem
-            sx={{
-              ...style.tab, ...(tab === 0 ? style.tabActive : {}),
-            }}
+            sx={[
+              style.tab,
+              tab === 0 && style.tabActive,
+            ]}
             onClick={() => setTab(0)}
           >
             Pending
           </ListItem>
           <ListItem
-            sx={{
-              ...style.tab, ...(tab === 1 ? style.tabActive : {}),
-            }}
+            sx={[
+              style.tab,
+              tab === 1 && style.tabActive,
+            ]}
             onClick={() => setTab(1)}
           >
             Completed
           </ListItem>
           <ListItem
-            sx={{
-              ...style.tab, ...(tab === 2 ? style.tabActive : {}),
-            }}
+            sx={[
+              style.tab,
+              tab === 2 && style.tabActive,
+            ]}
             onClick={() => setTab(2)}
           >
             Cancelled
