@@ -46,7 +46,7 @@ function App() {
         <Route
           path="/disputeorder"
           element={
-            <Layout showLink={true}>
+            <Layout>
               <DisputeOrder />
             </Layout>
           }
@@ -91,21 +91,21 @@ function App() {
             </Layout>
           }
         />
-        <Route 
+        <Route
           path="/userdetail"
-          element= {
+          element={
             <Layout showLink={true} contactSupport={true} >
               <Userdetail />
             </Layout>
           }
         />
-        <Route 
-        path="/OpenDisputes"
-        element={
-          <Layout >
-            <OpenDisputes />
-          </Layout>
-        }
+        <Route
+          path="/OpenDisputes"
+          element={
+            <Layout >
+              <OpenDisputes />
+            </Layout>
+          }
         />
       </Routes>
     </Router>

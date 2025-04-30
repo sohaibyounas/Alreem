@@ -8,14 +8,16 @@ import {
 import React from "react";
 import User from "../../assets/images/user.png";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 const Navbar = ({ showLink, contactSupport: showContactSupport }) => {
   const navigate = useNavigate();
 
-  const handleChatClick = () => {
-    navigate("/manageorder");
+  // click to go on desired page & move back
+  const handleBack = (e) => {
+    e.preventDefault(); // Prevent default Link navigation
+    navigate(-1); // Navigate back to the previous page
   };
 
   return (
@@ -114,7 +116,7 @@ const Navbar = ({ showLink, contactSupport: showContactSupport }) => {
               transition: "color 0.3s, transform 0.3s",
             },
           }}
-          onClick={() => handleChatClick()}
+          onClick={handleBack}
         >
           <Icon
             className="back-icon"
@@ -125,10 +127,12 @@ const Navbar = ({ showLink, contactSupport: showContactSupport }) => {
           >
             <KeyboardBackspaceIcon />
           </Icon>
-          <Typography sx={{ color: "#fff" }}>Chat Support</Typography>
+          <Typography sx={{ color: "#fff" }}> Chat Support </Typography>
         </Box>
       )}
-      {/* contact support */}
+
+      {/* contact support Link*/}
+
       {/* Divider only on user detail page */}
       {showContactSupport && (
         <Divider
@@ -139,7 +143,7 @@ const Navbar = ({ showLink, contactSupport: showContactSupport }) => {
       {/* contact support */}
       {showContactSupport &&
         (
-          <Box sx={{ width: "100%", background: "#212121", display: "flex", justifyContent: "space-between", alignItems: "center", cursor:"pointer" }}
+          <Box sx={{ width: "100%", background: "#212121", display: "flex", justifyContent: "space-between", alignItems: "center", cursor: "pointer" }}
             onClick={() => navigate("/OpenDisputes")}
           >
             <Typography sx={{ background: "#212121", color: "#EEE692", fontSize: "16px", py: 2 }}>
