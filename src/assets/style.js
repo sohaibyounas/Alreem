@@ -712,7 +712,7 @@ const style = {
     // User Detail Page
     box: {
         p: 1,
-        border: "1px solid grey",
+        border: "1px solid #3D4348",
         borderRadius: "10px",
     },
 
@@ -779,6 +779,320 @@ const style = {
         p: 1,
         color: "#fff",
     },
+
+
+    // Open Dispute Page
+    openBox: {
+        borderRadius: "10px",
+        border: "1px solid #3D4348",
+    },
+
+    alreem: {
+        p: 2,
+        display: "flex",
+        justifyContent: "space-between",
+    },
+
+    alreemCard: {
+        background: "none",
+        boxShadow: "none",
+        display: "flex",
+        justifyContent: "center",
+        flexDirection: "column",
+        alignItems: "center",
+    },
+
+    alreemMedia: {
+        width: "200px",
+        height: "200px",
+        borderRadius: "50%",
+        background: "#111111",
+    },
+
+    alreemLogo: {
+        width: "180px",
+        height: "auto",
+        padding: "40px 25px 20px 11px",
+    },
+
+    alreemText: {
+        color: "#fff",
+        textAlign: 'center',
+        marginTop: '20px',
+        fontSize: '16px',
+        fontWeight: 400,
+        lineHeight: "24px",
+        width: "50%",
+    },
+
+    alreemIcon: {
+        position: "absolute",
+        top: 8,
+        right: 8,
+        color: "#fff", fontSize: "20px",
+        '&:hover': { backgroundColor: 'transparent' },
+    },
+
+    disputeBox: {
+        width: "25%",
+        margin: '10px 0px 20px 350px',
+        backgroundColor: '#29292A',
+        padding: '8px 16px',
+        display: 'flex',
+        alignItems: 'center',
+        borderRadius: '20px',
+        border: "1px solid #3D4348",
+    },
+
+    disputeButton: {
+        gap: "10px",
+        height: '20px',
+        borderRadius: '50%',
+        display: "flex",
+        alignItems: "center",
+        justifyItems: "center",
+        paddingLeft: "30px",
+    },
+
+    disputeIcon: {
+        color: "#fff",
+        fontSize: "20px",
+    },
+
+    disputeText: {
+        color: '#fff',
+        fontSize: '13px',
+        fontWeight: "400",
+        lineHeight: "18px",
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    alreemDivider: {
+        margin: "0px",
+        height: "3px",
+        background: "#3D4348",
+    },
+
+    Avatar: {
+        display: "flex",
+        justifyContent: "space-between",
+    },
+
+    avatarBox: {
+        gap: "10px",
+        display: "flex",
+        padding: "30px  0px 20px 7px",
+    },
+
+    avatarIcon: {
+        mt: 17,
+    },
+
+    avatarCard: {
+        background: "none",
+        boxShadow: "none",
+    },
+
+    avatarMedia: {
+        width: "170px",
+    },
+
+    avatarText: {
+        color: "grey",
+    },
+
+    avatarTextColor: {
+        color: "#fff",
+    },
+
+    avatarTextColor2: {
+        color: "#EEE692",
+    },
+
+    message: {
+        pt: 30,
+        gap: "12px",
+        display: "flex",
+        justifyContent: "space-between",
+    },
+
+    inbox: {
+        p: 1,
+        borderRadius: "10px",
+        border: "1px solid #3D4348",
+    },
+
+    inboxText: {
+        color: "#fff",
+        fontSize: "14px",
+        fontWeight: "400",
+        lineHeight: "18px",
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    inboxSubbox: {
+        textAlign: "end",
+    },
+
+    inboxSubText: {
+        pt: 1,
+        color: "#909090",
+        textAlign: "end",
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    inboxSubTex1: {
+        color: "#fff",
+        fontSize: "14px",
+        fontWeight: "400",
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    inboxSubTex2: {
+        color: "#EEE692",
+        fontSize: "14px",
+        fontWeight: "400",
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    avatarImg: {
+        width: "50px",
+    },
+
+    textField: {
+        pt: 2,
+        pr: 1,
+        gap: "10px",
+        background: "#111111",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+    },
+
+    textFieldDetail: {
+        pr: 1,
+        pt: 2,
+        gap: "10px",
+        background: "#111111",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+    },
+
+    textFieldText: {
+        background: "#000", color: "#fff", width: "100%", height: "40px", m: 1.5, borderRadius: "10px",
+        '& .MuiInputBase-input': {
+            color: "#fff",
+            padding: "10px",
+        },
+        '& .MuiInputBase-input::placeholder': {
+            color: "#fff",
+            opacity: 0.7,
+        },
+    },
+
+    iconbox: {
+        display: "flex",
+        gap: "5px",
+    },
+
+    iconButton: {
+        p: 1,
+        border: "1px solid grey",
+        borderRadius: "10px",
+    },
+
+    icon: {
+        color: "#EEE692",
+        fontSize: "20px",
+    },
+
+    iconClick: {
+        p: 1,
+        border: "1px solid grey",
+        borderRadius: "10px",
+    },
+
+    sendIcon: {
+        color: "#EEE692",
+    },
+
+    // Dialog Box
+    dialog: {
+        '& .MuiPaper-root': {
+            bgcolor: '#29292A',
+            color: '#fff',
+            borderRadius: "10px",
+            minWidth: 320,
+            maxWidth: 450,
+            ml: 30,
+        }
+    },
+
+    dialogbox: {
+        py: 2,
+        textAlign: 'center',
+    },
+
+    dialogboxText: {
+        color: '#EEE677',
+        fontWeight: 400,
+        fontSize: "16px",
+        lineHeight: "24px",
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    dialogInner: {
+        p: 2,
+        borderTop: '1px solid #3d4348',
+        borderBottom: '1px solid #3d4348',
+    },
+
+    dialogInnerText: {
+        align: "center",
+        fontSize: "14px",
+        lineHeight: "24px",
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    dialogText: {
+        py: 2,
+        borderBottom: '1px solid #3d4348',
+    },
+
+    dialogTextButton: {
+        color: '#fff',
+        fontSize: "14px",
+        lineHeight: "24px",
+        fontFamily: '"Poppins", sans-serif',
+        '&:hover': {
+            bgcolor: 'rgba(255, 255, 255, 0.08)',
+        },
+    },
+
+        dialogButton2Style: {
+            py: 2,
+        },
+
+        dialogButton: {
+            color: '#f44336',
+            fontSize: "14px",
+            lineHeight: "24px",
+            fontFamily: '"Poppins", sans-serif',
+            '&:hover': {
+                bgcolor: 'rgba(244, 67, 54, 0.08)',
+            },
+    },
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -8,6 +8,7 @@ import GoldenRing from '../assets/images/Golden-Ring.png';
 import Shopping from '../assets/images/shoping.jfif';
 import AttachFileIcon from '@mui/icons-material/AttachFile';
 import SendIcon from '@mui/icons-material/Send';
+import style from '../assets/style';
 
 const OpenDisputes = () => {
     const [inputValue, setInputValue] = useState('');
@@ -35,141 +36,119 @@ const OpenDisputes = () => {
     };
 
     return (
-        <Box sx={{ border: "1px solid #3D4348", borderRadius: "10px" }}>
+        <Box sx={style.openBox}>
+            {/* alreem logo & text */}
             <Box>
-                <Box sx={{ display: "flex", justifyContent: "space-between", py: 2, px: 2 }}>
-                    <Card sx={{ background: "none", boxShadow: "none", display: "flex", justifyContent: "center", flexDirection: "column", alignItems: "center" }}>
-                        <CardMedia sx={{ background: "#111111", width: "200px", height: "200px", borderRadius: "50%", }}>
-                            <img src={Logo} alt="LOGO" style={{ width: "180px", height: "auto", padding: "40px 25px 20px 11px" }} />
+                {/* Alreem icon & Text */}
+                <Box sx={style.alreem}>
+                    <Card sx={style.alreemCard}>
+                        <CardMedia sx={style.alreemMedia}>
+                            <img src={Logo} alt="LOGO" style={style.alreemLogo} />
                         </CardMedia>
                         {/* Text Section */}
-                        <Typography sx={{
-                            color: "#fff", textAlign: 'center',
-                            marginTop: '20px',
-                            fontSize: '16px',
-                            fontWeight: 400,
-                            lineHeight: "24px",
-                            width: "50%",
-                        }}>
+                        <Typography sx={style.alreemText}>
                             Welcome to Alreem Chat Support. Seller and buyer are requested to resolve their dispute via chat support. In case of no solution contact admin in the chat.
                         </Typography>
                     </Card>
                     <IconButton onClick={handleOpenDialog}>
-                        <MoreVertIcon sx={{ 
-                            position: "absolute",
-                            top: 8,
-                            right: 8,
-                            color: "#fff", fontSize: "20px",
-                            '&:hover': { backgroundColor: 'transparent' }
-                            }} />
+                        <MoreVertIcon sx={style.alreemIcon} />
                     </IconButton>
                 </Box>
+
                 {/* Dispute Button */}
-                <Box sx={{
-                    margin: '10px 0px 20px 350px',
-                    backgroundColor: '#29292A',
-                    borderRadius: '20px',
-                    border: "1px solid #3D4348",
-                    padding: '8px 16px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    width: "25%",
-                }}>
-                    <Box sx={{
-                        height: '20px',
-                        borderRadius: '50%',
-                        display: "flex",
-                        alignItems: "center",
-                        justifyItems: "center",
-                        paddingLeft: "30px",
-                        gap:"10px"
-                    }}>
+                <Box sx={style.disputeBox}>
+                    <Box sx={style.disputeButton}>
                         <Icon>
-                            <InfoOutlineRoundedIcon sx={{ color: "#fff", fontSize: "20px" }} />
+                            <InfoOutlineRoundedIcon sx={style.disputeIcon} />
                         </Icon>
-                        <Typography sx={{ color: '#fff', fontSize: '14px' }}>
+                        <Typography sx={style.disputeText}>
                             Seller has opened a dispute
                         </Typography>
                     </Box>
                 </Box>
             </Box>
+
             <Divider
-                sx={{ background: "#3D4348", margin: "0px", height: "3px" }}
+                sx={style.alreemDivider}
             />
-            <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+
+            <Box sx={style.Avatar}>
                 {/* avatar + image */}
-                <Box sx={{ padding: "30px  0px 20px 7px", display: "flex", gap: "10px" }}>
-                    <Avatar alt='Buyer' src={Buyer} sx={{ mt: 17 }}>
+                <Box sx={style.avatarBox}>
+                    <Avatar alt='Buyer' src={Buyer} sx={style.avatarIcon}>
                     </Avatar>
-                    <Card sx={{ background: "none", boxShadow: "none" }}>
+                    <Card sx={style.avatarCard}>
                         <CardMedia>
                             <img src={GoldenRing} alt="Golden Ring"
-                                style={{
-                                    width: "170px",
-                                }} />
+                                style={style.avatarMedia} />
                         </CardMedia>
-                        <Typography sx={{ color: "grey" }}>
-                            09:01 am <span style={{ color: "#fff" }}>Michel</span> <span style={{ color: "#EEE692" }}>Buyer</span>
+                        <Typography
+                            sx={style.avatarText}
+                        >
+                            09:01 am
+                            <span style={style.avatarTextColor}>
+                                Michel
+                            </span>
+                            <span style={style.avatarTextColor2}>
+                                Buyer
+                            </span>
                         </Typography>
                     </Card>
                 </Box>
+
                 {/* message */}
-                <Box sx={{ display: "flex", justifyContent: "space-between", gap: "12px", pt: 30 }}>
+                <Box sx={style.message}>
                     {/* inbox */}
                     <Box>
-                        <Box sx={{ border: "1px solid #3D4348", borderRadius: "10px", p: 1 }}>
-                            <Typography sx={{ color: "#fff" }}>
+                        <Box sx={style.inbox}>
+                            <Typography sx={style.inboxText}>
                                 What is any reason this product is in dispute?
                             </Typography>
                         </Box>
-                        <Box>
-                            <Typography sx={{ color: "#fff", textAlign: "end", pt: 1 }}>
-                                09:01 am <span style={{ color: "#fff" }}>David</span> <span style={{ color: "#EEE692" }}>Seller</span>
+                        <Box sx={style.inboxSubbox}>
+                            <Typography sx={style.inboxSubText}>
+                                09:01 am
+                                <span style={style.inboxSubTex1}>
+                                    David
+                                </span>
+                                <span style={style.inboxSubTex2}>
+                                    Seller
+                                </span>
                             </Typography>
                         </Box>
                     </Box>
                     {/* avatar */}
                     <Box>
                         <Avatar sx={{ mt: 2 }}>
-                            <img src={Shopping} alt="Shopping" style={{ width: "50px" }} />
+                            <img src={Shopping} alt="Shopping" style={style.avatarImg} />
                         </Avatar>
                     </Box>
                 </Box>
             </Box>
+
             {/* text field */}
             <Box
-                sx={{
-                    background: "#111111", display: "flex", pt: 2, alignItems: "center", justifyContent: "space-between", gap: "10px", pr: 1
-                }}>
+                sx={style.textFieldDetail}>
                 <TextField
                     placeholder="Type message..."
                     value={inputValue}
                     onChange={handleInputChange}
-                    onKeyPress={(e) => {
+                    onKeyDown={(e) => {
                         if (e.key === 'Enter') {
                             handleSendMessage();
                         }
                     }}
-                    sx={{
-                        background: "#000", color: "#fff", width: "100%", height: "40px", m: 1.5, borderRadius: "10px",
-                        '& .MuiInputBase-input': {
-                            color: "#fff",
-                            padding: "10px",
-                        },
-                        '& .MuiInputBase-input::placeholder': {
-                            color: "#fff",
-                            opacity: 0.7,
-                        },
-                    }}
+                    sx={style.textFieldText}
                 />
 
                 {/* icon */}
-                <Box sx={{ display: "flex", gap: "5px" }}>
-                    <IconButton sx={{ border: "1px solid grey", borderRadius: "10px", p: 1 }}>
-                        <AttachFileIcon sx={{ color: "#EEE692", fontSize: "20px" }} />
+                <Box sx={style.iconbox}>
+                    <IconButton sx={style.iconButton}>
+                        <AttachFileIcon sx={style.icon} />
                     </IconButton>
-                    <IconButton onClick={handleSendMessage} sx={{ border: "1px solid grey", borderRadius: "10px", p: 1 }}>
-                        <SendIcon sx={{ color: "#EEE692" }} />
+                    <IconButton onClick={handleSendMessage}
+                        sx={style.iconClick}>
+                        <SendIcon sx={style.sendIcon} />
                     </IconButton>
                 </Box>
             </Box>
@@ -177,60 +156,33 @@ const OpenDisputes = () => {
             <Dialog
                 open={openDialog}
                 onClose={handleCloseDialog}
-                PaperProps={{
-                    sx: {
-                        bgcolor: '#29292A',
-                        color: '#fff',
-                        borderRadius: "2px",
-                        minWidth: 320,
-                        maxWidth: 380
-                    }
-                }}
+                sx={style.dialog}
             >
-                <Box sx={{ textAlign: 'center', py: 2 }}>
-                    <Typography sx={{ color: '#EEE677', fontWeight: 500 }}>
+                <Box sx={style.dialogbox}>
+                    <Typography sx={style.dialogboxText}>
                         Invite Admin
                     </Typography>
                 </Box>
-                <Box sx={{
-                    borderTop: '1px solid #3d4348',
-                    borderBottom: '1px solid #3d4348',
-                    p: 2,
-                }}>
-                    <Typography align="center" sx={{ fontSize: "14px" }}>
+                <Box sx={style.dialogInner}>
+                    <Typography sx={style.dialogInnerText}>
                         Are you sure you want to invite the admin to this chat?
                     </Typography>
                 </Box>
-                <Box sx={{
-                    borderBottom: '1px solid #3d4348',
-                    py: 2
-                }}>
+                <Box sx={style.dialogText}>
                     <Button
                         fullWidth
-                        sx={{
-                            color: '#fff',
-                            fontSize: "14px",
-                            '&:hover': {
-                                bgcolor: 'rgba(255, 255, 255, 0.08)'
-                            }
-                        }}
+                        sx={style.dialogTextButton}
                     >
                         Yes, invite
                     </Button>
                 </Box>
-                <Box sx={{ py: 2 }}>
+                <Box sx={style.dialogButton2Style}>
                     <Button
                         fullWidth
                         onClick={handleCloseDialog}
-                        sx={{
-                            color: '#f44336',
-                            fontSize: "14px",
-                            '&:hover': {
-                                bgcolor: 'rgba(244, 67, 54, 0.08)'
-                            }
-                        }}
+                        sx={style.dialogButton}
                     >
-                        cancel
+                        Cancel
                     </Button>
                 </Box>
             </Dialog>
