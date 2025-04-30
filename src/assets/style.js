@@ -306,5 +306,295 @@ const style = {
         outline: '1px solid #3D4348',
     },
 
+    // Details Page
+    mainDetailBox: {
+        display: 'flex',
+        gap: '25px',
+        width: '100%',
+    },
+
+    // Grid 1 
+    mainGrid1: {
+        border: '1px solid #3D4348',
+        borderRadius: '10px',
+    },
+
+    // Cards
+    card: {
+        background: "none",
+        boxShadow: "none",
+    },
+
+    cardText: {
+        color: "#EEE692",
+        fontSize: "20px",
+        fontWeight: 700,
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    cardMedia: {
+        width: "65px",
+        paddingLeft: "15px",
+        display: "block",
+    },
+
+    cardDetail: {
+        display: "flex",
+        justifyContent: "space-between",
+    },
+
+    cardInnerText: {
+        textAlign: "start",
+        color: "#909090",
+    },
+
+    // left side text
+    textDetail: {
+        padding: "0px 0px 10px 10px",
+        fontSize: "14px",
+        lineHeight: "21px",
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    // right side text
+    textDetail2: {
+        padding: "0px 10px 0px 0px",
+        fontSize: "14px",
+        lineHeight: "21px",
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    cardRightText: {
+        textAlign: "end",
+        color: "#fff",
+        fontSize: "14px",
+    },
+
+    divider: {
+        background: "#3D4348",
+        margin: "0px",
+        height: "3px",
+        mx: 2,
+    },
+
+    card1: {
+        background: "none",
+        boxShadow: "none",
+        padding: "10px",
+    },
+
+    cardimg: {
+        width: "65px",
+        paddingLeft: "5px",
+        display: "block",
+    },
+
+    cardInnerText2: {
+        textAlign: "start",
+        color: "#909090",
+        fontSize: "14px",
+        p: "10px 0px",
+    },
+
+    card2inner: {
+        textAlign: "end",
+        color: "#fff",
+        fontSize: "14px",
+        pr: "0",
+    },
+
+    card3: {
+        p: 2,
+        background: "none",
+        boxShadow: "none",
+    },
+
+    card3Img: {
+        width: "65px",
+        display: "block",
+    },
+
+    card3InnerText: {
+        textAlign: "start",
+        color: "#909090",
+        fontSize: "14px",
+        p: "10px 0px 0px 0px",
+    },
+
+    textDetail2: {
+        padding: "0px 0px 10px 0px",
+        fontSize: "14px",
+        lineHeight: "21px",
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    // Grid 2 Order Info
+    grid2: {
+        ps: 1,
+        pr: 2,
+        borderRadius: "10px",
+        border: "1px solid #3D4348",
+    },
+
+    buyerCard: {
+        background: "none",
+        boxShadow: "none",
+        paddingBottom: "0px",
+    },
+
+    buyerCardText: {
+        fontSize: "20px",
+        lineHeight: "24px",
+        fontWeight: "700",
+        color: "#EEE692",
+        padding: "10px 0px 0px 15px",
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    buyerDetail: {
+        padding: "10px 0px 0px 10px",
+        alignItems: "center",
+    },
+
+    buyerMedia: {
+        display: "flex",
+        gap: "10px",
+    },
+
+    buyerIcon: {
+        width: "2rem",
+        height: "2rem",
+    },
+
+    buyerIconDetail: {
+        color: "#EEE692",
+        fontSize: "20px",
+        backgroundColor: "#5E5C43",
+        borderRadius: "50%",
+        padding: "5px",
+    },
+
+    buyerText: {
+        fontSize: "20px",
+        lineHeight: "24px",
+        color: "#fff",
+        fontWeight: 500,
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    buyerBox: {
+        display: "flex",
+        justifyContent: "space-between",
+    },
+
+    buyerTextCard: {
+        textAlign: "start",
+        color: "#909090",
+    },
+
+    leftText: {
+        padding: "10px 0px 0px 0px",
+        lineHeight: "21px",
+        fontSize: "14px",
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    rightText: {
+        textAlign: "end",
+        color: "#fff",
+        fontSize: "14px",
+        padding: "10px 0px 0px 10px",
+        paddingBottom: "0 !important",
+    },
+
+    // Order Placed
+    order: {
+        p: 1,
+        m: 1.5,
+        border: "1px solid #3D4348",
+        borderRadius: "10px",
+    },
+
+    orderCard: {
+        display: "flex",
+        gap: "10px",
+        background: "none",
+        boxShadow: "none",
+        alignItems: "center",
+        justifyContent: "space-between",
+    },
+
+    orderCardBox: {
+        display: "flex",
+        alignItems: "center",
+        gap: "8px",
+    },
+
+    orderCardMedia: {
+        display: "flex",
+        gap: "8px",
+    },
+
+    orderCardIcon: {
+        color: "#000",
+        fontSize: "18px",
+        backgroundColor: "#EEE692",
+        borderRadius: "50%",
+        padding: "5px",
+        border: "2px solid #73704e",
+    },
+
+    orderIcon: {
+        color: "#EEE692",
+        fontSize: "30px",
+        backgroundColor: "#5E5C43",
+        borderRadius: "50%",
+    },
+
+    orderCardText: {
+        color: "#fff",
+        fontSize: "14px",
+        lineHeight: "21px",
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    orderText: {
+        color: "#fff",
+    },
+
+    // Order Accept/Reject
+    orderBox: {
+        p: 2,
+        display: "flex",
+        gap: "10px",
+    },
+
+    orderButton: {
+        color: "#fff",
+        fontWeight: "bold",
+        padding: "10px 33px",
+        borderRadius: "10px",
+        border: "1px solid #3D4348",
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    acceptButton: {
+        color: "#000",
+        fontWeight: "bold",
+        fontSize: "14px",
+        lineHeight: "25px",
+        padding: "10px 36px",
+        borderRadius: "10px",
+        border: "1px solid #3D4348",
+        backgroundColor: "#E1D481",
+    },
+
+
+
 }
 export default style;

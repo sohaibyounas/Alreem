@@ -19,21 +19,22 @@ import PaymentRoundedIcon from "@mui/icons-material/PaymentRounded";
 import LocalShippingRoundedIcon from "@mui/icons-material/LocalShippingRounded";
 import CheckOutlinedIcon from "@mui/icons-material/CheckOutlined";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import style from "../assets/style";
 
 const Detail = () => {
   return (
     <>
-      <Box sx={{ display: "flex", gap: "25px", width: "100%" }}>
+      <Box sx={style.mainDetailBox}>
         {/* Order Detail */}
         <Grid
           size={7}
-          sx={{ border: "1px solid #3D4348", borderRadius: "10px" }}
+          sx={style.mainGrid1}
         >
-          {/* card */}
-          <Card sx={{ background: "none", boxShadow: "none" }}>
+          {/* card 1 */}
+          <Card sx={style.card}>
             <CardContent>
               <Typography
-                sx={{ color: "#EEE692", fontSize: "20px", fontWeight: "bold" }}
+                sx={style.cardText}
               >
                 Order Detail
               </Typography>
@@ -42,176 +43,153 @@ const Detail = () => {
               <img
                 src={Shoe}
                 alt="shoe"
-                style={{ width: "65px", paddingLeft: "15px" }}
+                style={style.cardMedia}
               />
             </CardMedia>
-            <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+            <Box sx={style.cardDetail}>
               <CardContent
-                sx={{ textAlign: "start", color: "#909090", fontSize: "14px" }}
+                sx={style.cardInnerText}
               >
-                <Typography sx={{ lineHeight: "30px" }}>
-                  Product Name
-                </Typography>
-                <Typography sx={{ lineHeight: "30px" }}>Price</Typography>
-                <Typography sx={{ lineHeight: "30px" }}>Quantity</Typography>
-                <Typography sx={{ lineHeight: "30px" }}>Size</Typography>
-                <Typography sx={{ lineHeight: "30px" }}>Color</Typography>
+                <Typography sx={style.textDetail2}>Product Name</Typography>
+                <Typography sx={style.textDetail2}>Price</Typography>
+                <Typography sx={style.textDetail2}>Quantity</Typography>
+                <Typography sx={style.textDetail2}>Size</Typography>
+                <Typography sx={style.textDetail2}>Color</Typography>
               </CardContent>
               <CardContent
-                sx={{ textAlign: "end", color: "#fff", fontSize: "14px" }}
+                sx={style.cardRightText}
               >
-                <Typography sx={{ lineHeight: "30px" }}>
+                <Typography sx={style.textDetail}>
                   Vitality vibeshoes
                 </Typography>
-                <Typography sx={{ lineHeight: "30px" }}>AED500</Typography>
-                <Typography sx={{ lineHeight: "30px" }}>1</Typography>
-                <Typography sx={{ lineHeight: "30px" }}>40</Typography>
-                <Typography sx={{ lineHeight: "30px" }}>Pink</Typography>
+                <Typography sx={style.textDetail2}>AED500</Typography>
+                <Typography sx={style.textDetail2}>1</Typography>
+                <Typography sx={style.textDetail2}>40</Typography>
+                <Typography sx={style.textDetail2}>Pink</Typography>
               </CardContent>
             </Box>
           </Card>
           <Divider
-            sx={{ background: "#3D4348", margin: "0px", height: "3px", mx: 2 }}
+            sx={style.divider}
           />
-          <Card sx={{ background: "none", p: 2, boxShadow: "none" }}>
+
+          {/* card 2 */}
+          <Card sx={style.card1}>
             <CardMedia>
               <img
                 src={PowerBank}
                 alt="PowerBank"
-                style={{ width: "65px" }}
+                style={style.cardimg}
               />
             </CardMedia>
-            <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+            <Box sx={style.cardDetail}>
               <CardContent
-                sx={{ textAlign: "start", color: "#909090", fontSize: "14px", p: "0 !important" }}
+                sx={style.cardInnerText2}
               >
-                <Typography sx={{ lineHeight: "30px" }}>
-                  Product Name
-                </Typography>
-                <Typography sx={{ lineHeight: "30px" }}>Price</Typography>
-                <Typography sx={{ lineHeight: "30px" }}>Quantity</Typography>
-                <Typography sx={{ lineHeight: "30px" }}>Size</Typography>
+                <Typography sx={style.textDetail}>Product Name</Typography>
+                <Typography sx={style.textDetail}>Price</Typography>
+                <Typography sx={style.textDetail}>Quantity</Typography>
+                <Typography sx={style.textDetail}>Size</Typography>
               </CardContent>
               <CardContent
-                sx={{ textAlign: "end", color: "#fff", fontSize: "14px", pr: "0 !important" }}
+                sx={style.card2inner}
               >
-                <Typography sx={{ lineHeight: "30px" }}>Power Bank</Typography>
-                <Typography sx={{ lineHeight: "30px" }}>AED350</Typography>
-                <Typography sx={{ lineHeight: "30px" }}>1</Typography>
-                <Typography sx={{ lineHeight: "30px" }}>40</Typography>
+                <Typography sx={style.textDetail2}>Power Bank</Typography>
+                <Typography sx={style.textDetail2}>AED350</Typography>
+                <Typography sx={style.textDetail2}>1</Typography>
+                <Typography sx={style.textDetail2}>40</Typography>
               </CardContent>
             </Box>
           </Card>
           <Divider
-            sx={{ background: "#3D4348", margin: "0px", height: "3px", mx: 2 }}
+            sx={style.divider}
           />
-          <Card sx={{ background: "none", p: 2, boxShadow: "none" }}>
+
+          {/* card3 */}
+          <Card sx={style.card3}>
             <CardMedia>
               <img
                 src={GoldenRing}
                 alt="GoldenRing"
-                style={{ width: "65px" }}
+                style={style.card3Img}
               />
             </CardMedia>
-            <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+            <Box sx={style.cardDetail}>
               <CardContent
-                sx={{ textAlign: "start", color: "#909090", fontSize: "14px", p: "0 !important" }}
+                sx={style.card3InnerText}
               >
-                <Typography sx={{ lineHeight: "30px" }}>
+                <Typography sx={style.textDetail2}>
                   Product Name
                 </Typography>
-                <Typography sx={{ lineHeight: "30px" }}>Price</Typography>
-                <Typography sx={{ lineHeight: "30px" }}>Quantity</Typography>
-                <Typography sx={{ lineHeight: "30px" }}>Size</Typography>
+                <Typography sx={style.textDetail2}>Price</Typography>
+                <Typography sx={style.textDetail2}>Quantity</Typography>
+                <Typography sx={style.textDetail2}>Size</Typography>
               </CardContent>
               <CardContent
-                sx={{ textAlign: "end", color: "#fff", fontSize: "14px", pr: "0 !important" }}
+                sx={style.card2inner}
               >
-                <Typography sx={{ lineHeight: "30px" }}>Power Bank</Typography>
-                <Typography sx={{ lineHeight: "30px" }}>AED350</Typography>
-                <Typography sx={{ lineHeight: "30px" }}>1</Typography>
-                <Typography sx={{ lineHeight: "30px" }}>40</Typography>
+                <Typography sx={style.textDetail2}>Power Bank</Typography>
+                <Typography sx={style.textDetail2}>AED350</Typography>
+                <Typography sx={style.textDetail2}>1</Typography>
+                <Typography sx={style.textDetail2}>40</Typography>
               </CardContent>
             </Box>
           </Card>
           <Divider
-            sx={{ background: "#3D4348", margin: "0px", height: "3px", mx: 2, mb: 4 }}
+            sx={style.divider}
           />
         </Grid>
 
         {/* Order Info */}
         <Grid
           size={5}
-          sx={{ border: "1px solid #3D4348", borderRadius: "10px", pr: 2, ps: 1 }}
+          sx={style.grid2}
         >
           {/* Buyer info */}
           <Box>
             <Card
-              sx={{
-                background: "none",
-                boxShadow: "none",
-                paddingBottom: "0px",
-              }}
+              sx={style.buyerCard}
             >
               <Typography
-                sx={{
-                  fontSize: "20px",
-                  fontWeight: "bold",
-                  color: "#EEE692",
-                  padding: "10px 0px 0px 15px",
-                }}
+                sx={style.buyerCardText}
               >
                 Order Info
               </Typography>
               {/*buyer details  */}
               <CardContent
-                sx={{ padding: "10px 0px 0px 10px", alignItems: "center" }}
+                sx={style.buyerDetail}
               >
-                <CardMedia sx={{ display: "flex", gap: "10px" }}>
-                  <Icon sx={{ width: "2rem", height: "2rem" }}>
+                <CardMedia sx={style.buyerMedia}>
+                  <Icon sx={style.buyerIcon}>
                     <PersonRoundedIcon
-                      sx={{
-                        color: "#EEE692",
-                        fontSize: "20px",
-                        backgroundColor: "#5E5C43",
-                        borderRadius: "50%",
-                        padding: "5px",
-                      }}
+                      sx={style.buyerIconDetail}
                     />
                   </Icon>
                   <Typography
-                    sx={{ fontSize: "20px", color: "#fff", fontWeight: "bold" }}
+                    sx={style.buyerText}
                   >
                     Buyer Details
                   </Typography>
                 </CardMedia>
               </CardContent>
 
-              <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+              {/* Buyer Text */}
+              <Box sx={style.buyerBox}>
                 <CardContent
-                  sx={{
-                    textAlign: "start",
-                    color: "#909090",
-                    fontSize: "14px",
-                    padding: "10px 0px 0px 10px",
-                  }}
+                  sx={style.buyerTextCard}
                 >
-                  <Typography sx={{ lineHeight: "35px" }}> Name </Typography>
-                  <Typography sx={{ lineHeight: "35px" }}>
+                  <Typography sx={style.leftText}>
+                    Name
+                  </Typography>
+                  <Typography sx={style.leftText}>
                     Phone Number
                   </Typography>
-                  <Typography sx={{ lineHeight: "35px" }}>
+                  <Typography sx={style.leftText}>
                     Email Address
                   </Typography>
                 </CardContent>
                 <CardContent
-                  sx={{
-                    textAlign: "end",
-                    color: "#fff",
-                    fontSize: "14px",
-                    padding: "10px 0px 0px 10px",
-                    paddingBottom: "0 !important",
-                  }}
+                  sx={style.rightText}
                 >
                   <Typography sx={{ lineHeight: "35px" }}>
                     Michael Jorden
@@ -225,98 +203,73 @@ const Detail = () => {
                 </CardContent>
               </Box>
             </Card>
+
             {/* Payment info */}
-            <Card sx={{ background: "none", boxShadow: "none" }}>
+            <Card sx={style.card}>
               {/*payment details  */}
               <CardContent
-                sx={{ padding: "10px 0px 0px 10px", alignItems: "center" }}
+                sx={style.buyerDetail}
               >
-                <CardMedia sx={{ display: "flex", gap: "10px" }}>
-                  <Icon sx={{ width: "2rem", height: "2rem" }}>
+                <CardMedia sx={style.buyerMedia}>
+                  <Icon sx={style.buyerIcon}>
                     <PaymentRoundedIcon
-                      sx={{
-                        color: "#EEE692",
-                        fontSize: "20px",
-                        backgroundColor: "#5E5C43",
-                        borderRadius: "50%",
-                        padding: "5px",
-                      }}
+                      sx={style.buyerIconDetail}
                     />
                   </Icon>
                   <Typography
-                    sx={{ fontSize: "20px", color: "#fff", fontWeight: "bold" }}
+                    sx={style.buyerText}
                   >
                     Payment Method
                   </Typography>
                 </CardMedia>
               </CardContent>
 
-              <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+              <Box sx={style.buyerBox}>
                 <CardContent
-                  sx={{
-                    textAlign: "start",
-                    color: "#909090",
-                    fontSize: "14px",
-                    padding: "10px 0px 0px 10px",
-                    paddingBottom: "0 !important",
-                  }}
+                  sx={style.buyerTextCard}
                 >
-                  <Typography sx={{ lineHeight: "35px" }}>
+                  <Typography sx={style.leftText}>
                     Total Amount
                   </Typography>
-                  <Typography sx={{ lineHeight: "35px" }}>
+                  <Typography sx={style.leftText}>
                     Delivery Charges
                   </Typography>
-                  <Typography sx={{ lineHeight: "35px" }}>
+                  <Typography sx={style.leftText}>
                     Order Placed on
                   </Typography>
-                  <Typography sx={{ lineHeight: "35px" }}>Order Id</Typography>
+                  <Typography sx={style.leftText}>Order Id</Typography>
                 </CardContent>
                 <CardContent
-                  sx={{
-                    textAlign: "end",
-                    color: "#fff",
-                    fontSize: "14px",
-                    padding: "10px 0px 0px 10px",
-                    paddingBottom: "0 !important",
-                  }}
+                  sx={style.rightText}
                 >
-                  <Typography sx={{ lineHeight: "35px" }}>
+                  <Typography sx={style.rightText}>
                     1024:00 AED
                   </Typography>
-                  <Typography sx={{ lineHeight: "35px" }}>20.00 AED</Typography>
-                  <Typography sx={{ lineHeight: "35px" }}>
+                  <Typography sx={style.rightText}>20.00 AED</Typography>
+                  <Typography sx={style.rightText}>
                     2024-11-14,1447
                   </Typography>
-                  <Typography sx={{ lineHeight: "35px" }}>ALREEM-1</Typography>
+                  <Typography sx={style.rightText}>ALREEM-1</Typography>
                 </CardContent>
               </Box>
             </Card>
+
             {/* shipping info */}
             <Card
-              sx={{
-                background: "none",
-                boxShadow: "none",
-              }}
+              sx={style.card}
             >
               {/*shipping details  */}
               <CardContent
-                sx={{ padding: "10px 0px 0px 10px", alignItems: "center" }}
+                sx={style.buyerDetail}
               >
-                <CardMedia sx={{ display: "flex", gap: "10px" }}>
-                  <Icon sx={{ width: "2rem", height: "2rem" }}>
+                <CardMedia sx={style.buyerMedia}>
+                  <Icon sx={style.buyerIcon}>
                     <LocalShippingRoundedIcon
-                      sx={{
-                        color: "#EEE692",
-                        fontSize: "20px",
-                        backgroundColor: "#5E5C43",
-                        borderRadius: "50%",
-                        padding: "5px",
-                      }}
+                      sx={style.buyerIconDetail}
                     />
                   </Icon>
                   <Typography
-                    sx={{ fontSize: "20px", color: "#fff", fontWeight: "bold" }}
+                    sx={style.buyerText}
                   >
                     Shipping Method
                   </Typography>
@@ -324,133 +277,89 @@ const Detail = () => {
               </CardContent>
 
               <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                }}
+                sx={style.buyerBox}
               >
                 <CardContent
-                  sx={{
-                    textAlign: "start",
-                    color: "#909090",
-                    fontSize: "14px",
-                    padding: "10px 0px 0px 10px",
-                    paddingBottom: "0 !important",
-                  }}
+                  sx={style.buyerTextCard}
                 >
-                  <Typography sx={{ lineHeight: "35px" }}>
-                    {" "}
-                    Tracking Id{" "}
+                  <Typography sx={style.leftText}>
+                    Tracking Id
                   </Typography>
-                  <Typography sx={{ lineHeight: "35px" }}>Address</Typography>
-                  <Typography sx={{ lineHeight: "35px" }}>
+                  <Typography sx={style.leftText}>Address</Typography>
+                  <Typography sx={style.leftText}>
                     alternative Address
                   </Typography>
-                  <Typography sx={{ lineHeight: "35px" }}>Countary</Typography>
-                  <Typography sx={{ lineHeight: "35px" }}>City</Typography>
-                  <Typography sx={{ lineHeight: "35px" }}>
-                    Postal Code{" "}
+                  <Typography sx={style.leftText}>Countary</Typography>
+                  <Typography sx={style.leftText}>City</Typography>
+                  <Typography sx={style.leftText}>
+                    Postal Code
                   </Typography>
                 </CardContent>
                 <CardContent
-                  sx={{
-                    textAlign: "end",
-                    color: "#fff",
-                    fontSize: "14px",
-                    padding: "10px 0px 0px 10px",
-                  }}
+                  sx={style.rightText}
                 >
-                  <Typography sx={{ lineHeight: "35px" }}>Alreem</Typography>
-                  <Typography sx={{ lineHeight: "35px" }}>
+                  <Typography sx={style.rightText}>Alreem</Typography>
+                  <Typography sx={style.rightText}>
                     96 church way bradbury
                   </Typography>
-                  <Typography sx={{ lineHeight: "35px" }}>
+                  <Typography sx={style.rightText}>
                     96 church way bradbury
                   </Typography>
-                  <Typography sx={{ lineHeight: "35px" }}>
+                  <Typography sx={style.rightText}>
                     United arab Emirates(UAE)
                   </Typography>
-                  <Typography sx={{ lineHeight: "35px" }}>Abu Dhabi</Typography>
-                  <Typography sx={{ lineHeight: "35px" }}>62100</Typography>
+                  <Typography sx={style.rightText}>Abu Dhabi</Typography>
+                  <Typography sx={style.rightText}>62100</Typography>
                 </CardContent>
               </Box>
             </Card>
+
             {/* order placed details */}
             <Box
-              sx={{
-                border: "1px solid #3D4348",
-                borderRadius: "10px",
-                p: 1,
-                m: 1.5,
-              }}
+              sx={style.order}
             >
               <Card
-                sx={{
-                  display: "flex",
-                  gap: "10px",
-                  background: "none",
-                  boxShadow: "none",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                }}
+                sx={style.orderCard}
               >
-                <Box sx={{ display: "flex", gap: "8px", alignItems: "center" }}>
-                  <CardMedia sx={{ display: "flex", gap: "8px" }}>
+                <Box sx={style.orderCardBox}>
+                  <CardMedia sx={style.orderCardMedia}>
                     <Box>
                       <CheckOutlinedIcon
-                        sx={{
-                          color: "#000",
-                          fontSize: "18px",
-                          backgroundColor: "#EEE692",
-                          borderRadius: "50%",
-                          padding: "5px",
-                          border: "2px solid #73704e",
-                        }}
+                        sx={style.orderCardIcon}
                       />
                     </Box>
                     <Box>
                       <PersonRoundedIcon
-                        sx={{
-                          color: "#EEE692",
-                          fontSize: "30px",
-                          backgroundColor: "#5E5C43",
-                          borderRadius: "50%",
-                        }}
+                        sx={style.orderIcon}
                       />
                     </Box>
                   </CardMedia>
-                  <Box sx={{ color: "#fff" }}>
+                  <Box sx={style.orderCardText}>
                     <Typography>Order Place by Buyer</Typography>
                     <Typography>14 November</Typography>
                   </Box>
                 </Box>
                 <Box>
-                  <Typography sx={{ color: "#fff" }}>2:00 PM</Typography>
+                  <Typography sx={style.orderText}>2:00 PM</Typography>
                 </Box>
               </Card>
 
               {/* Accept Order Section */}
-              <Box sx={{}}>
+              <Box>
                 <Box>
-                  <Icon sx={{color: "#EEE692"}}>
+                  <Icon sx={{ color: "#EEE692" }}>
                     <MoreVertIcon />
                   </Icon>
                 </Box>
               </Box>
             </Box>
-          
+
             {/* cancel/accept order button */}
-            <Box sx={{ p: 2, display: "flex", gap: "10px" }}>
+            <Box sx={style.orderBox}>
               <Grid>
                 <Button
                   variant="outlined"
-                  sx={{
-                    border: "1px solid #3D4348",
-                    color: "#fff",
-                    fontWeight: "bold",
-                    padding: "10px 36px",
-                    borderRadius: "10px",
-                  }}
+                  sx={style.orderButton}
                 >
                   Cancel Order
                 </Button>
@@ -458,21 +367,13 @@ const Detail = () => {
               <Grid>
                 <Button
                   variant="outlined"
-                  sx={{
-                    border: "1px solid #3D4348",
-                    backgroundColor: "#E1D481",
-                    color: "#000",
-                    fontWeight: "bold",
-                    fontSize: "14px",
-                    lineHeight: "25px",
-                    padding: "10px 36px",
-                    borderRadius: "10px",
-                  }}
-                >                  
+                  sx={style.acceptButton}
+                >
                   Accept Order
                 </Button>
               </Grid>
             </Box>
+
           </Box>
         </Grid>
       </Box>
