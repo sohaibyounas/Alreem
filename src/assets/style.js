@@ -709,6 +709,77 @@ const style = {
         fontFamily: '"Poppins", sans-serif',
     },
 
+    // User Detail Page
+    box: {
+        p: 1,
+        border: "1px solid grey",
+        borderRadius: "10px",
+    },
+
+    user: {
+        py: 1,
+        px: 2,
+        color: "#EEE692",
+        fontSize: "20px",
+        fontWeight: "600",
+        lineHeight: "21px",
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    userDetail: {
+        display: "flex",
+        justifyContent: "space-between",
+    },
+
+    userText: {
+        p: 2,
+        color: "#fff",
+        fontSize: "20px",
+        fontWeight: "400",
+        lineHeight: "24px",
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    userTextItem: {
+        pb: 1,
+        color: "#fff",
+        fontSize: "14px",
+        fontWeight: "400",
+        lineHeight: "24px",
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    userTextDetail: {
+        pb: 1,
+        textAlign: "end",
+        color: "#eee692",
+        fontSize: "14px",
+        fontWeight: "400",
+        lineHeight: "24px",
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    userDivider: {
+        mx: 2,
+        margin: "0px",
+        height: "2.5px",
+        background: "#3D4348",
+    },
+
+    userInnerBox: {
+        p: 1,
+        color: "#EEE692",
+        fontSize: "20px",
+        fontWeight: "700",
+        lineHeight: "24px",
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    userBoxDetail: {
+        p: 1,
+        color: "#fff",
+    },
+
 
 
 
