@@ -26,13 +26,13 @@ import SmartPhone from "../assets/images/phone.png";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import { useNavigate } from "react-router-dom";
+import style from '../assets/style';
 
 const ManageOrder = () => {
   const [data, setData] = useState([]);
   const [tab, setTab] = useState(0);
 
   useEffect(() => {
-    // console.log(tab);
     setData(
       tab === 0 ? Pending : tab === 1 ? Completed : tab === 2 ? Cancelled : []
     );
@@ -50,28 +50,11 @@ const ManageOrder = () => {
         {/* tabs gird */}
         <Grid
           size={12}
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            fontSize: "16px",
-            lineHeight: "18px",
-            fontWeight: "bold",
-            marginBottom: "20px",
-            color: "#fff",
-            border: "1px solid #3D4348",
-            borderRadius: "10px",
-            padding: "7px",
-            gap: "10px",
-          }}
+          sx={style.grid}
         >
           <ListItem
             sx={{
-              color: tab === 0 && "#000",
-              background: tab === 0 && "#fff",
-              borderRadius: "10px",
-              padding: "10px",
-              cursor: "pointer",
-              justifyContent: "center",
+              ...style.tab, ...(tab === 0 ? style.tabActive : {}),
             }}
             onClick={() => setTab(0)}
           >
@@ -79,12 +62,7 @@ const ManageOrder = () => {
           </ListItem>
           <ListItem
             sx={{
-              color: tab === 1 && "#000",
-              background: tab === 1 && "#fff",
-              borderRadius: "10px",
-              padding: "10px",
-              cursor: "pointer",
-              justifyContent: "center",
+              ...style.tab, ...(tab === 1 ? style.tabActive : {}),
             }}
             onClick={() => setTab(1)}
           >
@@ -92,12 +70,7 @@ const ManageOrder = () => {
           </ListItem>
           <ListItem
             sx={{
-              color: tab === 2 && "#000",
-              background: tab === 2 && "#fff",
-              borderRadius: "10px",
-              padding: "10px",
-              cursor: "pointer",
-              justifyContent: "center",
+              ...style.tab, ...(tab === 2 ? style.tabActive : {}),
             }}
             onClick={() => setTab(2)}
           >
@@ -106,57 +79,48 @@ const ManageOrder = () => {
         </Grid>
 
         {/* order list gird */}
-
         {data.map((item, index) => (
           <Grid
             key={index}
             size={12}
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              border: "1px solid #3D4348",
-              borderRadius: "10px",
-              marginBottom: "20px",
-            }}
+            sx={style.listGrid}
           >
             {/* item detail grid */}
             <Grid
               size={10}
-              sx={{ display: "flex", padding: "20px", gap: "10px" }}
+              sx={style.grid1}
             >
               {/* image */}
-              <Grid sx={{ borderRadius: "10px" }}>
-                <img src={item.image} alt="Shoe" style={{ width: "100px" }} />
+              <Grid sx={style.imgGrid}>
+                <img src={item.image} alt="ITEM" style={style.imgGridDetail} />
                 <Typography
-                  sx={{ color: "#fff", lineHeight: "21px", fontSize: "14px" }}
+                  sx={style.imgText}
                 >
                   only 1 items
                 </Typography>
               </Grid>
               {/* text details */}
               <Grid
-                sx={{ display: "flex", flexDirection: "column", gap: "15px" }}
+                sx={style.gridText}
               >
                 <Typography
-                  sx={{
-                    color: "#fff",
-                    lineHeight: "21px",
-                    fontSize: "20px",
-                  }}
+                  sx={style.gridDetail}
                 >
                   {item.name}
                 </Typography>
                 <Typography
-                  sx={{ color: "#fff", lineHeight: "21px", fontSize: "14px" }}
+                  sx={style.gridLeftSideText}
                 >
-                  order on.{" "}
-                  <span style={{ color: "#EEE692" }}>UAE-095498745</span>
+                  order on.
+                  <span style={style.gridRightSideText}>
+                    UAE-095498745
+                  </span>
                 </Typography>
                 <Typography
-                  sx={{ color: "#fff", lineHeight: "21px", fontSize: "14px" }}
+                  sx={style.gridLeftSideText}
                 >
-                  Delivery Date:{" "}
-                  <span style={{ color: "#EEE692" }}>
+                  Delivery Date:
+                  <span style={style.gridRightSideText}>
                     02:09 AM Thursday 21, July 2024
                   </span>
                 </Typography>
@@ -166,26 +130,11 @@ const ManageOrder = () => {
             {/* button grid */}
             <Grid
               size={2}
-              sx={{
-                display: "flex",
-                padding: "20px",
-                justifyContent: "end",
-                width: "150px",
-                height: "75px",
-              }}
+              sx={style.buttonMain}
             >
               <Button
                 variant="contained"
-                sx={{
-                  background:
-                    "linear-gradient(90deg, #bba051, #ece490, #bba052)",
-                  color: "#000",
-                  border: "none",
-                  borderRadius: "10px",
-                  padding: "6px 30px",
-                  fontSize: "16px",
-                  fontWeight: "bold",
-                }}
+                sx={style.button}
                 onClick={handleClick}
               >
                 Details
@@ -195,7 +144,7 @@ const ManageOrder = () => {
         ))}
 
         {/* Pagination Grid */}
-        <Grid sx={{ display: "flex", marginTop: "40px", gap: "10px" }}>
+        <Grid sx={style.paginationGrid}>
           <Grid size={4}></Grid>
           <Grid size={4}>
             <Pagination
@@ -204,38 +153,17 @@ const ManageOrder = () => {
               shape="rounded"
               hidePrevButton
               hideNextButton
-              sx={{
-                "& .MuiPaginationItem-root": {
-                  backgroundColor: "#212121",
-                  color: "#fff",
-                },
-                "& .MuiPaginationItem-root.Mui-selected": {
-                  backgroundColor: "#fff",
-                  color: "#000",
-                },
-                "&. hover": {
-                  backgroundColor: "#fff",
-                  color: "#000",
-                },
-              }}
+              sx={style.pagination}
             />
           </Grid>
           <Grid
             size={4}
-            sx={{ justifyContent: "end", display: "flex", gap: "10px" }}
+            sx={style.paginationDetail}
           >
             <IconButton
               aria-label="backspacearrow"
               disabled
-              sx={{
-                background: "#212121",
-                color: "#fff",
-                border: "none",
-                borderRadius: "5px",
-                padding: "0px 15px",
-                fontSize: "16px",
-                outline: "1px solid #3D4348",
-              }}
+              sx={style.paginationButton}
             >
               <KeyboardBackspaceIcon />
               Previous
@@ -243,15 +171,7 @@ const ManageOrder = () => {
 
             <IconButton
               aria-label="arrowright"
-              sx={{
-                background: "#212121",
-                color: "#fff",
-                border: "none",
-                borderRadius: "5px",
-                padding: "0px 15px",
-                fontSize: "16px",
-                outline: "1px solid #3D4348",
-              }}
+              sx={style.paginationButton}
             >
               Next
               <ArrowRightAltIcon />

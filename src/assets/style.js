@@ -155,8 +155,156 @@ const style = {
         display: 'flex',
         gap: '20px',
         marginTop: '15px',
-    }
+    },
 
+    // Manage Order Page
+    grid: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        gap: '10px',
+        marginBottom: '20px',
+        padding: '7px',
+        color: '#fff',
+        fontSize: '16px',
+        lineHeight: '24px',
+        fontWeight: 700,
+        border: '1px solid #3D4348',
+        borderRadius: '10px',
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    tab: {
+        color: "#fff",
+        background: "transparent",
+        cursor: 'pointer',
+        padding: '10px',
+        justifyContent: "center",
+        borderRadius: '10px',
+    },
+
+    tabActive: {
+        color: "#000",
+        background: "#fff",
+    },
+
+    // order list grid
+    listGrid: {
+        display: 'flex',
+        justifyContent: "space-between",
+        border: "1px solid #3D4348",
+        borderRadius: "10px",
+        marginBottom: "20px",
+    },
+
+    grid1: {
+        display: 'flex',
+        padding: '20px',
+        gap: '10px',
+    },
+
+    imgGrid: {
+        borderRadius: '10px',
+    },
+
+    imgGridDetail: {
+        width: '100px',
+        display: 'block',
+    },
+
+    imgText: {
+        color: '#fff',
+        lineHeight: '21px',
+        fontSize: '14px',
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    gridText: {
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '15px',
+    },
+
+    gridDetail: {
+        color: '#fff',
+        lineHeight: '24px',
+        fontSize: '20px',
+        fontWeight: 500,
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    gridLeftSideText: {
+        color: '#fff',
+        lineHeight: '21px',
+        fontSize: '14px',
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    gridRightSideText: {
+        color: '#EEE692',
+        paddingLeft: '5px',
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    // Button Grid
+    buttonMain: {
+        display: 'flex',
+        padding: '20px',
+        justifyContent: 'end',
+        width: '150px',
+        height: '75px',
+    },
+
+    button: {
+        color: "#000",
+        border: "none",
+        borderRadius: "10px",
+        padding: "6px 30px",
+        fontSize: "16px",
+        fontWeight: "700",
+        fontFamily: '"Poppins", sans-serif',
+        background: 'linear-gradient(90deg, #bba051, #ece490, #bba052)',
+    },
+
+    // Paination
+    paginationGrid: {
+        display: 'flex',
+        marginTop: '40px',
+        gap: '10px',
+    },
+
+    pagination: {
+        "& .MuiPaginationItem-root": {
+            backgroundColor: "#212121",
+            color: "#fff",
+        },
+        "& .MuiPaginationItem-root.Mui-selected": {
+            backgroundColor: "#fff",
+            color: "#000",
+        },
+        "&. hover": {
+            backgroundColor: "#fff",
+            color: "#000",
+        },
+    },
+
+    paginationDetail: {
+        justifyContent: 'end',
+        display: 'flex',
+        gap: '10px',
+    },
+
+    paginationButton: {
+        background: '#212121',
+        color: '#fff',
+        border: 'none',
+        borderRadius: '5px',
+        padding: '0px 15px',
+        fontSize: '16px',
+        outline: '1px solid #3D4348',
+    },
 
 }
 export default style;
