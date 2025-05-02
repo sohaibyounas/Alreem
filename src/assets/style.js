@@ -1070,20 +1070,218 @@ const style = {
         },
     },
 
-        dialogButton2Style: {
-            py: 2,
-        },
-
-        dialogButton: {
-            color: '#f44336',
-            fontSize: "14px",
-            lineHeight: "24px",
-            fontFamily: '"Poppins", sans-serif',
-            '&:hover': {
-                bgcolor: 'rgba(244, 67, 54, 0.08)',
-            },
+    dialogButton2Style: {
+        py: 2,
     },
 
+    dialogButton: {
+        color: '#f44336',
+        fontSize: "14px",
+        lineHeight: "24px",
+        fontFamily: '"Poppins", sans-serif',
+        '&:hover': {
+            bgcolor: 'rgba(244, 67, 54, 0.08)',
+        },
+    },
+
+    // Inventory Page
+    search: {
+        display: "flex",
+        justifyContent: "space-between",
+    },
+
+    searchBox: {
+        px: 2,
+        py: 0.5,
+        mx: "auto",
+        width: 400,
+        maxWidth: "90vw",
+        display: "flex",
+        alignItems: "center",
+        backgroundColor: "#29292A",
+        justifyContent: "space-between",
+        borderRadius: "999px",
+        border: "1px solid #3D4348",
+    },
+
+
+    searchIcon: {
+        color: "#aaa",
+        fontSize: "30px",
+    },
+
+    searchText: {
+        color: "#ccc",
+        width: "100%",
+        fontSize: "20px",
+        lineHeight: "24px",
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif',
+        "& input": {
+            padding: 0,
+        },
+    },
+
+    searchButon: {
+        px: 2,
+        border: "1px solid grey",
+        borderRadius: "20px",
+        color: "#fff",
+        fontSize: 16,
+        textTransform: "none",
+        display: "flex",
+        alignItems: "center",
+        background: "transparent",
+        boxShadow: "none",
+        lineHeight: "24px",
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif',
+        "&:hover": {
+            background: "#29292A",
+            boxShadow: "none",
+        },
+    },
+
+    // Product Grid
+    cardGrid: {
+        m: 2,
+        width: '100%',
+        background: 'none',
+        overflow: 'hidden',
+        boxShadow: 'none',
+        borderRadius: '10px',
+        border: '1px solid #3D4348',
+    },
+
+    cardPosition: {
+        position: 'relative',
+    },
+
+    cardImg: {
+        width: '100%',
+        height: '200px',
+        display: 'block',
+        objectFit: 'cover',
+    },
+
+    cardText: {
+        px: 2,
+        py: 1,
+        position: 'absolute',
+        left: 0,
+        bottom: 0,
+        width: '50%',
+        background: '#000',
+        color: '#fff',
+        fontSize: '20px',
+        fontWeight: 500,
+        borderTopRightRadius: '40px',
+    },
+
+    productBox: {
+        display: 'flex',
+        justifyContent: 'space-between',
+    },
+
+    productContent: {
+        pb: '0',
+        color: '#fff',
+    },
+
+    productDetails: {
+        mb: 1,
+        fontSize: '16px',
+        lineHeight: "24px",
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    productText: {
+        pb: '0',
+        mb: 1,
+        pr: 1,
+        color: '#EEE692',
+        textAlign: "end",
+        fontSize: '16px',
+        lineHeight: "24px",
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    // Inbox Page
+    iBox: {
+        width: '100%',
+    },
+
+    inboxSearch: {
+        py: 1,
+        px: 1,
+        my: 2,
+        width: "98%",
+        background: "#000",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "start",
+        borderRadius: "10px",
+        border: "1px solid #3D4348",
+    },
+
+    inboxIcon: {
+        color: "#FFFFFF",
+        fontSize: "25px",
+    },
+
+    searchText2: {
+        color: "#ccc",
+        width: "100%",
+        fontSize: "16px",
+        lineHeight: "24px",
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif',
+        "& input": {
+            padding: 0,
+        },
+    },
+
+    mapData: {
+        display: 'flex',
+        alignItems: 'center',
+        bgcolor: '#212121',
+        color: '#fff',
+        padding: '20px 16px',
+        borderRadius: '8px',
+        marginBottom: '15px',
+        border: "1px solid #3D4348",
+    },
+
+    inboxImg: {
+        mr: 2,
+        width: "80px",
+        height: "80px",
+        borderRadius: "50%",
+        outline: "2px solid #EEE692",
+    },
+
+    cardText: {
+        mb: 2,
+        color: "#fff",
+        fontSize: "16px",
+        lineHeight: "24px",
+        fontWeight: 600,
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    cardText2: {
+        color: "#fff",
+        fontSize: "14px",
+        lineHeight: "24px",
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+
+    // Edit Shop Page
+    
 
 
 
