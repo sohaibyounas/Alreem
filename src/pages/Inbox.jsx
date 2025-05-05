@@ -28,7 +28,7 @@ const Inbox = () => {
           />
         </Box>
 
-        {/* avatar, Texts, Button */}
+        {/* avatar, Texts, Button */} 
         {data.map((item, index) => (
           <Box
             key={item.id}

@@ -1,3 +1,5 @@
+import { faIR } from "@mui/material/locale";
+
 const style = {
     // Home Page
     mainBox: {
@@ -1258,6 +1260,7 @@ const style = {
         mr: 2,
         width: "80px",
         height: "80px",
+        display: "block",
         borderRadius: "50%",
         outline: "2px solid #EEE692",
     },
@@ -1281,20 +1284,327 @@ const style = {
 
 
     // Edit Shop Page
-    
+    editBox: {
+        bgcolor: "#212121",
+        width: "100%",
+        height: "auto",
+        padding: "5px",
+        border: "1px solid #3D4348",
+        borderRadius: "10px",
+    },
+
+    imgBox: {
+        p: 2,
+        position: "relative",
+    },
+
+    editImg: {
+        width: "180px",
+        display: "block",
+        borderRadius: "10px",
+        border: "1px solid #3D4348",
+    },
+
+    imgIcon: {
+        top: 15,
+        left: 160,
+        cursor: "pointer",
+        color: "#fff",
+        position: "absolute",
+    },
+
+    // Form
+    form: {
+        width: "100%",
+        padding: "0 10px 16px",
+    },
+
+    title: {
+        color: "#fff",
+        fontSize: "16px",
+        lineHeight: "24px",
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif',
+        marginBottom: "8px",
+    },
+
+    field: {
+        color: "#fff",
+        background: "#2C2C2C",
+        borderRadius: "10px",
+        border: "1px solid #3D4348",
+        '& :input': {
+            outline: "none",
+            border: "1px solid #3D4348",
+        },
+        '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+                borderColor: '#3D4348',
+                outline: "none",
+                border: "none",
+            },
+            '&:hover fieldset': {
+                borderColor: '#3D4348',
+            },
+            '&.Mui-focused fieldset': {
+                borderColor: '#3D4348',
+            },
+        },
+        '& .MuiInputBase-input': {
+            color: '#fff',
+            padding: "16px",
+            fontSize: "14px",
+            fontFamily: '"Poppins", sans-serif',
+        },
+    },
+
+    gridStyle: {
+        gap: "10px",
+        padding: "10px 20px 10px 10px",
+        display: "flex",
+        flexWrap: "wrap",
+    },
+
+    gridChild: {
+        flex: 1,
+        minWidth: "48%",
+    },
+
+    select: {
+        m: 1,
+        width: "49%",
+    },
+
+    selectGrid: {
+        gap: "5px",
+        padding: "10px 20px 10px 0px",
+        display: "flex",
+        flexWrap: "wrap",
+    },
+
+    //dropdown fields 
+    selectField: {
+        borderRadius: "10px",
+        border: "1px solid #3D4348",
+        backgroundColor: "#2C2C2C",
+        fontFamily: '"Poppins", sans-serif',
+        fontSize: "14px",
+        fontWeight: 400,
+        color: "#fff",
+        '& .MuiSelect-icon': {
+            color: "#fff",
+        },
+        '& .MuiOutlinedInput-notchedOutline': {
+            borderColor: "#3D4348",
+        },
+        '&:hover .MuiOutlinedInput-notchedOutline': {
+            borderColor: "#3D4348",
+        },
+        '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+            borderColor: "#3D4348",
+        },
+    },
+
+    menuItem: {
+        color: "#fff",
+        backgroundColor: "#1a1a1a",
+        justifyContent: "center",
+        fontFamily: '"Poppins", sans-serif',
+
+        '&.Mui-selected': {
+            backgroundColor: "#2C2C2C",
+            color: "#fff",
+        },
+        '&.Mui-selected:hover': {
+            backgroundColor: "#2C2C2C",
+            color: "#fff",
+        },
+        '&:hover': {
+            backgroundColor: "#2C2C2C",
+            color: "#fff",
+        },
+    },
+
+    website: {
+        width: "48.5%",
+        pt: 1,
+    },
+
+    // countary list
+    phoneList: {
+        px: 2,
+        pb: 1,
+        color: "#fff",
+        background: "transparent",
+        fontSize: "16px",
+        lineHeight: "24px",
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    countary: {
+        mx: 2,
+        px: 0,
+        width: "45%",
+        borderRadius: "10px",
+        border: "1px solid #3d4348",
+        background: "#2C2C2C",
+        color: "#fff",
+        outline: "none",
+        fontSize: "18px",
+        padding: "16px",
+        boxShadow: "none",
+        transition: "none",
+    },
+
+    phoneNumber: {
+        background: "#232323",
+        color: "#fff",
+        width: "97%",
+        border: "none",
+        outline: "none",
+        fontSize: "18px",
+        padding: "7px",
+        "& .react-tel-input .form-control": {
+            background: "#232323",
+            color: "#fff",
+            border: "none",
+            outline: "none",
+            width: "100%",
+            fontSize: "18px",
+            padding: "7px",
+        },
+        "& .react-tel-input .form-control:focus": {
+            background: "#232323 !important",
+            color: "#fff",
+            border: "none",
+            outline: "none",
+            boxShadow: "none",
+        },
+        "& .react-tel-input .form-control:active": {
+            background: "#232323 !important",
+            color: "#fff",
+            border: "none",
+            outline: "none",
+            boxShadow: "none",
+        },
+    },
+
+    city: {
+        m: 1,
+        width: "50%",
+    },
+
+    cityTitle: {
+        px: 1,
+        color: "#fff",
+        fontSize: "16px",
+        lineHeight: "24px",
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif',
+        marginBottom: "8px",
+    },
+
+    cityList: {
+        mb: 2,
+        width: "100%",
+        display: "flex",
+        gap: "16px",
+    },
+
+
+    desctiption: {
+        mx: 1,
+        color: "#fff",
+        fontSize: "16px",
+        lineHeight: "24px",
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif',
+        marginBottom: "8px",
+    },
+
+    descText: {
+        pb: 1,
+        color: "#fff",
+        fontSize: "16px",
+        lineHeight: "24px",
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    descField: {
+        color: "#fff",
+        background: "#2C2C2C",
+        borderRadius: "10px",
+        border: "1px solid #3D4348",
+        pb: 2,
+        '& :input': {
+            outline: "none",
+            border: "1px solid #3D4348",
+        },
+        '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+                borderColor: '#3D4348',
+                outline: "none",
+                border: "none",
+            },
+            '&:hover fieldset': {
+                borderColor: '#3D4348',
+            },
+            '&.Mui-focused fieldset': {
+                borderColor: '#3D4348',
+            },
+        },
+        '& .MuiInputBase-input': {
+            color: '#fff',
+            padding: "10px 16px 60px 16px",
+            fontSize: "14px",
+            fontFamily: '"Poppins", sans-serif',
+        },
+    },
+
+    // check & Text
+    checkText: {
+        display: "flex",
+        gap: "10px",
+        alignItems: "center",
+        width: "50%",
+    },
+
+    checkBox: {
+        color: "#fff",
+        
+    },
+
+    checkDetail: {
+        color: "#fff",
+        fontSize: "14px",
+        lineHeight: "24px",
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif',
+    },
+
+    checkSpan: {
+        color: "#EEE692",
+        textDecoration: "underline",
+        cursor: "pointer",
+    },
+
+
+    save: {
+        py: 1,
+        my: 2,
+        background: "linear-gradient(90deg, #bba051, #ece490, #bba052) ",
+        width: "100%",
+        color: "#000",
+        fontSize: "16px",
+        lineHeight: "24px",
+        fontWeight: 700,
+        fontFamily: '"Poppins", sans-serif !important',
+    },
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-}
+};
 export default style;
