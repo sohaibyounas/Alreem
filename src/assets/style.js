@@ -1383,6 +1383,10 @@ const style = {
     },
 
     //dropdown fields 
+    countryBox: {
+        width: "50%", // Set equal width to match city dropdown
+    },
+
     selectField: {
         borderRadius: "10px",
         border: "1px solid #3D4348",
@@ -1396,12 +1400,15 @@ const style = {
         },
         '& .MuiOutlinedInput-notchedOutline': {
             borderColor: "#3D4348",
+            border: "none",
         },
         '&:hover .MuiOutlinedInput-notchedOutline': {
             borderColor: "#3D4348",
+            border: "none",
         },
         '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
             borderColor: "#3D4348",
+            border: "none",
         },
     },
 
@@ -1409,6 +1416,7 @@ const style = {
         color: "#fff",
         backgroundColor: "#1a1a1a",
         justifyContent: "center",
+        fontSize: "16px",
         fontFamily: '"Poppins", sans-serif',
 
         '&.Mui-selected': {
@@ -1430,7 +1438,7 @@ const style = {
         pt: 1,
     },
 
-    // countary list
+    // country list
     phoneList: {
         px: 2,
         pb: 1,
@@ -1442,10 +1450,10 @@ const style = {
         fontFamily: '"Poppins", sans-serif',
     },
 
-    countary: {
-        mx: 2,
+    country: {
+        ml: 2,
         px: 0,
-        width: "45%",
+        width: "100%",
         borderRadius: "10px",
         border: "1px solid #3d4348",
         background: "#2C2C2C",
@@ -1460,7 +1468,7 @@ const style = {
     phoneNumber: {
         background: "#232323",
         color: "#fff",
-        width: "97%",
+        width: "100%", // Set to 100% for proper sizing
         border: "none",
         outline: "none",
         fontSize: "18px",
@@ -1491,8 +1499,7 @@ const style = {
     },
 
     city: {
-        m: 1,
-        width: "50%",
+        width: "50%", // Equal width
     },
 
     cityTitle: {
@@ -1509,10 +1516,11 @@ const style = {
         mb: 2,
         width: "100%",
         display: "flex",
-        gap: "16px",
+        gap: "20px",
+        justifyContent: "space-between",
     },
 
-
+    // desctiption
     desctiption: {
         mx: 1,
         color: "#fff",
@@ -1573,7 +1581,7 @@ const style = {
 
     checkBox: {
         color: "#fff",
-        
+
     },
 
     checkDetail: {
@@ -1594,13 +1602,13 @@ const style = {
     save: {
         py: 1,
         my: 2,
-        background: "linear-gradient(90deg, #bba051, #ece490, #bba052) ",
         width: "100%",
         color: "#000",
         fontSize: "16px",
         lineHeight: "24px",
         fontWeight: 700,
         fontFamily: '"Poppins", sans-serif !important',
+        background: "linear-gradient(90deg, #bba051, #ece490, #bba052) ",
     },
 
 

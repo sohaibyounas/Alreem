@@ -92,6 +92,7 @@ const EditShop = () => {
               </Select>
             </FormControl>
 
+            {/* website */}
             <Box sx={style.website}>
               <Typography sx={style.title}>
                 Website URL (opitional)
@@ -106,15 +107,15 @@ const EditShop = () => {
           </Box>
         </Box>
 
-        {/* Countary List */}
+        {/* country List */}
         <Box sx={style.cityList}>
           <Box
-            fullWidth
+            sx={style.countryBox}
           >
             <Typography sx={style.phoneList}>
               Phone Number
             </Typography>
-            <Box sx={style.countary}>
+            <Box sx={style.country}>
               <PhoneInput
                 defaultCountry="PK"
                 value={value}
@@ -125,24 +126,26 @@ const EditShop = () => {
           </Box>
 
           {/* city List */}
-          <FormControl sx={style.city}>
+          <Box sx={style.city}>
             <Typography sx={style.cityTitle}>
               City
             </Typography>
-            <Select
-              value={city}
-              onChange={handlecity}
-              displayEmpty
-              sx={style.selectField}
-              renderValue={(selected) => selected || 'Ajman'}
-            >
-              <MenuItem value={"Ajman"} sx={style.menuItem}> Ajman</MenuItem>
-              <MenuItem value={"Dubai"} sx={style.menuItem}>Dubai</MenuItem>
-              <MenuItem value={"Abu Dubai"} sx={style.menuItem}>Abu Dubai</MenuItem>
-              <MenuItem value={"Sharjah"} sx={style.menuItem}>Sharjah</MenuItem>
-              <MenuItem value={"Derah Dubai"} sx={style.menuItem}>Derah Dubai</MenuItem>
-            </Select>
-          </FormControl>
+            <FormControl fullWidth sx={style.country}>
+              <Select
+                value={city}
+                onChange={handlecity}
+                displayEmpty
+                sx={style.selectField}
+                renderValue={(selected) => selected || 'Ajman'}
+              >
+                <MenuItem value={"Ajman"} sx={style.menuItem}> Ajman</MenuItem>
+                <MenuItem value={"Dubai"} sx={style.menuItem}>Dubai</MenuItem>
+                <MenuItem value={"Abu Dubai"} sx={style.menuItem}>Abu Dubai</MenuItem>
+                <MenuItem value={"Sharjah"} sx={style.menuItem}>Sharjah</MenuItem>
+                <MenuItem value={"Derah Dubai"} sx={style.menuItem}>Derah Dubai</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
         </Box>
 
         {/* Desctiption */}
@@ -180,7 +183,7 @@ const EditShop = () => {
             sx={style.save}
           >
             Save
-            </Button>
+          </Button>
         </Box>
 
       </Box>
