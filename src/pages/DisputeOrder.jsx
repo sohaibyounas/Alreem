@@ -28,7 +28,7 @@ const DisputeOrder = () => {
       >
         <Typography
           sx={[
-            style.disputeText,
+            style.disputeTextTabs,
             tab === 0 && style.disputeActiveTab
           ]}
           onClick={() => setTab(0)}
@@ -37,7 +37,7 @@ const DisputeOrder = () => {
         </Typography>
         <Box
           sx={[
-            style.disputeText,
+            style.disputeTextTabs,
             tab === 1 && style.disputeActiveTab
           ]}
           onClick={() => setTab(1)}

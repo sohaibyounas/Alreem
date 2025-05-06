@@ -771,25 +771,38 @@ const style = {
         display: "flex",
         gap: "10px",
         padding: '6px',
-        border: "1px solid #3D4348",
-        borderRadius: "10px",
+        border: "1px solid #3d4348",
+        borderRadius: "6px",
+        background: "#29292A",
+        alignItems: "center",
+        width: "100%",
+        overflow:"hidden",
     },
 
-    disputeText: {
+    disputeTextTabs: {
         width: "50%",
         textAlign: "center",
-        fontSize: "20px",
-        fontWeight: "bold",
+        fontSize: "16px !important",
+        fontWeight: "700 !important",
         borderRadius: "10px",
-        padding: "4px",
+        padding: "10px 0px",
         cursor: "pointer",
         color: "#fff",
+        background: "transparent",
+        transition: "all 0.3s",
+        margin: 0,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
     },
 
     disputeActiveTab: {
         color: "#000",
         background: "#fff",
+        fontWeight: "600 !important",
     },
+
+    // Dispute section
 
     link: {
         textDecoration: "none",
