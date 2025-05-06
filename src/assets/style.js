@@ -1,6 +1,171 @@
-import { faIR } from "@mui/material/locale";
-
 const style = {
+    // Navbar
+    navBox: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        backgroundColor: "#212121",
+        color: "#fff",
+        height: "70px",
+        padding: "0 20px",
+    },
+
+    navHead: {
+        color: "#DED184",
+        fontSize: "28px",
+        fontWeight: "600",
+        fontFamily: '"Poppins", sans-serif !important',
+        paddingTop: "10px",
+        marginLeft: "0px",
+        lineHeight: "34px",
+        textTransform: "uppercase",
+        backgroundColor: "linear-gradient(180deg, #f3ef9c, #d9cb7f, #bea963, #a3884a, #876832)",
+    },
+
+    navHeadText: {
+        display: "flex",
+        alignItems: "center",
+        gap: "10px",
+    },
+
+    navAvatar: {
+        width: "39px",
+        height: "39px",
+        border: "1px solid #eee692",
+    },
+
+    navImg: {
+        width: "100%",
+        height: "100%",
+        borderRadius: "50%",
+    },
+
+    // avatar text
+    avatarTextBox: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-start",
+        padding: "0px",
+    },
+
+    avatarHeadText: {
+        color: "#fff",
+        lineHeight: "30px",
+        fontSize: "16px",
+        fontWeight: "500",
+        fontFamily: '"Poppins", sans-serif !important',
+    },
+
+    avatarHeadText2: {
+        fontSize: "16px",
+        color: "#bbb",
+        fontSize: "16px",
+        fontWeight: "400",
+        fontFamily: '"Poppins", sans-serif !important',
+    },
+
+    // contact-chat-support (page => userdetail-linked)
+    contactChatSupport: {
+        width: "100%",
+        background: "#212121",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        cursor: "pointer",
+    },
+
+    contactChatText: {
+        background: "#212121",
+        color: "#EEE692",
+        fontSize: "16px",
+        py: 2,
+    },
+
+    contactChatTextIcon: {
+        background: "#212121",
+        color: "#fff",
+    },
+
+    showContactSupportDivider: {
+        background: "#3D4348",
+        height: "2.5px",
+    },
+
+    showLink: {
+        display: "flex",
+        gap: "5px",
+        alignItems: "center",
+        backgroundColor: "#212121",
+        cursor: "pointer",
+        padding: "10px",
+        "&:hover .back-icon": {
+            color: "#EEE692",
+            transform: "translateX(-5px)",
+            transition: "color 0.3s, transform 0.3s",
+        },
+    },
+
+    showLinkIcon: {
+        color: "#fff",
+        transition: "color 0.3s, transform 0.3s",
+    },
+
+    chatSupportText: {
+        color: "#fff",
+        fontSize: "16px",
+        fontWeight: 400,
+        fontFamily: '"Poppins", sans-serif !important',
+    },
+
+
+    // Layout Page
+    mainContentBox: {
+        background: "#29292A",
+        overflowY: "auto",
+        scrollbarWidth: "none",
+    },
+
+
+    // SideBar Page
+    sideMainBox: {
+        width: "100%",
+        height: "100vh",
+        backgroundColor: "#212121",
+    },
+
+    siteLogo: {
+        width: "200px",
+        height: "100px",
+        textDecoration: "none",
+    },
+
+    // sidebar lists
+    sideMenuLink: {
+        display: "flex",
+        alignItems: "center",
+        textDecoration: "none",
+    },
+
+    sideMenuList: {
+        mr: 1,
+        minWidth: 30,
+    },
+
+    sideMenuListImg: {
+        width: 24,
+        height: 24,
+    },
+
+    sideMenuListText: {
+        color: "#EEE692",
+        '& .css-rizt0-MuiTypography-root': {
+            fontSize: "16px !important",
+            fontWeight: "700 !important",
+            fontFamily: '"Poppins", sans-serif !important',
+        },
+    },
+
+
     // Home Page
     mainBox: {
         display: "flex",

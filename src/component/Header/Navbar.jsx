@@ -10,6 +10,7 @@ import User from "../../assets/images/user.png";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { Link, useNavigate } from "react-router-dom";
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import style from '../../assets/style';
 
 const Navbar = ({ showLink, contactSupport: showContactSupport }) => {
   const navigate = useNavigate();
@@ -23,78 +24,38 @@ const Navbar = ({ showLink, contactSupport: showContactSupport }) => {
   return (
     <>
       <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          backgroundColor: "#212121",
-          color: "#fff",
-          height: "70px",
-          padding: "0 20px",
-        }}
+        sx={style.navBox}
       >
         <Typography
-          sx={{
-            color: "#DED184",
-            fontFamily: "Poppins",
-            fontSize: "28px",
-            fontWeight: "600",
-            paddingTop: "10px",
-            marginLeft: "0px",
-            lineHeight: "34px",
-            textTransform: "uppercase",
-          }}
+          sx={style.navHead}
         >
           Aleem Seller Dashboard
         </Typography>
+        {/* Avatar & Text */}
         <Box
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            gap: "10px",
-          }}
+          sx={style.navHeadText}
         >
           <Avatar
-            sx={{
-              width: "39px",
-              height: "39px",
-              border: "1px solid #eee692",
-            }}
+            sx={style.navAvatar}
           >
             <img
               src={User}
               alt="user"
-              style={{
-                width: "100%",
-                height: "100%",
-                borderRadius: "50%",
-              }}
+              style={style.navImg}
             />
           </Avatar>
+
+          {/* avtar text */}
           <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-start",
-              padding: "0px",
-            }}
+            sx={style.avatarTextBox}
           >
             <Typography
-              sx={{
-                fontSize: "16px",
-                fontWeight: "500",
-                color: "#fff",
-                lineHeight: 1.2,
-              }}
+              sx={style.avatarHeadText}
             >
               Michael Jorden
             </Typography>
             <Typography
-              sx={{
-                fontSize: "16px",
-                color: "#bbb",
-                lineHeight: 1.2,
-              }}
+              sx={style.avatarHeadText2}
             >
               Seller
             </Typography>
@@ -103,31 +64,16 @@ const Navbar = ({ showLink, contactSupport: showContactSupport }) => {
       </Box>
       {showLink && (
         <Box
-          sx={{
-            display: "flex",
-            gap: "5px",
-            alignItems: "center",
-            backgroundColor: "#212121",
-            cursor: "pointer",
-            padding: "10px",
-            "&:hover .back-icon": {
-              color: "#EEE692",
-              transform: "translateX(-5px)",
-              transition: "color 0.3s, transform 0.3s",
-            },
-          }}
+          sx={style.showLink}
           onClick={handleBack}
         >
           <Icon
             className="back-icon"
-            sx={{
-              color: "#fff",
-              transition: "color 0.3s, transform 0.3s",
-            }}
+            sx={style.showLinkIcon}
           >
             <KeyboardBackspaceIcon />
           </Icon>
-          <Typography sx={{ color: "#fff" }}> Chat Support </Typography>
+          <Typography sx={style.chatSupportText}> Chat Support </Typography>
         </Box>
       )}
 
@@ -136,20 +82,20 @@ const Navbar = ({ showLink, contactSupport: showContactSupport }) => {
       {/* Divider only on user detail page */}
       {showContactSupport && (
         <Divider
-          sx={{ background: "#3D4348", height: "2.5px" }}
+          sx={style.showContactSupportDivider}
         />
       )}
 
       {/* contact support */}
       {showContactSupport &&
         (
-          <Box sx={{ width: "100%", background: "#212121", display: "flex", justifyContent: "space-between", alignItems: "center", cursor: "pointer" }}
+          <Box sx={style.contactChatSupport}
             onClick={() => navigate("/OpenDisputes")}
           >
-            <Typography sx={{ background: "#212121", color: "#EEE692", fontSize: "16px", py: 2 }}>
+            <Typography sx={style.contactChatText}>
               Contact Chat Support
             </Typography>
-            <ChevronRightIcon sx={{ background: "#212121", color: "#fff" }}
+            <ChevronRightIcon sx={style.contactChatTextIcon}
             />
           </Box>
         )}

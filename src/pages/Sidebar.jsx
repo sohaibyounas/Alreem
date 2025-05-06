@@ -12,6 +12,7 @@ import inventoryIcon from "../assets/images/Inventory.png";
 import draftInventoryIcon from "../assets/images/DraftInventory.png";
 import inboxIcon from "../assets/images/Inbox.png";
 import editShopIcon from "../assets/images/Editshop.png";
+import style from '../assets/style';
 
 // Routes
 import {
@@ -27,13 +28,13 @@ import {
 
 const Sidebar = () => {
   return (
-    <Box sx={{ backgroundColor: "#212121", height: "100vh", width: "100%" }}>
+    <Box sx={style.sideMainBox}>
       <Box>
         <Link to={HOME}>
           <img
             src={logo}
             alt="Company Logo"
-            style={{ width: "200px", height: "100px", textDecoration: "none" }}
+            style={style.siteLogo}
           />
         </Link>
       </Box>
@@ -41,81 +42,81 @@ const Sidebar = () => {
       <List>
         {/* Home */}
         <ListItem>
-          <Link to={HOME} style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
-            <ListItemIcon sx={{ minWidth: 30, mr: 1 }}>
-              <img src={homeIcon} alt="Home" style={{ width: 24, height: 24 }} />
+          <Link to={HOME} style={style.sideMenuLink}>
+            <ListItemIcon sx={style.sideMenuList}>
+              <img src={homeIcon} alt="Home" style={style.sideMenuListImg} />
             </ListItemIcon>
-            <ListItemText primary="Home" sx={{ color: "#EEE692" }} />
+            <ListItemText primary="Home Page" sx={style.sideMenuListText} />
           </Link>
         </ListItem>
 
         {/* Dashboard */}
         <ListItem>
-          <Link to={DASHBOARD} style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
-            <ListItemIcon sx={{ minWidth: 30, mr: 1 }}>
-              <img src={dashboardIcon} alt="Dashboard" style={{ width: 24, height: 24 }} />
+          <Link to={DASHBOARD} style={style.sideMenuLink}>
+            <ListItemIcon sx={style.sideMenuList}>
+              <img src={dashboardIcon} alt="Dashboard" style={style.sideMenuListImg} />
             </ListItemIcon>
-            <ListItemText primary="Dashboard" sx={{ color: "#EEE692" }} />
+            <ListItemText primary="Dashboard" sx={style.sideMenuListText} />
           </Link>
         </ListItem>
 
         {/* Manage Order */}
         <ListItem>
-          <Link to={MANAGEORDER} style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
-            <ListItemIcon sx={{ minWidth: 30, mr: 1 }}>
-              <img src={manageOrderIcon} alt="Manage Order" style={{ width: 24, height: 24 }} />
+          <Link to={MANAGEORDER} style={style.sideMenuLink}>
+            <ListItemIcon sx={style.sideMenuList}>
+              <img src={manageOrderIcon} alt="Manage Order" style={style.sideMenuListImg} />
             </ListItemIcon>
-            <ListItemText primary="Manage Order" sx={{ color: "#EEE692" }} />
+            <ListItemText primary="Manage Order" sx={style.sideMenuListText} />
           </Link>
         </ListItem>
 
         {/* Dispute Order */}
         <ListItem>
-          <Link to={DISPUTEORDER} style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
-            <ListItemIcon sx={{ minWidth: 30, mr: 1 }}>
-              <img src={disputeOrderIcon} alt="Dispute Order" style={{ width: 24, height: 24 }} />
+          <Link to={DISPUTEORDER} style={style.sideMenuLink}>
+            <ListItemIcon sx={style.sideMenuList}>
+              <img src={disputeOrderIcon} alt="Dispute Order" style={style.sideMenuListImg} />
             </ListItemIcon>
-            <ListItemText primary="Dispute Order" sx={{ color: "#EEE692" }} />
+            <ListItemText primary="Dispute Order" sx={style.sideMenuListText} />
           </Link>
         </ListItem>
 
         {/* Inventory */}
         <ListItem>
-          <Link to={INVENTORY} style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
-            <ListItemIcon sx={{ minWidth: 30, mr: 1 }}>
-              <img src={inventoryIcon} alt="Inventory" style={{ width: 24, height: 24 }} />
+          <Link to={INVENTORY} style={style.sideMenuLink}>
+            <ListItemIcon sx={style.sideMenuList}>
+              <img src={inventoryIcon} alt="Inventory" style={style.sideMenuListImg} />
             </ListItemIcon>
-            <ListItemText primary="Inventory" sx={{ color: "#EEE692" }} />
+            <ListItemText primary="Inventory" sx={style.sideMenuListText} />
           </Link>
         </ListItem>
 
         {/* Draft Inventory */}
         <ListItem>
-          <Link to={DRAFTINVENTORY} style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
-            <ListItemIcon sx={{ minWidth: 30, mr: 1 }}>
-              <img src={draftInventoryIcon} alt="Draft Inventory" style={{ width: 24, height: 24 }} />
+          <Link to={DRAFTINVENTORY} style={style.sideMenuLink}>
+            <ListItemIcon sx={style.sideMenuList}>
+              <img src={draftInventoryIcon} alt="Draft Inventory" style={style.sideMenuListImg} />
             </ListItemIcon>
-            <ListItemText primary="Draft Inventory" sx={{ color: "#EEE692" }} />
+            <ListItemText primary="Draft Inventory" sx={style.sideMenuListText} />
           </Link>
         </ListItem>
 
         {/* Inbox */}
         <ListItem>
-          <Link to={INBOX} style={{ display: "flex", alignItems: "center", textDecoration: "none"}}>
-            <ListItemIcon sx={{ minWidth: 30, mr: 1 }}>
-              <img src={inboxIcon} alt="Inbox" style={{ width: 24, height: 24 }} />
+          <Link to={INBOX} style={style.sideMenuLink}>
+            <ListItemIcon sx={style.sideMenuList}>
+              <img src={inboxIcon} alt="Inbox" style={style.sideMenuListImg} />
             </ListItemIcon>
-            <ListItemText primary="Inbox" sx={{ color: "#EEE692" }} />
+            <ListItemText primary="Inbox" sx={style.sideMenuListText} />
           </Link>
         </ListItem>
 
         {/* Edit Shop */}
         <ListItem>
-          <Link to={EDITSHOP} style={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
-            <ListItemIcon sx={{ minWidth: 30, mr: 1 }}>
-              <img src={editShopIcon} alt="Edit Shop" style={{ width: 24, height: 24 }} />
+          <Link to={EDITSHOP} style={style.sideMenuLink}>
+            <ListItemIcon sx={style.sideMenuList}>
+              <img src={editShopIcon} alt="Edit Shop" style={style.sideMenuListImg} />
             </ListItemIcon>
-            <ListItemText primary="Edit Shop" sx={{ color: "#EEE692" }} />
+            <ListItemText primary="Edit Shop" sx={style.sideMenuListText} />
           </Link>
         </ListItem>
       </List>

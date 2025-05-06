@@ -2,6 +2,7 @@ import { Box, Grid } from "@mui/material";
 import React from "react";
 import Sidebar from "../pages/Sidebar";
 import Navbar from "./Header/Navbar";
+import style from '../assets/style';
 
 const Layout = ({ children, showLink = false, contactSupport = false, padding = "20px" }) => {
   return (
@@ -15,7 +16,7 @@ const Layout = ({ children, showLink = false, contactSupport = false, padding = 
             <Navbar showLink={showLink} contactSupport={contactSupport} />
             <Box
               sx={{
-                background: "#29292A",
+                ...style.mainContentBox,
                 padding: padding,
                 height: showLink
                   ? "calc(100vh - 150px)"
@@ -23,8 +24,6 @@ const Layout = ({ children, showLink = false, contactSupport = false, padding = 
                     ? "calc(100vh - 100px)"
                     : "calc(100vh - 110px)"
                 ,
-                overflowY: "auto",
-                scrollbarWidth: "none",
               }}
             >
               {children}
