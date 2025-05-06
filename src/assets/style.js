@@ -8,9 +8,8 @@ const style = {
         color: "#fff",
         height: "70px",
         padding: "0 20px",
-        // full width on xs/sm, 80vw on md+
         width: '100%',
-        position: { xs: 'fixed', md: 'static' },
+        // position: { xs: 'fixed', md: 'static' },
         top: 0,
         left: 0,
         zIndex: 1200,
@@ -1574,7 +1573,7 @@ const style = {
 
     //dropdown fields 
     countryBox: {
-        width: "50%", // Set equal width to match city dropdown
+        width: "50%", //Set equal width to match city dropdown
     },
 
     selectField: {
@@ -1643,7 +1642,7 @@ const style = {
     country: {
         ml: 2,
         px: 0,
-        width: "100%",
+        width: "90%",
         borderRadius: "10px",
         border: "1px solid #3d4348",
         background: "#2C2C2C",
@@ -1651,6 +1650,20 @@ const style = {
         outline: "none",
         fontSize: "18px",
         padding: "16px",
+        boxShadow: "none",
+        transition: "none",
+    },
+
+    countryList: {
+        ml: 2,
+        px: 0,
+        width: "90%",
+        borderRadius: "10px",
+        border: "1px solid #3d4348",
+        background: "#2C2C2C",
+        color: "#fff",
+        outline: "none",
+        fontSize: "18px",
         boxShadow: "none",
         transition: "none",
     },
@@ -1688,6 +1701,31 @@ const style = {
         },
     },
 
+    selectField2: {
+        borderRadius: "10px",
+        border: "1px solid #3D4348",
+        backgroundColor: "#2C2C2C",
+        fontFamily: '"Poppins", sans-serif',
+        fontSize: "14px",
+        fontWeight: 400,
+        color: "#fff",
+        '& .MuiSelect-icon': {
+            color: "#fff",
+        },
+        '& .MuiOutlinedInput-notchedOutline': {
+            borderColor: "#3D4348",
+            border: "none",
+        },
+        '&:hover .MuiOutlinedInput-notchedOutline': {
+            borderColor: "#3D4348",
+            border: "none",
+        },
+        '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+            borderColor: "#3D4348",
+            border: "none",
+        },
+    },
+
     city: {
         width: "50%", // Equal width
     },
@@ -1706,7 +1744,7 @@ const style = {
         mb: 2,
         width: "100%",
         display: "flex",
-        gap: "20px",
+        gap: "10px",
         justifyContent: "space-between",
     },
 

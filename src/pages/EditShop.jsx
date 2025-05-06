@@ -130,12 +130,12 @@ const EditShop = () => {
             <Typography sx={style.cityTitle}>
               City
             </Typography>
-            <FormControl fullWidth sx={style.country}>
+            <FormControl sx={style.countryList}>
               <Select
                 value={city}
                 onChange={handlecity}
                 displayEmpty
-                sx={style.selectField}
+                sx={style.selectField2}
                 renderValue={(selected) => selected || 'Ajman'}
               >
                 <MenuItem value={"Ajman"} sx={style.menuItem}> Ajman</MenuItem>
