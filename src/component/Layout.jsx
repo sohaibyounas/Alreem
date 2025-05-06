@@ -9,10 +9,10 @@ const Layout = ({ children, showLink = false, contactSupport = false, padding = 
     <>
       <Box>
         <Grid container spacing={0}>
-          <Grid size={2}>
+          <Grid size={2} sx={{ display: { xs: 'none', md: 'block' } }}>
             <Sidebar />
           </Grid>
-          <Grid size={10}>
+          <Grid size={{ xs: 12, md: 10 }}>
             <Navbar showLink={showLink} contactSupport={contactSupport} />
             <Box
               sx={{
@@ -22,8 +22,7 @@ const Layout = ({ children, showLink = false, contactSupport = false, padding = 
                   ? "calc(100vh - 150px)"
                   : contactSupport
                     ? "calc(100vh - 100px)"
-                    : "calc(100vh - 110px)"
-                ,
+                    : "calc(100vh)",
               }}
             >
               {children}

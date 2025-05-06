@@ -1,6 +1,6 @@
 import React from 'react';
 import Stack from '@mui/material/Stack';
-import { Avatar, Box, Button, Card, CardContent, CardMedia, InputBase, Typography } from '@mui/material';
+import { Avatar, Box, Button, InputBase, Typography } from '@mui/material';
 import style from '../assets/style';
 import SearchIcon from "@mui/icons-material/Search";
 import Jordan from '../assets/images/user.png';

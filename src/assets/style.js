@@ -8,6 +8,12 @@ const style = {
         color: "#fff",
         height: "70px",
         padding: "0 20px",
+        // full width on xs/sm, 80vw on md+
+        width: '100%',
+        position: { xs: 'fixed', md: 'static' },
+        top: 0,
+        left: 0,
+        zIndex: 1200,
     },
 
     navHead: {
@@ -20,6 +26,9 @@ const style = {
         lineHeight: "34px",
         textTransform: "uppercase",
         backgroundColor: "linear-gradient(180deg, #f3ef9c, #d9cb7f, #bea963, #a3884a, #876832)",
+        display: {
+            xs: "none", sm: "none", md: "block",
+        },
     },
 
     navHeadText: {
@@ -46,6 +55,9 @@ const style = {
         flexDirection: "column",
         alignItems: "flex-start",
         padding: "0px",
+        display: {
+            xs: "none", sm: "none", md: "block",
+        },
     },
 
     avatarHeadText: {
@@ -117,7 +129,6 @@ const style = {
         fontFamily: '"Poppins", sans-serif !important',
     },
 
-
     // Layout Page
     mainContentBox: {
         background: "#29292A",
@@ -131,6 +142,7 @@ const style = {
         width: "100%",
         height: "100vh",
         backgroundColor: "#212121",
+
     },
 
     siteLogo: {
@@ -776,7 +788,7 @@ const style = {
         background: "#29292A",
         alignItems: "center",
         width: "100%",
-        overflow:"hidden",
+        overflow: "hidden",
     },
 
     disputeTextTabs: {
@@ -1789,6 +1801,16 @@ const style = {
         background: "linear-gradient(90deg, #bba051, #ece490, #bba052) ",
     },
 
+    // sidebutton
+    sideButon: {
+        border: "1px solid #3dD4348",
+        borderRadius: "10px",
+        color: "#fff",
+        background: "#3D4348",
+        display: {
+            xs: "block", sm: "block", md: "none",
+        },
+    },
 
 
 
