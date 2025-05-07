@@ -1505,7 +1505,7 @@ const style = {
     // Form
     form: {
         width: "100%",
-        padding: "0 10px 16px",
+        padding: "0 10px 10px",
     },
 
     title: {
@@ -1605,6 +1605,7 @@ const style = {
         color: "#fff",
         backgroundColor: "#1a1a1a",
         justifyContent: "center",
+        alignItems: "center",
         fontSize: "16px",
         fontFamily: '"Poppins", sans-serif',
 
@@ -1657,7 +1658,7 @@ const style = {
     countryList: {
         ml: 2,
         px: 0,
-        width: "90%",
+        width: "94%",
         borderRadius: "10px",
         border: "1px solid #3d4348",
         background: "#2C2C2C",
@@ -1671,11 +1672,11 @@ const style = {
     phoneNumber: {
         background: "#232323",
         color: "#fff",
-        width: "100%", // Set to 100% for proper sizing
+        width: "100%",
         border: "none",
         outline: "none",
         fontSize: "18px",
-        padding: "7px",
+        // padding: "7px",
         "& .react-tel-input .form-control": {
             background: "#232323",
             color: "#fff",
@@ -1724,6 +1725,9 @@ const style = {
             borderColor: "#3D4348",
             border: "none",
         },
+        '& .css-1toxriw-MuiList-root-MuiMenu-list': {
+            paddingTop: '0 !important',
+        },
     },
 
     city: {
@@ -1748,8 +1752,8 @@ const style = {
         justifyContent: "space-between",
     },
 
-    // desctiption
-    desctiption: {
+    // description
+    description: {
         mx: 1,
         color: "#fff",
         fontSize: "16px",
@@ -1844,10 +1848,11 @@ const style = {
         border: "1px solid #3dD4348",
         borderRadius: "10px",
         color: "#fff",
-        background: "#3D4348",
+        fontSize:"20px",
         display: {
             xs: "block", sm: "block", md: "none",
         },
+        width:"0px",
     },
 
 

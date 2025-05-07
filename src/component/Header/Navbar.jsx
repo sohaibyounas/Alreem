@@ -5,7 +5,7 @@ import {
   Divider,
   Drawer,
   Icon,
-  Typography,
+  Typography, IconButton,
 } from "@mui/material";
 import React, { useState } from "react";
 import User from "../../assets/images/user.png";
@@ -14,6 +14,7 @@ import { useNavigate } from "react-router-dom";
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import style from '../../assets/style';
 import Sidebar from "../../pages/Sidebar";
+import ReorderIcon from '@mui/icons-material/Reorder';
 
 const Navbar = ({ showLink, contactSupport: showContactSupport }) => {
   const navigate = useNavigate();
@@ -57,12 +58,13 @@ const Navbar = ({ showLink, contactSupport: showContactSupport }) => {
         >
           Aleem Seller Dashboard
         </Typography>
-        <Button
-          sx={style.sideButon}
+        {/* line icon */}
+        <IconButton
           onClick={() => buttonClick()}
+          sx={style.sideButon}
         >
-          Click
-        </Button>
+          <ReorderIcon />
+        </IconButton>
         {/* Avatar & Text */}
         <Box
           sx={style.navHeadText}

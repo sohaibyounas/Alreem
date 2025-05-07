@@ -120,7 +120,7 @@ const EditShop = () => {
                 defaultCountry="PK"
                 value={value}
                 onChange={setValue}
-                inputStyle={style.phoneNumber}
+                sx={style.phoneNumber}
               />
             </Box>
           </Box>
@@ -130,15 +130,17 @@ const EditShop = () => {
             <Typography sx={style.cityTitle}>
               City
             </Typography>
-            <FormControl sx={style.countryList}>
+            <FormControl sx={style.countryList} >
               <Select
                 value={city}
                 onChange={handlecity}
                 displayEmpty
                 sx={style.selectField2}
+
                 renderValue={(selected) => selected || 'Ajman'}
               >
-                <MenuItem value={"Ajman"} sx={style.menuItem}> Ajman</MenuItem>
+                <MenuItem value={"Ajman"}
+                  sx={style.menuItem}> Ajman</MenuItem>
                 <MenuItem value={"Dubai"} sx={style.menuItem}>Dubai</MenuItem>
                 <MenuItem value={"Abu Dubai"} sx={style.menuItem}>Abu Dubai</MenuItem>
                 <MenuItem value={"Sharjah"} sx={style.menuItem}>Sharjah</MenuItem>
@@ -149,7 +151,7 @@ const EditShop = () => {
         </Box>
 
         {/* Desctiption */}
-        <Box sx={style.desctiption}>
+        <Box sx={style.description}>
           <Typography sx={style.descText}>
             Write Desctiption
           </Typography>
