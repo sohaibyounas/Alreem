@@ -8,7 +8,7 @@ const style = {
         color: "#fff",
         height: "70px",
         padding: "0 20px",
-        width: '100%',
+        width: { md: "94%", lg: '100%', },
         // position: { xs: 'fixed', md: 'static' },
         top: 0,
         left: 0,
@@ -1854,8 +1854,5 @@ const style = {
         },
         width:"0px",
     },
-
-
-
 };
 export default style;

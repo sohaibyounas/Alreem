@@ -5,18 +5,21 @@ import {
   Divider,
   Drawer,
   Icon,
-  Typography, IconButton,
+  Typography,
+  IconButton,
 } from "@mui/material";
 import React, { useState } from "react";
 import User from "../../assets/images/user.png";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import { useNavigate } from "react-router-dom";
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import style from '../../assets/style';
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import style from "../../assets/style";
 import Sidebar from "../../pages/Sidebar";
-import ReorderIcon from '@mui/icons-material/Reorder';
+import ReorderIcon from "@mui/icons-material/Reorder";
 
 const Navbar = ({ showLink, contactSupport: showContactSupport }) => {
+  // sidebar drawer
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const navigate = useNavigate();
 
   // button for small screen
@@ -25,15 +28,11 @@ const Navbar = ({ showLink, contactSupport: showContactSupport }) => {
     setButton(true);
   };
 
-
   // click to go on desired page & move back
   const handleBack = (e) => {
     e.preventDefault(); // Prevent default Link navigation
     navigate(-1); // Navigate back to the previous page
   };
-
-  // sidebar drawer
-  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   // open function
   const buttonClick = () => {
@@ -47,106 +46,55 @@ const Navbar = ({ showLink, contactSupport: showContactSupport }) => {
 
   return (
     <>
-
-
       {/* MainBox */}
-      <Box
-        sx={style.navBox}
-      >
-        <Typography
-          sx={style.navHead}
-        >
-          Aleem Seller Dashboard
-        </Typography>
+      <Box sx={style.navBox}>
+        <Typography sx={style.navHead}>Aleem Seller Dashboard</Typography>
         {/* line icon */}
-        <IconButton
-          onClick={() => buttonClick()}
-          sx={style.sideButon}
-        >
+        <IconButton onClick={() => buttonClick()} sx={style.sideButon}>
           <ReorderIcon />
         </IconButton>
         {/* Avatar & Text */}
-        <Box
-          sx={style.navHeadText}
-        >
-          <Avatar
-            sx={style.navAvatar}
-          >
-            <img
-              src={User}
-              alt="user"
-              style={style.navImg}
-            />
+        <Box sx={style.navHeadText}>
+          <Avatar sx={style.navAvatar}>
+            <img src={User} alt="user" style={style.navImg} />
           </Avatar>
 
           {/* avtar text */}
-          <Box
-            sx={style.avatarTextBox}
-          >
-            <Typography
-              sx={style.avatarHeadText}
-            >
-              Michael Jorden
-            </Typography>
-            <Typography
-              sx={style.avatarHeadText2}
-            >
-              Seller
-            </Typography>
+          <Box sx={style.avatarTextBox}>
+            <Typography sx={style.avatarHeadText}>Michael Jorden</Typography>
+            <Typography sx={style.avatarHeadText2}>Seller</Typography>
           </Box>
         </Box>
       </Box>
 
-      {
-        showLink && (
-          <Box
-            sx={style.showLink}
-            onClick={handleBack}
-          >
-            <Icon
-              className="back-icon"
-              sx={style.showLinkIcon}
-            >
-              <KeyboardBackspaceIcon />
-            </Icon>
-            <Typography sx={style.chatSupportText}> Chat Support </Typography>
-          </Box>
-        )
-      }
+      {showLink && (
+        <Box sx={style.showLink} onClick={handleBack}>
+          <Icon className="back-icon" sx={style.showLinkIcon}>
+            <KeyboardBackspaceIcon />
+          </Icon>
+          <Typography sx={style.chatSupportText}> Chat Support </Typography>
+        </Box>
+      )}
 
       {/* contact support Link*/}
 
       {/* Divider only on user detail page */}
-      {
-        showContactSupport && (
-          <Divider
-            sx={style.showContactSupportDivider}
-          />
-        )
-      }
+      {showContactSupport && <Divider sx={style.showContactSupportDivider} />}
 
       {/* contact support */}
-      {
-        showContactSupport &&
-        (
-          <Box sx={style.contactChatSupport}
-            onClick={() => navigate("/OpenDisputes")}
-          >
-            <Typography sx={style.contactChatText}>
-              Contact Chat Support
-            </Typography>
-            <ChevronRightIcon sx={style.contactChatTextIcon}
-            />
-          </Box>
-        )
-      }
+      {showContactSupport && (
+        <Box
+          sx={style.contactChatSupport}
+          onClick={() => navigate("/OpenDisputes")}
+        >
+          <Typography sx={style.contactChatText}>
+            Contact Chat Support
+          </Typography>
+          <ChevronRightIcon sx={style.contactChatTextIcon} />
+        </Box>
+      )}
 
-
-      <Drawer
-        anchor="left"
-        open={sidebarOpen}
-        onClose={handleSidebarClose}
-      >
+      <Drawer anchor="left" open={sidebarOpen} onClose={handleSidebarClose}>
         <Sidebar />
       </Drawer>
     </>
