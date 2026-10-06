@@ -54,7 +54,7 @@ function App() {
         <Route
           path="/inventory"
           element={
-            <Layout padding="20px 30px 20px 0px">
+            <Layout>
               <Inventory />
             </Layout>
           }
@@ -62,7 +62,7 @@ function App() {
         <Route
           path="/draftinventory"
           element={
-            <Layout padding="20px 30px 20px 0px">
+            <Layout>
               <DraftInventory />
             </Layout>
           }
@@ -94,7 +94,7 @@ function App() {
         <Route
           path="/userdetail"
           element={
-            <Layout showLink={true} contactSupport={true} >
+            <Layout showLink={true} contactSupport={true}>
               <Userdetail />
             </Layout>
           }
@@ -102,7 +102,7 @@ function App() {
         <Route
           path="/OpenDisputes"
           element={
-            <Layout >
+            <Layout>
               <OpenDisputes />
             </Layout>
           }

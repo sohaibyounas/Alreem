@@ -1,272 +1,260 @@
-import React from 'react'
-import { Box, Button, Card, CardContent, CardMedia, Grid, IconButton, InputBase, Pagination, Typography } from "@mui/material";
+import React, { useState } from "react";
+import {
+  Box,
+  Button,
+  Chip,
+  InputBase,
+  Pagination,
+  Typography,
+} from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import AddIcon from '@mui/icons-material/Add';
-import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
-import MackBook from '../assets/images/laptop.jpg';
-import GoldenRing from '../assets/images/Golden-Ring.png';
-import HeadPhone from '../assets/images/headphone.jpg';
-import Watch from '../assets/images/watch.jpg';
-import AirBuds from '../assets/images/airbuds.jpg';
-import Keyboard from '../assets/images/keyboard.jpg';
+import AddRoundedIcon from "@mui/icons-material/AddRounded";
+import { motion } from "framer-motion";
+
+// Images
+import MackBook from "../assets/images/laptop.jpg";
+import GoldenRing from "../assets/images/Golden-Ring.png";
+import HeadPhone from "../assets/images/headphone.jpg";
+import Watch from "../assets/images/watch.jpg";
+import AirBuds from "../assets/images/airbuds.jpg";
+import Keyboard from "../assets/images/keyboard.jpg";
+
+const draftData = [
+  { id: 1, PID: "DFT-901", name: "Macbook Pro M3", Status: "Draft", Price: "AED 6,200", image: MackBook },
+  { id: 2, PID: "DFT-902", name: "Studio Pro Headphone", Status: "Draft", Price: "AED 750", image: HeadPhone },
+  { id: 3, PID: "DFT-903", name: "Custom Golden Ring", Status: "Draft", Price: "AED 1,450", image: GoldenRing },
+  { id: 4, PID: "DFT-904", name: "Vintage Chrono Watch", Status: "Draft", Price: "AED 980", image: Watch },
+  { id: 5, PID: "DFT-905", name: "AirBuds Titanium", Status: "Draft", Price: "AED 850", image: AirBuds },
+  { id: 6, PID: "DFT-906", name: "Custom Gaming Keyboard", Status: "Draft", Price: "AED 420", image: Keyboard },
+  { id: 7, PID: "DFT-907", name: "Diamond Ring", Status: "Draft", Price: "AED 3,100", image: GoldenRing },
+  { id: 8, PID: "DFT-908", name: "Smart Diver Watch", Status: "Draft", Price: "AED 1,150", image: Watch },
+];
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.05 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 15 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.3 },
+  },
+};
 
 const DraftInventory = () => {
-  return (
-    <>
-      <>
-        {/* Search field & Button */}
-        <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              maxWidth: "90vw",
-              mx: "auto",
-              backgroundColor: "#29292A",
-              borderRadius: "999px",
-              px: 2,
-              py: 0.5,
-              width: 400,
-              border: "1px solid #3D4348",
-            }}
-          >
-            <SearchIcon sx={{ color: "#aaa", fontSize: "32px" }} />
-            <InputBase
-              placeholder="search..."
-              sx={{
-                color: "#ccc",
-                width: "100%",
-                fontSize: "24px",
-                "& input": {
-                  padding: 0,
-                },
-              }}
-              inputProps={{ "aria-label": "search" }}
-            />
-          </Box>
+  const [searchQuery, setSearchQuery] = useState("");
 
-          {/* Add Button */}
-          <Button sx={{
-            border: "1px solid grey",
-            borderRadius: "20px",
-            color: "#fff",
-            px: 2,
-            fontSize: 16,
-            textTransform: "none",
+  const filteredData = draftData.filter(
+    (item) =>
+      item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      item.PID.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  return (
+    <Box sx={{ width: "100%", py: 1 }}>
+      {/* Search & Action bar */}
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", sm: "row" },
+          justifyContent: "space-between",
+          alignItems: { xs: "stretch", sm: "center" },
+          gap: 2,
+          mb: 3,
+        }}
+      >
+        <Box
+          sx={{
             display: "flex",
             alignItems: "center",
-            background: "transparent",
-            boxShadow: "none",
-            "&:hover": {
-              background: "#29292A",
-              boxShadow: "none",
+            backgroundColor: "#1E1E1E",
+            border: "1px solid #333333",
+            borderRadius: "12px",
+            px: 2,
+            py: 0.8,
+            width: { xs: "100%", sm: "360px", md: "420px" },
+            boxSizing: "border-box",
+            "&:focus-within": {
+              borderColor: "#DED184",
             },
-
-          }}>
-            Add Product <AddIcon sx={{ ml: 1, fontSize: 28 }} />
-          </Button>
+          }}
+        >
+          <SearchIcon sx={{ color: "#8E8E8E", mr: 1 }} />
+          <InputBase
+            placeholder="Search draft items..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            sx={{
+              color: "#FFFFFF",
+              fontSize: "14px",
+              width: "100%",
+              fontFamily: '"Poppins", sans-serif',
+            }}
+          />
         </Box>
 
-        {/* Cards */}
-        <Grid container spacing={2}>
-          {data.map((item) => (
-            <Grid item size={{ xs: 12, sm: 6, md: 3, lg: 3 }} key={item.id}>
-              <Card
+        <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+          <Button
+            variant="contained"
+            startIcon={<AddRoundedIcon />}
+            sx={{
+              backgroundColor: "#DED184",
+              color: "#000000",
+              fontWeight: 700,
+              fontSize: "14px",
+              borderRadius: "12px",
+              textTransform: "none",
+              px: 2.5,
+              py: 1.1,
+              width: { xs: "100%", sm: "auto" },
+              boxShadow: "0 4px 14px rgba(222, 209, 132, 0.25)",
+              "&:hover": {
+                backgroundColor: "#EEE692",
+              },
+            }}
+          >
+            Create Draft
+          </Button>
+        </motion.div>
+      </Box>
+
+      {/* Grid of draft cards */}
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
+          gap: "20px",
+          width: "100%",
+        }}
+      >
+        {filteredData.map((item) => (
+          <motion.div
+            key={item.id}
+            variants={cardVariants}
+            whileHover={{
+              y: -5,
+              borderColor: "rgba(222, 209, 132, 0.4)",
+              boxShadow: "0 8px 24px rgba(0,0,0,0.4)",
+            }}
+            transition={{ type: "spring", stiffness: 350, damping: 25 }}
+            style={{
+              backgroundColor: "#1E1E1E",
+              border: "1px solid #333333",
+              borderRadius: "14px",
+              overflow: "hidden",
+              display: "flex",
+              flexDirection: "column",
+              boxSizing: "border-box",
+            }}
+          >
+            <Box sx={{ position: "relative", width: "100%", height: "180px", overflow: "hidden", backgroundColor: "#141414" }}>
+              <img
+                src={item.image}
+                alt={item.name}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  display: "block",
+                }}
+              />
+              <Box
                 sx={{
-                  background: 'none',
-                  boxShadow: 'none',
-                  border: '1px solid #3D4348',
-                  borderRadius: '10px',
-                  width: '100%',
-                  overflow: 'hidden',
-                  m: 2,
+                  position: "absolute",
+                  left: 0,
+                  bottom: 0,
+                  backgroundColor: "rgba(18, 18, 18, 0.88)",
+                  backdropFilter: "blur(4px)",
+                  color: "#EEE692",
+                  px: 1.5,
+                  py: 0.6,
+                  fontSize: "13px",
+                  fontWeight: 600,
+                  borderTopRightRadius: "12px",
+                  border: "1px solid rgba(222, 209, 132, 0.3)",
+                  borderBottom: "none",
+                  borderLeft: "none",
+                  maxWidth: "80%",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
                 }}
               >
-                <Box sx={{ position: 'relative' }}>
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    style={{ width: '100%', height: '200px', display: 'block', objectFit: 'cover' }}
-                  />
-                  <Box
-                    sx={{
-                      position: 'absolute',
-                      left: 0,
-                      bottom: 0,
-                      width: '50%',
-                      background: '#000',
-                      color: '#fff',
-                      px: 2,
-                      py: 1,
-                      fontSize: '20px',
-                      fontWeight: 500,
-                      borderTopRightRadius: '40px',
-                    }}
-                  >
-                    {item.name}
-                  </Box>
-                </Box>
-                <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
-                  <CardContent sx={{ color: '#fff', pb: '0 !important' }}>
-                    <Typography sx={{ mb: 1 }}>Product ID:</Typography>
-                    <Typography sx={{ mb: 1 }}>Status:</Typography>
-                    <Typography sx={{ mb: 1 }}>Price:</Typography>
-                  </CardContent>
-                  <CardContent sx={{ color: '#EEE692', pb: '0 !important' }}>
-                    <Typography sx={{ mb: 1 }}>{item.PID}</Typography>
-                    <Typography sx={{ mb: 1 }}>{item.Status}</Typography>
-                    <Typography sx={{ mb: 1 }}>{item.Price}</Typography>
-                  </CardContent>
-                </Box>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
+                {item.name}
+              </Box>
+            </Box>
 
-        {/* Pagination Grid */}
-        <Grid sx={{ display: "flex", marginTop: "40px", gap: "10px" }}>
-          <Grid size={4}></Grid>
-          <Grid size={4}>
-            <Pagination
-              count={13}
-              variant="outlined"
-              shape="rounded"
-              hidePrevButton
-              hideNextButton
-              sx={{
-                "& .MuiPaginationItem-root": {
-                  backgroundColor: "#212121",
-                  color: "#fff",
-                },
-                "& .MuiPaginationItem-root.Mui-selected": {
-                  backgroundColor: "#fff",
-                  color: "#000",
-                },
-                "&. hover": {
-                  backgroundColor: "#fff",
-                  color: "#000",
-                },
-              }}
-            />
-          </Grid>
-          <Grid
-            size={4}
-            sx={{ justifyContent: "end", display: "flex", gap: "10px" }}
-          >
-            <IconButton
-              aria-label="backspacearrow"
-              disabled
-              sx={{
-                background: "#212121",
-                color: "#7A7A7A",
-                border: "none",
-                borderRadius: "5px",
-                padding: "0px 15px",
-                fontSize: "16px",
-                outline: "1px solid #3D4348",
-              }}
-            >
-              <KeyboardBackspaceIcon sx={{ color: "#7A7A7A" }} />
-              Previous
-            </IconButton>
+            <Box sx={{ p: 2, display: "flex", flexDirection: "column", gap: 1 }}>
+              <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <Typography sx={{ color: "#8E8E8E", fontSize: "12.5px" }}>
+                  Draft ID:
+                </Typography>
+                <Typography sx={{ color: "#FFFFFF", fontSize: "12.5px", fontWeight: 500 }}>
+                  {item.PID}
+                </Typography>
+              </Box>
 
-            <IconButton
-              aria-label="arrowright"
-              sx={{
-                background: "#212121",
-                color: "#fff",
-                border: "none",
-                borderRadius: "5px",
-                padding: "0px 15px",
-                fontSize: "16px",
-                outline: "1px solid #3D4348",
-              }}
-            >
-              Next
-              <ArrowRightAltIcon />
-            </IconButton>
-          </Grid>
-        </Grid>
-      </>
-    </>
-  )
-}
+              <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <Typography sx={{ color: "#8E8E8E", fontSize: "12.5px" }}>
+                  Status:
+                </Typography>
+                <Chip
+                  label={item.Status}
+                  size="small"
+                  sx={{
+                    backgroundColor: "rgba(255, 152, 0, 0.15)",
+                    color: "#FFA726",
+                    fontSize: "11px",
+                    fontWeight: 600,
+                    height: 20,
+                  }}
+                />
+              </Box>
+
+              <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mt: 0.5 }}>
+                <Typography sx={{ color: "#8E8E8E", fontSize: "12.5px" }}>
+                  Proposed Price:
+                </Typography>
+                <Typography sx={{ color: "#EEE692", fontSize: "15px", fontWeight: 700 }}>
+                  {item.Price}
+                </Typography>
+              </Box>
+            </Box>
+          </motion.div>
+        ))}
+      </motion.div>
+
+      {/* Pagination */}
+      <Box sx={{ mt: 4, display: "flex", justifyContent: "center" }}>
+        <Pagination
+          count={3}
+          defaultPage={1}
+          shape="rounded"
+          sx={{
+            "& .MuiPaginationItem-root": {
+              backgroundColor: "#1E1E1E",
+              color: "#FFFFFF",
+              border: "1px solid #333333",
+            },
+            "& .MuiPaginationItem-root.Mui-selected": {
+              backgroundColor: "#DED184",
+              color: "#000000",
+              fontWeight: 700,
+            },
+          }}
+        />
+      </Box>
+    </Box>
+  );
+};
 
 export default DraftInventory;
-
-const data = [
-  {
-    id: 1,
-    name: "Macbook",
-    Status: "Active",
-    image: MackBook,
-  },
-  {
-    id: 2,
-    name: "Head Phone",
-    Status: "Active",
-    image: HeadPhone,
-  },
-  {
-    id: 3,
-    name: "Golden Ring",
-    Status: "Active",
-    image: GoldenRing,
-  },
-  {
-    id: 4,
-    name: "Watch",
-    Status: "Active",
-    image: Watch,
-  },
-  {
-    id: 5,
-    name: "Apple Airbuds",
-    Status: "Active",
-    image: AirBuds,
-  },
-  {
-    id: 6,
-    name: "Keyboard",
-    Status: "Active",
-    image: Keyboard,
-  },
-  {
-    id: 7,
-    name: "Golden Ring",
-    Status: "Active",
-    image: GoldenRing,
-  },
-  {
-    id: 8,
-    name: "Watch",
-    Status: "Active",
-    image: Watch,
-  },
-  {
-    id: 9,
-    name: "Apple AirBuds",
-    Status: "Active",
-    image: AirBuds,
-  },
-  {
-    id: 10,
-    name: "Keyboard",
-    Status: "Active",
-    image: Keyboard,
-  },
-  {
-    id: 11,
-    name: "Golden Ring",
-    Status: "Active",
-    image: GoldenRing,
-  },
-  {
-    id: 12,
-    name: "Watch",
-    Status: "Active",
-    image: Watch,
-  },
-];
