@@ -234,13 +234,29 @@ const Navbar = ({ showLink, contactSupport: showContactSupport }) => {
         anchor="left"
         open={sidebarOpen}
         onClose={handleSidebarClose}
+        slotProps={{
+          paper: {
+            sx: {
+              width: { xs: "280px", sm: "300px" },
+              maxWidth: "85vw",
+              height: "100vh",
+              maxHeight: "100vh",
+              backgroundColor: "#1A1A1A !important",
+              color: "#FFFFFF !important",
+              borderRight: "1px solid #333333",
+              boxShadow: "4px 0 24px rgba(0,0,0,0.7)",
+              overflow: "hidden",
+            },
+          },
+        }}
         PaperProps={{
           sx: {
             width: { xs: "280px", sm: "300px" },
             maxWidth: "85vw",
             height: "100vh",
             maxHeight: "100vh",
-            backgroundColor: "#1A1A1A",
+            backgroundColor: "#1A1A1A !important",
+            color: "#FFFFFF !important",
             borderRight: "1px solid #333333",
             boxShadow: "4px 0 24px rgba(0,0,0,0.7)",
             overflow: "hidden",

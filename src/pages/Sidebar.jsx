@@ -3,12 +3,9 @@ import {
   Box,
   List,
   ListItem,
-  ListItemIcon,
-  ListItemText,
   Typography,
   IconButton,
   Avatar,
-  Divider,
 } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -59,6 +56,7 @@ const Sidebar = ({ onClose, isMobile = false }) => {
         height: "100vh",
         maxHeight: "100vh",
         backgroundColor: "#1A1A1A",
+        color: "#FFFFFF",
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-between",
@@ -164,10 +162,12 @@ const Sidebar = ({ onClose, isMobile = false }) => {
                 <Link
                   to={item.path}
                   onClick={() => onClose && onClose()}
+                  className="sidebar-menu-link"
                   style={{
                     width: "100%",
                     textDecoration: "none",
-                    color: "inherit",
+                    color: "#FFFFFF",
+                    display: "block",
                   }}
                 >
                   <motion.div
@@ -188,15 +188,16 @@ const Sidebar = ({ onClose, isMobile = false }) => {
                       border: isActive
                         ? "1px solid rgba(222, 209, 132, 0.3)"
                         : "1px solid transparent",
+                      color: "#FFFFFF",
                       transition: "all 0.2s ease",
                     }}
                   >
-                    <ListItemIcon
+                    <Box
                       sx={{
                         minWidth: 36,
                         display: "flex",
                         alignItems: "center",
-                        justifyContent: "center",
+                        justifyContent: "flex-start",
                       }}
                     >
                       <img
@@ -207,24 +208,26 @@ const Sidebar = ({ onClose, isMobile = false }) => {
                           height: 22,
                           filter: isActive
                             ? "drop-shadow(0 0 5px rgba(222, 209, 132, 0.8))"
-                            : "brightness(1.1)", // Crisp bright icon on dark background
+                            : "none",
                         }}
                       />
-                    </ListItemIcon>
-                    <ListItemText
-                      primary={item.label}
-                      primaryTypographyProps={{
-                        sx: {
-                          fontSize: "15px",
-                          fontWeight: isActive ? 700 : 500,
-                          // Pure WHITE for menu text as requested, with gold for active
-                          color: isActive ? "#EEE692" : "#FFFFFF",
-                          fontFamily: '"Poppins", sans-serif',
-                          letterSpacing: "0.2px",
-                          whiteSpace: "nowrap",
-                        },
+                    </Box>
+                    <Typography
+                      className="sidebar-menu-text"
+                      component="span"
+                      sx={{
+                        fontSize: "15px",
+                        fontWeight: isActive ? 600 : 500,
+                        color: "#FFFFFF !important",
+                        WebkitTextFillColor: "#FFFFFF !important",
+                        fontFamily: '"Poppins", sans-serif !important',
+                        letterSpacing: "0.2px",
+                        whiteSpace: "nowrap",
+                        flex: 1,
                       }}
-                    />
+                    >
+                      {item.label}
+                    </Typography>
                     {isActive && (
                       <Box
                         sx={{

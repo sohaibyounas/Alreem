@@ -59,3 +59,18 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* Ensure mobile drawer and sidebar menu text is always crisp pure white */
+.sidebar-menu-link,
+.sidebar-menu-text,
+.MuiDrawer-paper .sidebar-menu-text,
+.MuiDrawer-root .sidebar-menu-text,
+.MuiDrawer-paper a,
+.MuiDrawer-paper span {
+  color: #FFFFFF;
+}
+
+.sidebar-menu-text {
+  color: #FFFFFF !important;
+  -webkit-text-fill-color: #FFFFFF !important;
+}
